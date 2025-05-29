@@ -1,32 +1,34 @@
+// script.js
+
+// 1) Section دکھانے کا فنکشن
 function showSection(id) {
-  document.querySelectorAll('.section').forEach(s => s.classList.add('hidden'));
+  document.querySelectorAll('.section')
+    .forEach(s => s.classList.add('hidden'));
   document.getElementById(id).classList.remove('hidden');
 }
 
-// MathQuill Setup
-window.onload = function () {
+// 2) Lernmaterial کے لیے زبان کی toggle
+function toggleLanguage(lang) {
+  document.getElementById('content-urdu').classList.add('hidden');
+  document.getElementById('content-de').classList.add('hidden');
+  if (lang === 'urdu')    document.getElementById('content-urdu').classList.remove('hidden');
+  else if (lang === 'de') document.getElementById('content-de').classList.remove('hidden');
+}
+
+// 3) MathQuill Initialization
+window.onload = () => {
+  // MathQuill سیٹ اپ
   const MQ = MathQuill.getInterface(2);
   MQ.MathField(document.getElementById('math-field'), {
     spaceBehavesLikeTab: true
   });
-function loadQuiz() {
-  fetch('https://raw.githubusercontent.com/naeemjajja-786/taxi-fachkunde/main/prüfung_01.json')
-    .then(response => response.json())
-    .then(data => {
-      console.log("Quiz geladen:", data);
-      // window.location.href = 'quiz.html';
-    })
-    .catch(error => {
-      console.error("Fehler beim Laden der JSON-Datei:", error);
-      alert("Quiz لوڈ کرنے میں مسئلہ آیا!");
-    });
-}
-</script>
 
+  // placeholder: بعد میں questions append کریں
+  // loadMathQuestions();
 };
 
-// Quiz Data
-const quiz = [
+// 4) Quiz کے موجودہ دو سوالات (بعد میں JSON لوڈ کر کے merge کریں)
+const quizData = [
   {
     frage: "Wie hoch ist der gesetzliche MwSt-Satz für innerstädtische Fahrten?",
     antworten: ["19%", "7%", "0%"],
@@ -43,24 +45,72 @@ const quiz = [
 
 function loadQuiz() {
   const container = document.getElementById("quiz-container");
-  quiz.forEach((q, i) => {
+  container.innerHTML = '';  // reset
+  quizData.forEach((q, i) => {
     const div = document.createElement("div");
-    div.innerHTML = `<p><b>Frage ${i + 1}:</b> ${q.frage}</p>` +
-      q.antworten.map((a, j) =>
-        `<label><input type="radio" name="q${i}" value="${j}"> ${a}</label><br>`).join("");
+    div.innerHTML = `<p><b>Frage ${i+1}:</b> ${q.frage}</p>` +
+      q.antworten.map((a,j)=>
+        `<label><input type="radio" name="q${i}" value="${j}"> ${a}</label><br>`
+      ).join("");
     container.appendChild(div);
   });
 }
 
-function showResult() {
+function showQuizResult() {
   let correct = 0;
-  quiz.forEach((q, i) => {
-    const selected = document.querySelector(`input[name=q${i}]:checked`);
-    if (selected && parseInt(selected.value) === q.korrekt) correct++;
+  quizData.forEach((q,i)=>{
+    const sel = document.querySelector(`input[name=q${i}]:checked`);
+    if (sel && +sel.value === q.korrekt) correct++;
   });
-  const result = document.getElementById("result");
-  result.innerHTML = `<p>Ergebnis: ${correct} von ${quiz.length}</p>`;
-  quiz.forEach((q, i) => {
-    result.innerHTML += `<p><b>Frage ${i + 1}:</b> ${q.erklaerung}</p>`;
+  const res = document.getElementById("quiz-result");
+  res.innerHTML = `<p>Ergebnis: ${correct} / ${quizData.length}</p>`;
+  quizData.forEach((q,i)=>{
+    res.innerHTML += `<p><b>Frage ${i+1}:</b> ${q.erklaerung}</p>`;
   });
+}
+
+// 5) Prüfung Starten: testFiles سے Random JSON لوڈ کرنا
+const testFiles = [
+  "test_01.json",
+  "test_02.json",
+  "test_taxi_pruefung_1.json"
+];
+
+function startPruefung() {
+  const file = testFiles[Math.floor(Math.random()*testFiles.length)];
+  fetch(file)
+    .then(r=>r.json())
+    .then(data=>{
+      renderTest(data);
+    })
+    .catch(e=>{
+      alert("Test لوڈ کرنے میں مسئلہ: " + e);
+    });
+}
+
+// test.json کو render کرنے کا basic فنکشن
+function renderTest(data) {
+  const container = document.getElementById("test-container");
+  container.innerHTML = '';
+  data.forEach((q,i)=>{
+    const div = document.createElement("div");
+    div.classList.add("question");
+    div.innerHTML = `<p><b>Q${i+1}:</b> ${q.frage}</p>` +
+      q.antworten.map((a,j)=>
+        `<label><input type="radio" name="tq${i}" value="${j}"> ${a}</label><br>`
+      ).join("") +
+      `<button onclick="checkTestAnswer(${i}, ${q.korrekt})">Antwort prüfen</button>` +
+      `<span id="tresult${i}"></span>`;
+    container.appendChild(div);
+  });
+}
+
+function checkTestAnswer(qIndex, kor) {
+  const sel = document.querySelector(`input[name=tq${qIndex}]:checked`);
+  const span = document.getElementById(`tresult${qIndex}`);
+  if (!sel) {
+    span.textContent = " آپ نے جواب نہیں دیا!";
+    return;
+  }
+  span.textContent = (+sel.value===kor) ? "✅ درست!" : "❌ غلط!";
 }

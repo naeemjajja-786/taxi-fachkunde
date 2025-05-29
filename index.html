@@ -1,9 +1,21 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fachkundeprüfung für Taxi und Mietwagen Unternehmersschein</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/mathquill@0.10.1/build/mathquill.min.js"></script>
+</head>
+<body>
+  <header>
+
 <!-- body کے اندر navigation اور sections -->
 <nav>
   <button onclick="showSection('lern')">Lernmaterial</button>
   <button onclick="showSection('math')">Mathe Eingabe</button>
   <button onclick="showSection('quiz')">Quiz</button>
-  <button onclick="showSection('pruefung')">Prüfung Starten</button>
+  <button onclick="showSection('pruefung')">Prüfungen</button>
 </nav>
 
 <div id="lern" class="section hidden">
@@ -37,3 +49,11 @@
   <button onclick="startPruefung()">Test starten</button>
   <div id="test-container"></div>
 </div>
+ </section>
+  </main>
+  <footer>
+    <p>© 2025 Prüfungsvorbereitung für Taxi-Unternehmersschein</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

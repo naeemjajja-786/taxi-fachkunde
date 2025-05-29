@@ -72,8 +72,8 @@ function showQuizResult() {
 // 5) Prüfung Starten: testFiles سے Random JSON لوڈ کرنا
 const testFiles = [
   "test_01.json",
-  "test_02.json",
-  "test_taxi_pruefung_1.json"
+  "prüfung-01.json",
+  "prüfung_01.json"
 ];
 
 function startPruefung() {

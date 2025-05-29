@@ -14,9 +14,6 @@ function loadQuiz() {
     .then(response => response.json())
     .then(data => {
       console.log("Quiz geladen:", data);
-      // یہاں آپ چاہیں تو کوئی UI دکھائیں یا اگلا صفحہ کھولیں
-      alert("Prüfung 01 کامیابی سے لوڈ ہو گئی!");
-      // مثال کے طور پر اگلے صفحے پر بھیجنے کے لیے:
       // window.location.href = 'quiz.html';
     })
     .catch(error => {

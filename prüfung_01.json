@@ -1,0 +1,112 @@
+[
+  {
+    "frage": "In welchem Fall liegt ein Verstoß gegen die Betriebspflicht im Taxiverkehr vor?",
+    "antworten": [
+      "Das Taxi ist nachts nicht im Einsatz.",
+      "Der Fahrer lehnt eine Fahrt ins benachbarte Pflichtfahrgebiet ab.",
+      "Das Fahrzeug wird privat genutzt.",
+      "Das Taxi fährt nur bei Online-Vorbestellungen."
+    ],
+    "korrekt": 1,
+    "erklaerung": "Die Betriebspflicht gilt für genehmigte Betriebszeiten im Pflichtfahrgebiet."
+  },
+  {
+    "frage": "Welche Kombination ist gesetzlich für den Mietwagenverkehr verpflichtend?",
+    "antworten": [
+      "Fahrten ohne Auftrag, aber mit Fahrtenbuch",
+      "Rückkehrpflicht, keine Tarifpflicht",
+      "Betriebspflicht und Fahrtenbuchpflicht",
+      "Taxameterpflicht und Wartepflicht"
+    ],
+    "korrekt": 1,
+    "erklaerung": "Mietwagen müssen nach jeder Fahrt zum Betriebssitz zurückkehren und unterliegen keiner Tarifpflicht."
+  },
+  {
+    "frage": "Welche Aussage trifft auf die Ordnungsnummer eines Taxis zu?",
+    "antworten": [
+      "Sie ist freiwillig.",
+      "Sie kennzeichnet das Taxi eindeutig im Betrieb.",
+      "Sie ist identisch mit dem Kennzeichen.",
+      "Sie wird vom Finanzamt vergeben."
+    ],
+    "korrekt": 1,
+    "erklaerung": "Die Ordnungsnummer ist verpflichtend und dient der eindeutigen Fahrzeugidentifikation."
+  },
+  {
+    "frage": "Welche Einnahmen gelten als steuerpflichtig in der EÜR eines Taxiunternehmers?",
+    "antworten": [
+      "Nur Barumsätze",
+      "Alle Umsätze inkl. Trinkgeld",
+      "Alle Einnahmen ohne MwSt",
+      "Alle betrieblich erzielten Einnahmen"
+    ],
+    "korrekt": 3,
+    "erklaerung": "Jede betrieblich erzielte Einnahme ist steuerlich zu erfassen."
+  },
+  {
+    "frage": "Was gehört nicht zu den genehmigungspflichtigen Voraussetzungen eines Taxiunternehmers?",
+    "antworten": [
+      "Fachliche Eignung",
+      "Finanzielle Leistungsfähigkeit",
+      "Mitgliedschaft in der Taxizentrale",
+      "Persönliche Zuverlässigkeit"
+    ],
+    "korrekt": 2,
+    "erklaerung": "Die Mitgliedschaft in einer Zentrale ist freiwillig und keine Genehmigungsvoraussetzung."
+  },
+  {
+    "frage": "Welche technischen Anforderungen gelten laut BOKraft für Taxis?",
+    "antworten": [
+      "Navigationsgerät, Kindersitz, Klimaanlage",
+      "Alarmanlage, Ordnungsnummer, Fahrpreisanzeiger",
+      "Rückfahrkamera, Head-Up-Display, Dashcam",
+      "Abgasnachweis, TÜV-Zulassung, Feuerlöscher"
+    ],
+    "korrekt": 1,
+    "erklaerung": "Die BOKraft schreibt Sicherheits- und Fahrpreiskennzeichnung vor."
+  },
+  {
+    "frage": "Wann ist ein Unternehmer buchführungspflichtig?",
+    "antworten": [
+      "Ab 22.000 € Gewinn im Jahr",
+      "Ab 60.000 € Umsatz im Monat",
+      "Bei Eintragung ins Handelsregister",
+      "Immer ab dem 1. Fahrzeug"
+    ],
+    "korrekt": 2,
+    "erklaerung": "Die Buchführungspflicht ergibt sich z. B. durch Eintragung als Kaufmann."
+  },
+  {
+    "frage": "Welche Pflicht gilt nur für Taxis im Unterschied zu Mietwagen?",
+    "antworten": [
+      "Rückkehrpflicht",
+      "Betriebspflicht",
+      "Abrechnungspflicht",
+      "Umsatzsteuerpflicht"
+    ],
+    "korrekt": 1,
+    "erklaerung": "Nur Taxis müssen regelmäßig einsatzbereit sein (Betriebspflicht)."
+  },
+  {
+    "frage": "Welche Maßnahmen erhöhen die Sicherheit im Straßenverkehr für Taxifahrer?",
+    "antworten": [
+      "Tempoüberschreitung vermeiden, Sekundenschlaf fördern",
+      "Fahrtenbuch führen, Kunden nicht anschnallen",
+      "Schulung zu Unfallvermeidung, sichere Fahrzeugausstattung",
+      "Keine Nachtfahrten übernehmen"
+    ],
+    "korrekt": 2,
+    "erklaerung": "Schulungen und Technik verbessern Sicherheit."
+  },
+  {
+    "frage": "Welche Aussage zum grenzüberschreitenden Verkehr ist korrekt?",
+    "antworten": [
+      "In jedem EU-Land darf frei befördert werden.",
+      "Die Rückfahrt mit neuen Fahrgästen ist immer erlaubt.",
+      "Es gelten nationale Genehmigungsvorschriften.",
+      "Nur Taxis mit E-Kennzeichen dürfen über Grenzen fahren."
+    ],
+    "korrekt": 2,
+    "erklaerung": "Grenzüberschreitende Beförderung erfordert zusätzliche Genehmigungen."
+  }
+]

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Taxi-Unternehmers Vorbereitung</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/mathquill@0.10.1/build/mathquill.min.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Taxi-Unternehmers Vorbereitung</h1>
+    <nav>
+      <button onclick="showSection('pdf')">📁 Lernmaterial</button>
+      <button onclick="showSection('quiz')">🧠 Quiz</button>
+      <button onclick="showSection('math')">🧮 Mathe Eingabe</button>
+    </nav>
+  </header>
+  <main>
+    <section id="pdf" class="section">
+      <h2>Lernmaterial (PDF-Inhalte)</h2>
+      <p><b>DE:</b> Die Umsatzsteuer für innerstädtische Fahrten beträgt 7%.</p>
+      <p class="urdu">اردو: شہر کے اندر ٹیکسی کرایہ پر 7% سیلز ٹیکس لاگو ہوتا ہے۔</p>
+    </section>
+    <section id="quiz" class="section hidden">
+      <h2>Quiz</h2>
+      <div id="quiz-container"></div>
+      <button onclick="showResult()">Ergebnis anzeigen</button>
+      <div id="result"></div>
+    </section>
+    <section id="math" class="section hidden">
+      <h2>Mathematische Eingabe</h2>
+      <div id="math-field" class="mathquill-editable"></div>
+    </section>
+  </main>
+  <footer>
+    <p>© 2025 Taxi-Unternehmers Vorbereitung</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

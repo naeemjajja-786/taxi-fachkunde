@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Unternehmerprüfung – Teilprüfung I & II</title>
+<meta charset="UTF-8">
+<style>
+body { font-family: sans-serif; }
+.question { margin-bottom: 20px; }
+#result_q1, #result_q2, #result_q3, #result_q4, #result_q5, #result_q6, #result_q7, #result_q8, #result_q9, #result_q10 { font-weight: bold; margin-left: 10px; }
+.open-question textarea { width: 100%; min-height: 100px; margin-top: 5px; }
+.calculation-result { margin-top: 10px; font-weight: bold; }
+.score { font-size: 1.2em; font-weight: bold; margin-top: 20px; }
+.explanation { font-style: italic; color: #555; }
+.suggested-answers { margin-top: 30px; border-top: 1px solid #ccc; padding-top: 20px; }
+.suggested-answers h3 { margin-bottom: 10px; }
+.suggested-answer-item { margin-bottom: 15px; }
+</style>
+</head>
+<body>
+
+<h1>Unternehmerprüfung – Teilprüfung I & II</h1>
+<p><strong>Anleitung:</strong> Lesen Sie jede Frage sorgfältig durch und beantworten Sie sie nach bestem Wissen und Gewissen. Die Bestehensgrenze liegt bei 50% der Gesamtpunktzahl.</p>
+
+<h2>Teilprüfung I – Multiple Choice (30 Punkte)</h2>
+
+<div class="question">
+    <p><strong>1. In welchem Fall liegt ein Verstoß gegen die Betriebspflicht im Taxiverkehr vor? (3 Punkte)</strong></p>
+    <label><input type="radio" name="q1" value="a"> a) Das Taxi ist nachts nicht im Einsatz.</label><br>
+    <label><input type="radio" name="q1" value="b"> b) Der Fahrer lehnt eine Fahrt ins benachbarte Pflichtfahrgebiet ab.</label><br>
+    <label><input type="radio" name="q1" value="c"> c) Das Fahrzeug wird privat genutzt.</label><br>
+    <label><input type="radio" name="q1" value="d"> d) Das Taxi fährt nur bei Online-Vorbestellungen.</label><br>
+    <button onclick="checkAnswer('q1', 'b')">Antworten</button>
+    <span id="result_q1"></span>
+    <p class="explanation">Erklärung: Die Betriebspflicht gilt für genehmigte Betriebszeiten im Pflichtfahrgebiet.</p>
+</div>
+
+<div class="question">
+    <p><strong>2. Welche Kombination ist gesetzlich für den Mietwagenverkehr verpflichtend? (3 Punkte)</strong></p>
+    <label><input type="radio" name="q2" value="a"> a) Fahrten ohne Auftrag, aber mit Fahrtenbuch</label><br>
+    <label><input type="radio" name="q2" value="b"> b) Rückkehrpflicht, keine Tarifpflicht</label><br>
+    <label><input type="radio" name="q2" value="c"> c) Betriebspflicht und Fahrtenbuchpflicht</label><br>
+    <label><input type="radio" name="q2" value="d"> d) Taxameterpflicht und Wartepflicht</label><br>
+    <button onclick="checkAnswer('q2', 'b')">Antworten</button>
+    <span id="result_q2"></span>
+     <p class="explanation">Erklärung: Mietwagen müssen nach jeder Fahrt zum Betriebssitz zurückkehren und unterliegen keiner Tarifpflicht.</p>
+</div>
+
+<div class="question">
+    <p><strong>3. Welche Aussage trifft auf die Ordnungsnummer eines Taxis zu? (3 Punkte)</strong></p>
+    <label><input type="radio" name="q3" value="a"> a) Sie ist freiwillig.</label><br>
+    <label><input type="radio" name="q3" value="b"> b) Sie kennzeichnet das Taxi eindeutig im Betrieb.</label><br>
+    <label><input type="radio" name="q3" value="c"> c) Sie ist identisch mit dem Kennzeichen.</label><br>
+    <label><input type="radio" name="q3" value="d"> d) Sie wird vom Finanzamt vergeben.</label><br>
+    <button onclick="checkAnswer('q3', 'b')">Antworten</button>
+    <span id="result_q3"></span>
+     <p class="explanation">Erklärung: Die Ordnungsnummer ist verpflichtend und dient der eindeutigen Fahrzeugidentifikation.</p>
+</div>
+
+<div class="question">
+    <p><strong>4. Welche Einnahmen gelten als steuerpflichtig in der EÜR eines Taxiunternehmers? (3 Punkte)</strong></p>
+    <label><input type="radio" name="q4" value="a"> a) Nur Barumsätze</label><br>
+    <label><input type="radio" name="q4" value="b"> b) Alle Umsätze inkl. Trinkgeld</label><br>
+    <label><input type="radio" name="q4" value="c"> c) Alle Einnahmen ohne MwSt</label><br>
+    <label><input type="radio" name="q4" value="d"> d) Alle betrieblich erzielten Einnahmen</label><br>
+    <button onclick="checkAnswer('q4', 'd')">Antworten</button>
+    <span id="result_q4"></span>
+     <p class="explanation">Erklärung: Jede betrieblich erzielte Einnahme ist steuerlich zu erfassen.</p>
+</div>
+
+<div class="question">
+    <p><strong>5. Was gehört nicht zu den genehmigungspflichtigen Voraussetzungen eines Taxiunternehmers? (3 Punkte)</strong></p>
+    <label><input type="radio" name="q5" value="a"> a) Fachliche Eignung</label><br>
+    <label><input type="radio" name="q5" value="b"> b) Finanzielle Leistungsfähigkeit</label><br>
+    <label><input type="radio" name="q5" value="c"> c) Mitgliedschaft in der Taxizentrale</label><br>
+    <label><input type="radio" name="q5" value="d"> d) Persönliche Zuverlässigkeit</label><br>
+    <button onclick="checkAnswer('q5', 'c')">Antworten</button>
+    <span id="result_q5"></span>
+     <p class="explanation">Erklärung: Die Mitgliedschaft in einer Zentrale ist freiwillig und keine Genehmigungsvoraussetzung.</p>
+</div>
+
+<div class="question">
+    <p><strong>6. Welche technischen Anforderungen gelten laut BOKraft für Taxis? (3 Punkte)</strong></p>
+    <label><input type="radio" name="q6" value="a"> a) Navigationsgerät, Kindersitz, Klimaanlage</label><br>
+    <label><input type="radio" name="q6" value="b"> b) Alarmanlage, Ordnungsnummer, Fahrpreisanzeiger</label><br>
+    <label><input type="radio" name="q6" value="c"> c) Rückfahrkamera, Head-Up-Display, Dashcam</label><br>
+    <label><input type="radio" name="q6" value="d"> d) Abgasnachweis, TÜV-Zulassung, Feuerlöscher</label><br>
+    <button onclick="checkAnswer('q6', 'b')">Antworten</button>
+    <span id="result_q6"></span>
+     <p class="explanation">Erklärung: Die BOKraft schreibt Sicherheits- und Fahrpreiskennzeichnung vor.</p>
+</div>
+
+<div class="question">
+    <p><strong>7. Wann ist ein Unternehmer buchführungspflichtig? (3 Punkte)</strong></p>
+    <label><input type="radio" name="q7" value="a"> a) Ab 22.000 € Gewinn im Jahr</label><br>
+    <label><input type="radio" name="q7" value="b"> b) Ab 60.000 € Umsatz im Monat</label><br>
+    <label><input type="radio" name="q7" value="c"> c) Bei Eintragung ins Handelsregister</label><br>
+    <label><input type="radio" name="q7" value="d"> d) Immer ab dem 1. Fahrzeug</label><br>
+    <button onclick="checkAnswer('q7', 'c')">Antworten</button>
+    <span id="result_q7"></span>
+     <p class="explanation">Erklärung: Die Buchführungspflicht ergibt sich z. B. durch Eintragung als Kaufmann.</p>
+</div>
+
+<div class="question">
+    <p><strong>8. Welche Pflicht gilt nur für Taxis im Unterschied zu Mietwagen? (3 Punkte)</strong></p>
+    <label><input type="radio" name="q8" value="a"> a) Rückkehrpflicht</label><br>
+    <label><input type="radio" name="q8" value="b"> b) Betriebspflicht</label><br>
+    <label><input type="radio" name="q8" value="c"> c) Abrechnungspflicht</label><br>
+    <label><input type="radio" name="q8" value="d"> d) Umsatzsteuerpflicht</label><br>
+    <button onclick="checkAnswer('q8', 'b')">Antworten</button>
+    <span id="result_q8"></span>
+     <p class="explanation">Erklärung: Nur Taxis müssen regelmäßig einsatzbereit sein (Betriebspflicht).</p>
+</div>
+
+<div class="question">
+    <p><strong>9. Welche Maßnahmen erhöhen die Sicherheit im Straßenverkehr für Taxifahrer? (3 Punkte)</strong></p>
+    <label><input type="radio" name="q9" value="a"> a) Tempoüberschreitung vermeiden, Sekundenschlaf fördern</label><br>
+    <label><input type="radio" name="q9" value="b"> b) Fahrtenbuch führen, Kunden nicht anschnallen</label><br>
+    <label><input type="radio" name="q9" value="c"> c) Schulung zu Unfallvermeidung, sichere Fahrzeugausstattung</label><br>
+    <label><input type="radio" name="q9" value="d"> d) Keine Nachtfahrten übernehmen</label><br>
+    <button onclick="checkAnswer('q9', 'c')">Antworten</button>
+    <span id="result_q9"></span>
+     <p class="explanation">Erklärung: Schulungen und Technik verbessern Sicherheit.</p>
+</div>
+
+<div class="question">
+    <p><strong>10. Welche Aussage zum grenzüberschreitenden Verkehr ist korrekt? (3 Punkte)</strong></p>
+    <label><input type="radio" name="q10" value="a"> a) In jedem EU-Land darf frei befördert werden.</label><br>
+    <label><input type="radio" name="q10" value="b"> b) Die Rückfahrt mit neuen Fahrgästen ist immer erlaubt.</label><br>
+    <label><input type="radio" name="q10" value="c"> c) Es gelten nationale Genehmigungsvorschriften.</label><br>
+    <label><input type="radio" name="q10" value="d"> d) Nur Taxis mit E-Kennzeichen dürfen über Grenzen fahren.</label><br>
+    <button onclick="checkAnswer('q10', 'c')">Antworten</button>
+    <span id="result_q10"></span>
+     <p class="explanation">Erklärung: Grenzüberschreitende Beförderung erfordert zusätzliche Genehmigungen.</p>
+</div>
+
+<h2>Teilprüfung II – Offene Fragen (52,5 Punkte)</h2>
+
+<div class="question open-question">
+    <p><strong>1. Fallbeispiel – 20 Punkte</strong><br>
+    Ein Taxiunternehmer beschäftigt zwei Fahrer. Einer fällt krankheitsbedingt aus.<br>
+        •	Wie wirkt sich das auf Betriebspflicht und Personalplanung aus?<br>
+        •	Was muss der Unternehmer beachten, wenn er kurzfristig Ersatzpersonal einstellt?</p>
+    <textarea name="q11"></textarea>
+</div>
+
+<div class="question open-question">
+    <p><strong>2. Kalkulation – 15 Punkte</strong><br>
+    Bruttoumsatz: 11.305 € (inkl. 19 % USt)<br>
+    Betriebsausgaben (netto): 6.800 €<br><br>
+    Berechnen Sie:<br>
+        •	Netto-Umsatz<br>
+        •	Umsatzsteuer<br>
+        •	Gewinn<br>
+        •	Einkommensteuer bei 30 %</p>
+    <textarea name="q12"></textarea>
+    <div id="calculation_result" class="calculation-result"></div>
+    <button onclick="calculate()">Berechnen</button>
+</div>
+
+<div class="question open-question">
+    <p><strong>3. Was ist ein Pflichtfahrgebiet und wer legt es fest? (3,5 Punkte)</strong></p>
+    <textarea name="q13"></textarea>
+</div>
+
+<div class="question open-question">
+    <p><strong>4. Was regelt die BOKraft in Bezug auf technische Vorschriften? (3,5 Punkte)</strong></p>
+    <textarea name="q14"></textarea>
+</div>
+
+<div class="question open-question">
+    <p><strong>5. Nennen Sie zwei Möglichkeiten, wie ein Taxiunternehmen Kosten senken kann. (3,5 Punkte)</strong></p>
+    <textarea name="q15"></textarea>
+</div>
+
+<div class="question open-question">
+    <p><strong>6. Welche steuerlichen Pflichten hat ein Unternehmer mit Einnahmen über 22.000 € jährlich? (3,5 Punkte)</strong></p>
+    <textarea name="q16"></textarea>
+</div>
+
+<div class="question open-question">
+    <p><strong>7. Welche Unterlagen muss ein Taxiunternehmer im Fahrzeug mitführen? (3,5 Punkte)</strong></p>
+    <textarea name="q17"></textarea>
+</div>
+
+<div class="score">
+    <p id="score">Gesamtpunktzahl (Teil I): 0 / 30</p>
+    <p id="passing-status"></p>
+</div>
+
+<div class="suggested-answers">
+    <h3>Mögliche Antworten für Teilprüfung II</h3>
+    <div class="suggested-answer-item">
+        <strong>1. Fallbeispiel – 20 Punkte</strong>
+        <p>• Auswirkung auf Betriebspflicht: Der Unternehmer muss sicherstellen, dass weiterhin ein ausreichendes Angebot besteht, auch mit reduziertem Personal. Dies kann zu längeren Wartezeiten für Kunden führen oder dazu zwingen, Aufträge abzulehnen, was einen Verstoß gegen die Betriebspflicht darstellen kann, wenn das Angebot signifikant eingeschränkt ist.<br>
+           • Auswirkung auf Personalplanung: Kurzfristig muss der Unternehmer versuchen, den Ausfall zu kompensieren, z.B. durch Überstunden des verbleibenden Fahrers (unter Beachtung der Arbeitszeitgesetze) oder durch die Aktivierung von резервным Fahrern, falls vorhanden.<br>
+           • Beachtung bei kurzfristiger Einstellung: Der Unternehmer muss sicherstellen, dass auch kurzfristig eingestelltes Personal alle erforderlichen Lizenzen und Genehmigungen besitzt (Fahrgastbeförderungsschein), ausreichend eingewiesen ist und die lokalen Vorschriften kennt. Arbeitsrechtliche Aspekte (z.B. befristeter Arbeitsvertrag) müssen ebenfalls beachtet werden.</p>
+    </div>
+    <div class="suggested-answer-item">
+        <strong>2. Kalkulation – 15 Punkte</strong>
+        <p>• Netto-Umsatz: 11.305 € / 1,19 ≈ 9.500 €<br>
+           • Umsatzsteuer: 11.305 € - 9.500 € = 1.805 €<br>
+           • Gewinn: 9.500 € - 6.800 € = 2.700 €<br>
+           • Einkommensteuer bei 30 %: 2.700 € * 0,30 = 810 €</p>
+    </div>
+    <div class="suggested-answer-item">
+        <strong>3. Was ist ein Pflichtfahrgebiet und wer legt es fest? (

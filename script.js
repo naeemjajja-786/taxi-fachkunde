@@ -9,8 +9,23 @@ window.onload = function () {
   MQ.MathField(document.getElementById('math-field'), {
     spaceBehavesLikeTab: true
   });
+function loadQuiz() {
+  fetch('https://raw.githubusercontent.com/naeemjajja-786/taxi-fachkunde/main/prüfung_01.json')
+    .then(response => response.json())
+    .then(data => {
+      console.log("Quiz geladen:", data);
+      // یہاں آپ چاہیں تو کوئی UI دکھائیں یا اگلا صفحہ کھولیں
+      alert("Prüfung 01 کامیابی سے لوڈ ہو گئی!");
+      // مثال کے طور پر اگلے صفحے پر بھیجنے کے لیے:
+      // window.location.href = 'quiz.html';
+    })
+    .catch(error => {
+      console.error("Fehler beim Laden der JSON-Datei:", error);
+      alert("Quiz لوڈ کرنے میں مسئلہ آیا!");
+    });
+}
+</script>
 
-  loadQuiz();
 };
 
 // Quiz Data

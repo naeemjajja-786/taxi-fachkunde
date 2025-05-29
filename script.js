@@ -71,7 +71,6 @@ function showQuizResult() {
 
 // 5) Prüfung Starten: testFiles سے Random JSON لوڈ کرنا
 const testFiles = [
-  "test_01.json",
   "prüfung-01.json",
   "prüfung_01.json"
 ];

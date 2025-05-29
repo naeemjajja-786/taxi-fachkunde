@@ -1,41 +1,39 @@
-<!DOCTYPE html>
-<html lang="de">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> Fachkundeprüfung für Taxi und Mietwagen Unternehmerschein</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="https://cdn.jsdelivr.net/npm/mathquill@0.10.1/build/mathquill.min.js"></script>
-</head>
-<body>
-  <header>
-    <h1>Fachkundeprüfung für Taxi und Mietwagen Unternehmerschein</h1>
-    <nav>
-      <button onclick="showSection('pdf')">📁 Lernmaterial</button>
-      <button onclick="showSection('math')">🧮 Mathe Eingabe</button>
-      <button onclick="showSection('quiz')">🧠 Quiz</button>
-      <button onclick="loadRandomPrüfung()">📝 Prüfung starten</button>
+<!-- body کے اندر navigation اور sections -->
+<nav>
+  <button onclick="showSection('lern')">Lernmaterial</button>
+  <button onclick="showSection('math')">Mathe Eingabe</button>
+  <button onclick="showSection('quiz')">Quiz</button>
+  <button onclick="showSection('pruefung')">Prüfung Starten</button>
+</nav>
 
-    </nav>
-  </header>
-  <main>
-    <section id="pdf" class="section">
-      <h2>Lernmaterial </h2>
-    </section>
-    <section id="quiz" class="section hidden">
-      <h2>Quiz</h2>
-      <div id="quiz-container"></div>
-      <button onclick="showResult()">Ergebnis anzeigen</button>
-      <div id="result"></div>
-    </section>
-    <section id="math" class="section hidden">
-      <h2>Mathematische Eingabe</h2>
-      <div id="math-field" class="mathquill-editable"></div>
-    </section>
-  </main>
-  <footer>
-    <p>© 2025 Taxi und Mietwagen Unternehmerschein</p>
-  </footer>
-  <script src="script.js"></script>
-</body>
-</html>
+<div id="lern" class="section hidden">
+  <h2>Lernmaterial</h2>
+  <button onclick="toggleLanguage('urdu')">اردو</button>
+  <button onclick="toggleLanguage('de')">Deutsch</button>
+  <div id="content-urdu" class="hidden">
+    <p>یہاں اردو ٹیکسٹ آئے گا…</p>
+  </div>
+  <div id="content-de" class="hidden">
+    <p>Hier kommt deutscher Text…</p>
+  </div>
+</div>
+
+<div id="math" class="section hidden">
+  <h2>Math</h2>
+  <div id="math-field"></div>
+  <!-- بعد میں سوالات یہاں append کریں -->
+  <div id="math-questions"></div>
+</div>
+
+<div id="quiz" class="section hidden">
+  <h2>Quiz</h2>
+  <div id="quiz-container"></div>
+  <button onclick="showQuizResult()">Check Answers</button>
+  <div id="quiz-result"></div>
+</div>
+
+<div id="pruefung" class="section hidden">
+  <h2>Prüfung Starten</h2>
+  <button onclick="startPruefung()">Test starten</button>
+  <div id="test-container"></div>
+</div>

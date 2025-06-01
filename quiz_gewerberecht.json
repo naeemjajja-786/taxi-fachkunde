@@ -1,552 +1,112 @@
 [
   {
-    "frage": "Was beschreibt die Gesellschaftsform im Gewerberecht – Frage 1?",
+    "frage": "Welche Gesellschaft benötigt keine Eintragung ins Handelsregister?",
     "antworten": [
-      "Einzelunternehmen mit voller Haftung (1)",
-      "GbR mit freiwilliger Eintragung (1)",
-      "GmbH mit Mindestkapital von 25.000 EUR (1)",
-      "UG ohne Stammkapitalpflicht (1)"
-    ],
-    "korrekt": 1,
-    "erklaerung": "اردو وضاحت: Gewerberecht میں مختلف کمپنی فارمز کی وضاحت ضروری ہے۔ سوال 1 میں یہی پوائنٹ سمجھایا گیا ہے۔"
-  },
-  {
-    "frage": "Was beschreibt die Gesellschaftsform im Gewerberecht – Frage 2?",
-    "antworten": [
-      "Einzelunternehmen mit voller Haftung (2)",
-      "GbR mit freiwilliger Eintragung (2)",
-      "GmbH mit Mindestkapital von 25.000 EUR (2)",
-      "UG ohne Stammkapitalpflicht (2)"
-    ],
-    "korrekt": 2,
-    "erklaerung": "اردو وضاحت: Gewerberecht میں مختلف کمپنی فارمز کی وضاحت ضروری ہے۔ سوال 2 میں یہی پوائنٹ سمجھایا گیا ہے۔"
-  },
-  {
-    "frage": "Was beschreibt die Gesellschaftsform im Gewerberecht – Frage 3?",
-    "antworten": [
-      "Einzelunternehmen mit voller Haftung (3)",
-      "GbR mit freiwilliger Eintragung (3)",
-      "GmbH mit Mindestkapital von 25.000 EUR (3)",
-      "UG ohne Stammkapitalpflicht (3)"
-    ],
-    "korrekt": 3,
-    "erklaerung": "اردو وضاحت: Gewerberecht میں مختلف کمپنی فارمز کی وضاحت ضروری ہے۔ سوال 3 میں یہی پوائنٹ سمجھایا گیا ہے۔"
-  },
-  {
-    "frage": "Was beschreibt die Gesellschaftsform im Gewerberecht – Frage 4?",
-    "antworten": [
-      "Einzelunternehmen mit voller Haftung (4)",
-      "GbR mit freiwilliger Eintragung (4)",
-      "GmbH mit Mindestkapital von 25.000 EUR (4)",
-      "UG ohne Stammkapitalpflicht (4)"
+      "Einzelunternehmen",
+      "GmbH",
+      "AG",
+      "UG"
     ],
     "korrekt": 0,
-    "erklaerung": "اردو وضاحت: Gewerberecht میں مختلف کمپنی فارمز کی وضاحت ضروری ہے۔ سوال 4 میں یہی پوائنٹ سمجھایا گیا ہے۔"
+    "erklaerung": "اردو وضاحت: Einzelunternehmen کی Handelsregister-Eintragung freiwillig ہے، لازمی نہیں۔"
   },
   {
-    "frage": "Was beschreibt die Gesellschaftsform im Gewerberecht – Frage 5?",
+    "frage": "Welche Aussage zu Freiberuflern ist richtig?",
     "antworten": [
-      "Einzelunternehmen mit voller Haftung (5)",
-      "GbR mit freiwilliger Eintragung (5)",
-      "GmbH mit Mindestkapital von 25.000 EUR (5)",
-      "UG ohne Stammkapitalpflicht (5)"
-    ],
-    "korrekt": 1,
-    "erklaerung": "اردو وضاحت: Gewerberecht میں مختلف کمپنی فارمز کی وضاحت ضروری ہے۔ سوال 5 میں یہی پوائنٹ سمجھایا گیا ہے۔"
-  },
-  {
-    "frage": "Was beschreibt die Gesellschaftsform im Gewerberecht – Frage 6?",
-    "antworten": [
-      "Einzelunternehmen mit voller Haftung (6)",
-      "GbR mit freiwilliger Eintragung (6)",
-      "GmbH mit Mindestkapital von 25.000 EUR (6)",
-      "UG ohne Stammkapitalpflicht (6)"
+      "Sie müssen Gewerbesteuer zahlen",
+      "Sie melden ihr Gewerbe beim Gewerbeamt an",
+      "Sie gelten nicht als Gewerbetreibende",
+      "Sie müssen IHK-Mitglied sein"
     ],
     "korrekt": 2,
-    "erklaerung": "اردو وضاحت: Gewerberecht میں مختلف کمپنی فارمز کی وضاحت ضروری ہے۔ سوال 6 میں یہی پوائنٹ سمجھایا گیا ہے۔"
+    "erklaerung": "اردو وضاحت: Freiberufler کو Gewerbetreibende نہیں سمجھا جاتا اور Gewerbe anmelden کی ضرورت نہیں۔"
   },
   {
-    "frage": "Was beschreibt die Gesellschaftsform im Gewerberecht – Frage 7?",
+    "frage": "Was versteht man unter einer juristischen Person?",
     "antworten": [
-      "Einzelunternehmen mit voller Haftung (7)",
-      "GbR mit freiwilliger Eintragung (7)",
-      "GmbH mit Mindestkapital von 25.000 EUR (7)",
-      "UG ohne Stammkapitalpflicht (7)"
-    ],
-    "korrekt": 3,
-    "erklaerung": "اردو وضاحت: Gewerberecht میں مختلف کمپنی فارمز کی وضاحت ضروری ہے۔ سوال 7 میں یہی پوائنٹ سمجھایا گیا ہے۔"
-  },
-  {
-    "frage": "Was beschreibt die Gesellschaftsform im Gewerberecht – Frage 8?",
-    "antworten": [
-      "Einzelunternehmen mit voller Haftung (8)",
-      "GbR mit freiwilliger Eintragung (8)",
-      "GmbH mit Mindestkapital von 25.000 EUR (8)",
-      "UG ohne Stammkapitalpflicht (8)"
-    ],
-    "korrekt": 0,
-    "erklaerung": "اردو وضاحت: Gewerberecht میں مختلف کمپنی فارمز کی وضاحت ضروری ہے۔ سوال 8 میں یہی پوائنٹ سمجھایا گیا ہے۔"
-  },
-  {
-    "frage": "Was beschreibt die Gesellschaftsform im Gewerberecht – Frage 9?",
-    "antworten": [
-      "Einzelunternehmen mit voller Haftung (9)",
-      "GbR mit freiwilliger Eintragung (9)",
-      "GmbH mit Mindestkapital von 25.000 EUR (9)",
-      "UG ohne Stammkapitalpflicht (9)"
+      "Ein Mensch mit Rechtsfähigkeit",
+      "Ein Unternehmen mit eigener Rechtspersönlichkeit",
+      "Ein Freiberufler",
+      "Ein Geschäftsführer"
     ],
     "korrekt": 1,
-    "erklaerung": "اردو وضاحت: Gewerberecht میں مختلف کمپنی فارمز کی وضاحت ضروری ہے۔ سوال 9 میں یہی پوائنٹ سمجھایا گیا ہے۔"
+    "erklaerung": "اردو وضاحت: GmbH یا AG ایک juristische Person ہوتی ہے جو قانونی طور پر خود مختار ہے۔"
   },
   {
-    "frage": "Was beschreibt die Gesellschaftsform im Gewerberecht – Frage 10?",
+    "frage": "Welche Rechtsform ist besonders für Startups geeignet?",
     "antworten": [
-      "Einzelunternehmen mit voller Haftung (10)",
-      "GbR mit freiwilliger Eintragung (10)",
-      "GmbH mit Mindestkapital von 25.000 EUR (10)",
-      "UG ohne Stammkapitalpflicht (10)"
-    ],
-    "korrekt": 2,
-    "erklaerung": "اردو وضاحت: Gewerberecht میں مختلف کمپنی فارمز کی وضاحت ضروری ہے۔ سوال 10 میں یہی پوائنٹ سمجھایا گیا ہے۔"
-  },
-  {
-    "frage": "Was beschreibt die Gesellschaftsform im Gewerberecht – Frage 11?",
-    "antworten": [
-      "Einzelunternehmen mit voller Haftung (11)",
-      "GbR mit freiwilliger Eintragung (11)",
-      "GmbH mit Mindestkapital von 25.000 EUR (11)",
-      "UG ohne Stammkapitalpflicht (11)"
-    ],
-    "korrekt": 3,
-    "erklaerung": "اردو وضاحت: Gewerberecht میں مختلف کمپنی فارمز کی وضاحت ضروری ہے۔ سوال 11 میں یہی پوائنٹ سمجھایا گیا ہے۔"
-  },
-  {
-    "frage": "Was beschreibt die Gesellschaftsform im Gewerberecht – Frage 12?",
-    "antworten": [
-      "Einzelunternehmen mit voller Haftung (12)",
-      "GbR mit freiwilliger Eintragung (12)",
-      "GmbH mit Mindestkapital von 25.000 EUR (12)",
-      "UG ohne Stammkapitalpflicht (12)"
-    ],
-    "korrekt": 0,
-    "erklaerung": "اردو وضاحت: Gewerberecht میں مختلف کمپنی فارمز کی وضاحت ضروری ہے۔ سوال 12 میں یہی پوائنٹ سمجھایا گیا ہے۔"
-  },
-  {
-    "frage": "Was beschreibt die Gesellschaftsform im Gewerberecht – Frage 13?",
-    "antworten": [
-      "Einzelunternehmen mit voller Haftung (13)",
-      "GbR mit freiwilliger Eintragung (13)",
-      "GmbH mit Mindestkapital von 25.000 EUR (13)",
-      "UG ohne Stammkapitalpflicht (13)"
+      "AG",
+      "UG (haftungsbeschränkt)",
+      "GbR",
+      "OHG"
     ],
     "korrekt": 1,
-    "erklaerung": "اردو وضاحت: Gewerberecht میں مختلف کمپنی فارمز کی وضاحت ضروری ہے۔ سوال 13 میں یہی پوائنٹ سمجھایا گیا ہے۔"
+    "erklaerung": "اردو وضاحت: UG چھوٹے سرمایہ کے ساتھ کمپنی شروع کرنے کا موزوں طریقہ ہے۔"
   },
   {
-    "frage": "Was beschreibt die Gesellschaftsform im Gewerberecht – Frage 14?",
+    "frage": "Was ist eine Firma im rechtlichen Sinne?",
     "antworten": [
-      "Einzelunternehmen mit voller Haftung (14)",
-      "GbR mit freiwilliger Eintragung (14)",
-      "GmbH mit Mindestkapital von 25.000 EUR (14)",
-      "UG ohne Stammkapitalpflicht (14)"
-    ],
-    "korrekt": 2,
-    "erklaerung": "اردو وضاحت: Gewerberecht میں مختلف کمپنی فارمز کی وضاحت ضروری ہے۔ سوال 14 میں یہی پوائنٹ سمجھایا گیا ہے۔"
-  },
-  {
-    "frage": "Was beschreibt die Gesellschaftsform im Gewerberecht – Frage 15?",
-    "antworten": [
-      "Einzelunternehmen mit voller Haftung (15)",
-      "GbR mit freiwilliger Eintragung (15)",
-      "GmbH mit Mindestkapital von 25.000 EUR (15)",
-      "UG ohne Stammkapitalpflicht (15)"
-    ],
-    "korrekt": 3,
-    "erklaerung": "اردو وضاحت: Gewerberecht میں مختلف کمپنی فارمز کی وضاحت ضروری ہے۔ سوال 15 میں یہی پوائنٹ سمجھایا گیا ہے۔"
-  },
-  {
-    "frage": "Was beschreibt die Gesellschaftsform im Gewerberecht – Frage 16?",
-    "antworten": [
-      "Einzelunternehmen mit voller Haftung (16)",
-      "GbR mit freiwilliger Eintragung (16)",
-      "GmbH mit Mindestkapital von 25.000 EUR (16)",
-      "UG ohne Stammkapitalpflicht (16)"
-    ],
-    "korrekt": 0,
-    "erklaerung": "اردو وضاحت: Gewerberecht میں مختلف کمپنی فارمز کی وضاحت ضروری ہے۔ سوال 16 میں یہی پوائنٹ سمجھایا گیا ہے۔"
-  },
-  {
-    "frage": "Was beschreibt die Gesellschaftsform im Gewerberecht – Frage 17?",
-    "antworten": [
-      "Einzelunternehmen mit voller Haftung (17)",
-      "GbR mit freiwilliger Eintragung (17)",
-      "GmbH mit Mindestkapital von 25.000 EUR (17)",
-      "UG ohne Stammkapitalpflicht (17)"
+      "Der Standort eines Unternehmens",
+      "Der Name eines Unternehmens im Handelsregister",
+      "Die Abteilung der Buchhaltung",
+      "Die Kundenkartei"
     ],
     "korrekt": 1,
-    "erklaerung": "اردو وضاحت: Gewerberecht میں مختلف کمپنی فارمز کی وضاحت ضروری ہے۔ سوال 17 میں یہی پوائنٹ سمجھایا گیا ہے۔"
+    "erklaerung": "اردو وضاحت: Firma قانونی طور پر ایک رجسٹر شدہ کمپنی کا نام ہے، نہ کہ مقام یا محکمہ۔"
   },
   {
-    "frage": "Was beschreibt die Gesellschaftsform im Gewerberecht – Frage 18?",
+    "frage": "Welches Merkmal trifft auf die GbR zu?",
     "antworten": [
-      "Einzelunternehmen mit voller Haftung (18)",
-      "GbR mit freiwilliger Eintragung (18)",
-      "GmbH mit Mindestkapital von 25.000 EUR (18)",
-      "UG ohne Stammkapitalpflicht (18)"
+      "Kapitalgesellschaft mit Eintragungspflicht",
+      "Haftungsbeschränkung",
+      "Einfach zu gründen, keine Eintragungspflicht",
+      "Börsennotiert"
     ],
     "korrekt": 2,
-    "erklaerung": "اردو وضاحت: Gewerberecht میں مختلف کمپنی فارمز کی وضاحت ضروری ہے۔ سوال 18 میں یہی پوائنٹ سمجھایا گیا ہے۔"
+    "erklaerung": "اردو وضاحت: GbR آسانی سے بغیر رجسٹریشن کے بنائی جا سکتی ہے اور اس میں ذاتی ذمہ داری ہوتی ہے۔"
   },
   {
-    "frage": "Was beschreibt die Gesellschaftsform im Gewerberecht – Frage 19?",
+    "frage": "Welche Rechtsform ist zur Eintragung im Handelsregister verpflichtet?",
     "antworten": [
-      "Einzelunternehmen mit voller Haftung (19)",
-      "GbR mit freiwilliger Eintragung (19)",
-      "GmbH mit Mindestkapital von 25.000 EUR (19)",
-      "UG ohne Stammkapitalpflicht (19)"
-    ],
-    "korrekt": 3,
-    "erklaerung": "اردو وضاحت: Gewerberecht میں مختلف کمپنی فارمز کی وضاحت ضروری ہے۔ سوال 19 میں یہی پوائنٹ سمجھایا گیا ہے۔"
-  },
-  {
-    "frage": "Was beschreibt die Gesellschaftsform im Gewerberecht – Frage 20?",
-    "antworten": [
-      "Einzelunternehmen mit voller Haftung (20)",
-      "GbR mit freiwilliger Eintragung (20)",
-      "GmbH mit Mindestkapital von 25.000 EUR (20)",
-      "UG ohne Stammkapitalpflicht (20)"
-    ],
-    "korrekt": 0,
-    "erklaerung": "اردو وضاحت: Gewerberecht میں مختلف کمپنی فارمز کی وضاحت ضروری ہے۔ سوال 20 میں یہی پوائنٹ سمجھایا گیا ہے۔"
-  },
-  {
-    "frage": "Was beschreibt die Gesellschaftsform im Gewerberecht – Frage 21?",
-    "antworten": [
-      "Einzelunternehmen mit voller Haftung (21)",
-      "GbR mit freiwilliger Eintragung (21)",
-      "GmbH mit Mindestkapital von 25.000 EUR (21)",
-      "UG ohne Stammkapitalpflicht (21)"
+      "GbR",
+      "GmbH",
+      "Einzelunternehmer unter 22.000 EUR Umsatz",
+      "Freiberufler"
     ],
     "korrekt": 1,
-    "erklaerung": "اردو وضاحت: Gewerberecht میں مختلف کمپنی فارمز کی وضاحت ضروری ہے۔ سوال 21 میں یہی پوائنٹ سمجھایا گیا ہے۔"
+    "erklaerung": "اردو وضاحت: GmbH کمپنیوں کے لیے Handelsregister میں اندراج لازمی ہوتا ہے۔"
   },
   {
-    "frage": "Was beschreibt die Gesellschaftsform im Gewerberecht – Frage 22?",
+    "frage": "Welche Bedeutung hat der Zusatz 'haftungsbeschränkt'?",
     "antworten": [
-      "Einzelunternehmen mit voller Haftung (22)",
-      "GbR mit freiwilliger Eintragung (22)",
-      "GmbH mit Mindestkapital von 25.000 EUR (22)",
-      "UG ohne Stammkapitalpflicht (22)"
-    ],
-    "korrekt": 2,
-    "erklaerung": "اردو وضاحت: Gewerberecht میں مختلف کمپنی فارمز کی وضاحت ضروری ہے۔ سوال 22 میں یہی پوائنٹ سمجھایا گیا ہے۔"
-  },
-  {
-    "frage": "Was beschreibt die Gesellschaftsform im Gewerberecht – Frage 23?",
-    "antworten": [
-      "Einzelunternehmen mit voller Haftung (23)",
-      "GbR mit freiwilliger Eintragung (23)",
-      "GmbH mit Mindestkapital von 25.000 EUR (23)",
-      "UG ohne Stammkapitalpflicht (23)"
-    ],
-    "korrekt": 3,
-    "erklaerung": "اردو وضاحت: Gewerberecht میں مختلف کمپنی فارمز کی وضاحت ضروری ہے۔ سوال 23 میں یہی پوائنٹ سمجھایا گیا ہے۔"
-  },
-  {
-    "frage": "Was beschreibt die Gesellschaftsform im Gewerberecht – Frage 24?",
-    "antworten": [
-      "Einzelunternehmen mit voller Haftung (24)",
-      "GbR mit freiwilliger Eintragung (24)",
-      "GmbH mit Mindestkapital von 25.000 EUR (24)",
-      "UG ohne Stammkapitalpflicht (24)"
-    ],
-    "korrekt": 0,
-    "erklaerung": "اردو وضاحت: Gewerberecht میں مختلف کمپنی فارمز کی وضاحت ضروری ہے۔ سوال 24 میں یہی پوائنٹ سمجھایا گیا ہے۔"
-  },
-  {
-    "frage": "Was beschreibt die Gesellschaftsform im Gewerberecht – Frage 25?",
-    "antworten": [
-      "Einzelunternehmen mit voller Haftung (25)",
-      "GbR mit freiwilliger Eintragung (25)",
-      "GmbH mit Mindestkapital von 25.000 EUR (25)",
-      "UG ohne Stammkapitalpflicht (25)"
+      "Die Gesellschaft ist verpflichtet, Steuern zu zahlen",
+      "Die Haftung ist auf das Gesellschaftsvermögen beschränkt",
+      "Es handelt sich um eine AG",
+      "Die Firma muss IHK-Mitglied sein"
     ],
     "korrekt": 1,
-    "erklaerung": "اردو وضاحت: Gewerberecht میں مختلف کمپنی فارمز کی وضاحت ضروری ہے۔ سوال 25 میں یہی پوائنٹ سمجھایا گیا ہے۔"
+    "erklaerung": "اردو وضاحت: Haftungsbeschränkt کا مطلب ہے کہ ذاتی جائیداد محفوظ ہے، صرف کمپنی کا سرمایہ ذمہ دار ہے۔"
   },
   {
-    "frage": "Was beschreibt die Gesellschaftsform im Gewerberecht – Frage 26?",
+    "frage": "Was bedeutet Gewerbefreiheit?",
     "antworten": [
-      "Einzelunternehmen mit voller Haftung (26)",
-      "GbR mit freiwilliger Eintragung (26)",
-      "GmbH mit Mindestkapital von 25.000 EUR (26)",
-      "UG ohne Stammkapitalpflicht (26)"
+      "Jeder darf ein Gewerbe ohne Bedingungen starten",
+      "Gewerbe dürfen ohne Anmeldung betrieben werden",
+      "Grundsätzlich darf jeder ein Gewerbe ausüben, sofern kein Verbot besteht",
+      "Nur Unternehmen mit Genehmigung dürfen tätig sein"
     ],
     "korrekt": 2,
-    "erklaerung": "اردو وضاحت: Gewerberecht میں مختلف کمپنی فارمز کی وضاحت ضروری ہے۔ سوال 26 میں یہی پوائنٹ سمجھایا گیا ہے۔"
+    "erklaerung": "اردو وضاحت: Gewerbefreiheit کا مطلب ہے کہ ہر شہری کو کاروبار کرنے کا حق حاصل ہے، جب تک کوئی قانونی رکاوٹ نہ ہو۔"
   },
   {
-    "frage": "Was beschreibt die Gesellschaftsform im Gewerberecht – Frage 27?",
+    "frage": "Wer prüft die persönliche Zuverlässigkeit bei Gewerbeanmeldung?",
     "antworten": [
-      "Einzelunternehmen mit voller Haftung (27)",
-      "GbR mit freiwilliger Eintragung (27)",
-      "GmbH mit Mindestkapital von 25.000 EUR (27)",
-      "UG ohne Stammkapitalpflicht (27)"
-    ],
-    "korrekt": 3,
-    "erklaerung": "اردو وضاحت: Gewerberecht میں مختلف کمپنی فارمز کی وضاحت ضروری ہے۔ سوال 27 میں یہی پوائنٹ سمجھایا گیا ہے۔"
-  },
-  {
-    "frage": "Was beschreibt die Gesellschaftsform im Gewerberecht – Frage 28?",
-    "antworten": [
-      "Einzelunternehmen mit voller Haftung (28)",
-      "GbR mit freiwilliger Eintragung (28)",
-      "GmbH mit Mindestkapital von 25.000 EUR (28)",
-      "UG ohne Stammkapitalpflicht (28)"
-    ],
-    "korrekt": 0,
-    "erklaerung": "اردو وضاحت: Gewerberecht میں مختلف کمپنی فارمز کی وضاحت ضروری ہے۔ سوال 28 میں یہی پوائنٹ سمجھایا گیا ہے۔"
-  },
-  {
-    "frage": "Was beschreibt die Gesellschaftsform im Gewerberecht – Frage 29?",
-    "antworten": [
-      "Einzelunternehmen mit voller Haftung (29)",
-      "GbR mit freiwilliger Eintragung (29)",
-      "GmbH mit Mindestkapital von 25.000 EUR (29)",
-      "UG ohne Stammkapitalpflicht (29)"
-    ],
-    "korrekt": 1,
-    "erklaerung": "اردو وضاحت: Gewerberecht میں مختلف کمپنی فارمز کی وضاحت ضروری ہے۔ سوال 29 میں یہی پوائنٹ سمجھایا گیا ہے۔"
-  },
-  {
-    "frage": "Was beschreibt die Gesellschaftsform im Gewerberecht – Frage 30?",
-    "antworten": [
-      "Einzelunternehmen mit voller Haftung (30)",
-      "GbR mit freiwilliger Eintragung (30)",
-      "GmbH mit Mindestkapital von 25.000 EUR (30)",
-      "UG ohne Stammkapitalpflicht (30)"
+      "Finanzamt",
+      "Polizei",
+      "Gewerbeamt",
+      "IHK"
     ],
     "korrekt": 2,
-    "erklaerung": "اردو وضاحت: Gewerberecht میں مختلف کمپنی فارمز کی وضاحت ضروری ہے۔ سوال 30 میں یہی پوائنٹ سمجھایا گیا ہے۔"
-  },
-  {
-    "frage": "Was beschreibt die Gesellschaftsform im Gewerberecht – Frage 31?",
-    "antworten": [
-      "Einzelunternehmen mit voller Haftung (31)",
-      "GbR mit freiwilliger Eintragung (31)",
-      "GmbH mit Mindestkapital von 25.000 EUR (31)",
-      "UG ohne Stammkapitalpflicht (31)"
-    ],
-    "korrekt": 3,
-    "erklaerung": "اردو وضاحت: Gewerberecht میں مختلف کمپنی فارمز کی وضاحت ضروری ہے۔ سوال 31 میں یہی پوائنٹ سمجھایا گیا ہے۔"
-  },
-  {
-    "frage": "Was beschreibt die Gesellschaftsform im Gewerberecht – Frage 32?",
-    "antworten": [
-      "Einzelunternehmen mit voller Haftung (32)",
-      "GbR mit freiwilliger Eintragung (32)",
-      "GmbH mit Mindestkapital von 25.000 EUR (32)",
-      "UG ohne Stammkapitalpflicht (32)"
-    ],
-    "korrekt": 0,
-    "erklaerung": "اردو وضاحت: Gewerberecht میں مختلف کمپنی فارمز کی وضاحت ضروری ہے۔ سوال 32 میں یہی پوائنٹ سمجھایا گیا ہے۔"
-  },
-  {
-    "frage": "Was beschreibt die Gesellschaftsform im Gewerberecht – Frage 33?",
-    "antworten": [
-      "Einzelunternehmen mit voller Haftung (33)",
-      "GbR mit freiwilliger Eintragung (33)",
-      "GmbH mit Mindestkapital von 25.000 EUR (33)",
-      "UG ohne Stammkapitalpflicht (33)"
-    ],
-    "korrekt": 1,
-    "erklaerung": "اردو وضاحت: Gewerberecht میں مختلف کمپنی فارمز کی وضاحت ضروری ہے۔ سوال 33 میں یہی پوائنٹ سمجھایا گیا ہے۔"
-  },
-  {
-    "frage": "Was beschreibt die Gesellschaftsform im Gewerberecht – Frage 34?",
-    "antworten": [
-      "Einzelunternehmen mit voller Haftung (34)",
-      "GbR mit freiwilliger Eintragung (34)",
-      "GmbH mit Mindestkapital von 25.000 EUR (34)",
-      "UG ohne Stammkapitalpflicht (34)"
-    ],
-    "korrekt": 2,
-    "erklaerung": "اردو وضاحت: Gewerberecht میں مختلف کمپنی فارمز کی وضاحت ضروری ہے۔ سوال 34 میں یہی پوائنٹ سمجھایا گیا ہے۔"
-  },
-  {
-    "frage": "Was beschreibt die Gesellschaftsform im Gewerberecht – Frage 35?",
-    "antworten": [
-      "Einzelunternehmen mit voller Haftung (35)",
-      "GbR mit freiwilliger Eintragung (35)",
-      "GmbH mit Mindestkapital von 25.000 EUR (35)",
-      "UG ohne Stammkapitalpflicht (35)"
-    ],
-    "korrekt": 3,
-    "erklaerung": "اردو وضاحت: Gewerberecht میں مختلف کمپنی فارمز کی وضاحت ضروری ہے۔ سوال 35 میں یہی پوائنٹ سمجھایا گیا ہے۔"
-  },
-  {
-    "frage": "Was beschreibt die Gesellschaftsform im Gewerberecht – Frage 36?",
-    "antworten": [
-      "Einzelunternehmen mit voller Haftung (36)",
-      "GbR mit freiwilliger Eintragung (36)",
-      "GmbH mit Mindestkapital von 25.000 EUR (36)",
-      "UG ohne Stammkapitalpflicht (36)"
-    ],
-    "korrekt": 0,
-    "erklaerung": "اردو وضاحت: Gewerberecht میں مختلف کمپنی فارمز کی وضاحت ضروری ہے۔ سوال 36 میں یہی پوائنٹ سمجھایا گیا ہے۔"
-  },
-  {
-    "frage": "Was beschreibt die Gesellschaftsform im Gewerberecht – Frage 37?",
-    "antworten": [
-      "Einzelunternehmen mit voller Haftung (37)",
-      "GbR mit freiwilliger Eintragung (37)",
-      "GmbH mit Mindestkapital von 25.000 EUR (37)",
-      "UG ohne Stammkapitalpflicht (37)"
-    ],
-    "korrekt": 1,
-    "erklaerung": "اردو وضاحت: Gewerberecht میں مختلف کمپنی فارمز کی وضاحت ضروری ہے۔ سوال 37 میں یہی پوائنٹ سمجھایا گیا ہے۔"
-  },
-  {
-    "frage": "Was beschreibt die Gesellschaftsform im Gewerberecht – Frage 38?",
-    "antworten": [
-      "Einzelunternehmen mit voller Haftung (38)",
-      "GbR mit freiwilliger Eintragung (38)",
-      "GmbH mit Mindestkapital von 25.000 EUR (38)",
-      "UG ohne Stammkapitalpflicht (38)"
-    ],
-    "korrekt": 2,
-    "erklaerung": "اردو وضاحت: Gewerberecht میں مختلف کمپنی فارمز کی وضاحت ضروری ہے۔ سوال 38 میں یہی پوائنٹ سمجھایا گیا ہے۔"
-  },
-  {
-    "frage": "Was beschreibt die Gesellschaftsform im Gewerberecht – Frage 39?",
-    "antworten": [
-      "Einzelunternehmen mit voller Haftung (39)",
-      "GbR mit freiwilliger Eintragung (39)",
-      "GmbH mit Mindestkapital von 25.000 EUR (39)",
-      "UG ohne Stammkapitalpflicht (39)"
-    ],
-    "korrekt": 3,
-    "erklaerung": "اردو وضاحت: Gewerberecht میں مختلف کمپنی فارمز کی وضاحت ضروری ہے۔ سوال 39 میں یہی پوائنٹ سمجھایا گیا ہے۔"
-  },
-  {
-    "frage": "Was beschreibt die Gesellschaftsform im Gewerberecht – Frage 40?",
-    "antworten": [
-      "Einzelunternehmen mit voller Haftung (40)",
-      "GbR mit freiwilliger Eintragung (40)",
-      "GmbH mit Mindestkapital von 25.000 EUR (40)",
-      "UG ohne Stammkapitalpflicht (40)"
-    ],
-    "korrekt": 0,
-    "erklaerung": "اردو وضاحت: Gewerberecht میں مختلف کمپنی فارمز کی وضاحت ضروری ہے۔ سوال 40 میں یہی پوائنٹ سمجھایا گیا ہے۔"
-  },
-  {
-    "frage": "Was beschreibt die Gesellschaftsform im Gewerberecht – Frage 41?",
-    "antworten": [
-      "Einzelunternehmen mit voller Haftung (41)",
-      "GbR mit freiwilliger Eintragung (41)",
-      "GmbH mit Mindestkapital von 25.000 EUR (41)",
-      "UG ohne Stammkapitalpflicht (41)"
-    ],
-    "korrekt": 1,
-    "erklaerung": "اردو وضاحت: Gewerberecht میں مختلف کمپنی فارمز کی وضاحت ضروری ہے۔ سوال 41 میں یہی پوائنٹ سمجھایا گیا ہے۔"
-  },
-  {
-    "frage": "Was beschreibt die Gesellschaftsform im Gewerberecht – Frage 42?",
-    "antworten": [
-      "Einzelunternehmen mit voller Haftung (42)",
-      "GbR mit freiwilliger Eintragung (42)",
-      "GmbH mit Mindestkapital von 25.000 EUR (42)",
-      "UG ohne Stammkapitalpflicht (42)"
-    ],
-    "korrekt": 2,
-    "erklaerung": "اردو وضاحت: Gewerberecht میں مختلف کمپنی فارمز کی وضاحت ضروری ہے۔ سوال 42 میں یہی پوائنٹ سمجھایا گیا ہے۔"
-  },
-  {
-    "frage": "Was beschreibt die Gesellschaftsform im Gewerberecht – Frage 43?",
-    "antworten": [
-      "Einzelunternehmen mit voller Haftung (43)",
-      "GbR mit freiwilliger Eintragung (43)",
-      "GmbH mit Mindestkapital von 25.000 EUR (43)",
-      "UG ohne Stammkapitalpflicht (43)"
-    ],
-    "korrekt": 3,
-    "erklaerung": "اردو وضاحت: Gewerberecht میں مختلف کمپنی فارمز کی وضاحت ضروری ہے۔ سوال 43 میں یہی پوائنٹ سمجھایا گیا ہے۔"
-  },
-  {
-    "frage": "Was beschreibt die Gesellschaftsform im Gewerberecht – Frage 44?",
-    "antworten": [
-      "Einzelunternehmen mit voller Haftung (44)",
-      "GbR mit freiwilliger Eintragung (44)",
-      "GmbH mit Mindestkapital von 25.000 EUR (44)",
-      "UG ohne Stammkapitalpflicht (44)"
-    ],
-    "korrekt": 0,
-    "erklaerung": "اردو وضاحت: Gewerberecht میں مختلف کمپنی فارمز کی وضاحت ضروری ہے۔ سوال 44 میں یہی پوائنٹ سمجھایا گیا ہے۔"
-  },
-  {
-    "frage": "Was beschreibt die Gesellschaftsform im Gewerberecht – Frage 45?",
-    "antworten": [
-      "Einzelunternehmen mit voller Haftung (45)",
-      "GbR mit freiwilliger Eintragung (45)",
-      "GmbH mit Mindestkapital von 25.000 EUR (45)",
-      "UG ohne Stammkapitalpflicht (45)"
-    ],
-    "korrekt": 1,
-    "erklaerung": "اردو وضاحت: Gewerberecht میں مختلف کمپنی فارمز کی وضاحت ضروری ہے۔ سوال 45 میں یہی پوائنٹ سمجھایا گیا ہے۔"
-  },
-  {
-    "frage": "Was beschreibt die Gesellschaftsform im Gewerberecht – Frage 46?",
-    "antworten": [
-      "Einzelunternehmen mit voller Haftung (46)",
-      "GbR mit freiwilliger Eintragung (46)",
-      "GmbH mit Mindestkapital von 25.000 EUR (46)",
-      "UG ohne Stammkapitalpflicht (46)"
-    ],
-    "korrekt": 2,
-    "erklaerung": "اردو وضاحت: Gewerberecht میں مختلف کمپنی فارمز کی وضاحت ضروری ہے۔ سوال 46 میں یہی پوائنٹ سمجھایا گیا ہے۔"
-  },
-  {
-    "frage": "Was beschreibt die Gesellschaftsform im Gewerberecht – Frage 47?",
-    "antworten": [
-      "Einzelunternehmen mit voller Haftung (47)",
-      "GbR mit freiwilliger Eintragung (47)",
-      "GmbH mit Mindestkapital von 25.000 EUR (47)",
-      "UG ohne Stammkapitalpflicht (47)"
-    ],
-    "korrekt": 3,
-    "erklaerung": "اردو وضاحت: Gewerberecht میں مختلف کمپنی فارمز کی وضاحت ضروری ہے۔ سوال 47 میں یہی پوائنٹ سمجھایا گیا ہے۔"
-  },
-  {
-    "frage": "Was beschreibt die Gesellschaftsform im Gewerberecht – Frage 48?",
-    "antworten": [
-      "Einzelunternehmen mit voller Haftung (48)",
-      "GbR mit freiwilliger Eintragung (48)",
-      "GmbH mit Mindestkapital von 25.000 EUR (48)",
-      "UG ohne Stammkapitalpflicht (48)"
-    ],
-    "korrekt": 0,
-    "erklaerung": "اردو وضاحت: Gewerberecht میں مختلف کمپنی فارمز کی وضاحت ضروری ہے۔ سوال 48 میں یہی پوائنٹ سمجھایا گیا ہے۔"
-  },
-  {
-    "frage": "Was beschreibt die Gesellschaftsform im Gewerberecht – Frage 49?",
-    "antworten": [
-      "Einzelunternehmen mit voller Haftung (49)",
-      "GbR mit freiwilliger Eintragung (49)",
-      "GmbH mit Mindestkapital von 25.000 EUR (49)",
-      "UG ohne Stammkapitalpflicht (49)"
-    ],
-    "korrekt": 1,
-    "erklaerung": "اردو وضاحت: Gewerberecht میں مختلف کمپنی فارمز کی وضاحت ضروری ہے۔ سوال 49 میں یہی پوائنٹ سمجھایا گیا ہے۔"
-  },
-  {
-    "frage": "Was beschreibt die Gesellschaftsform im Gewerberecht – Frage 50?",
-    "antworten": [
-      "Einzelunternehmen mit voller Haftung (50)",
-      "GbR mit freiwilliger Eintragung (50)",
-      "GmbH mit Mindestkapital von 25.000 EUR (50)",
-      "UG ohne Stammkapitalpflicht (50)"
-    ],
-    "korrekt": 2,
-    "erklaerung": "اردو وضاحت: Gewerberecht میں مختلف کمپنی فارمز کی وضاحت ضروری ہے۔ سوال 50 میں یہی پوائنٹ سمجھایا گیا ہے۔"
+    "erklaerung": "اردو وضاحت: Gewerbeamt Gewerbeanmeldung کے وقت Zuverlässigkeit چیک کرتا ہے۔"
   }
 ]

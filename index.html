@@ -1,61 +1,76 @@
+<!DOCTYPE html>
+<html lang="de">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fachkundeprüfung für Taxi und Mietwagen Unternehmersschein</title>
+
   <!-- CSS -->
   <link rel="stylesheet" href="style.css">
+
   <!-- MathQuill -->
   <script src="https://cdn.jsdelivr.net/npm/mathquill@0.10.1/build/mathquill.min.js"></script>
-  <!-- پہلے سے موجود JavaScript (آپ کی ایپ کی navigation logic) -->
-  <script src="script.js" defer></script>
-  <!-- نیا: Quiz system -->
-  <script src="quiz.js" defer></script>
-</head>>
-<!-- body کے اندر navigation اور sections -->
-<nav>
-  <button onclick="showSection('lern')">Lernmaterial</button>
-  <button onclick="showSection('math')">Mathe Eingabe</button>
-  <button onclick="showSection('quiz')">Quiz</button>
-  <button onclick="showSection('pruefung')"> Muster Prüfungen</button>
-</nav>
-<div id="lern" class="section hidden">
-  <h2>Lernmaterial</h2>
-  <button onclick="toggleLanguage('urdu')">اردو</button>
-  <button onclick="toggleLanguage('de')">Deutsch</button>
-  <div id="content-urdu" class="hidden">
-    <p>یہاں اردو ٹیکسٹ آئے گا…</p>
-  </div>
-  <div id="content-de" class="hidden">
-    <p>Hier kommt deutscher Text…</p>
-  </div>
-</div>
 
-<div id="math" class="section hidden">
-  <h2>Math</h2>
-  <div id="math-field"></div>
-  <!-- بعد میں سوالات یہاں append کریں -->
-  <div id="math-questions"></div>
-</div>
-<section id="quiz" class="section hidden">
-  <div id="quiz-container">
-    <div id="question-box"></div>
-    <div id="answers-box"></div>
-    <div id="feedback" style="margin:10px 0; font-weight:bold;"></div>
-    <button id="next-button" onclick="nextQuestion()" class="hidden">Nächste Frage</button>
+  <!-- App navigation + logic -->
+  <script src="script.js" defer></script>
+
+  <!-- Quiz logic -->
+  <script src="quiz.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <h1>Taxi-Unternehmers Vorbereitung</h1>
+  </header>
+
+  <!-- Navigation Buttons -->
+  <nav>
+    <button onclick="showSection('lern')">Lernmaterial</button>
+    <button onclick="showSection('math')">Mathe Eingabe</button>
+    <button onclick="showQuizSection()">Quiz</button>
+    <button onclick="showSection('pruefung')">Muster Prüfungen</button>
+  </nav>
+
+  <!-- Lernmaterial Section -->
+  <div id="lern" class="section hidden">
+    <h2>Lernmaterial</h2>
+    <button onclick="toggleLanguage('urdu')">اردو</button>
+    <button onclick="toggleLanguage('de')">Deutsch</button>
+    <div id="content-urdu" class="hidden">
+      <p>یہاں اردو ٹیکسٹ آئے گا…</p>
+    </div>
+    <div id="content-de" class="hidden">
+      <p>Hier kommt deutscher Text…</p>
+    </div>
   </div>
-  <div id="result-box" class="hidden"></div>
-</section>
-</div>
-<div id="pruefung" class="section hidden">
-  <h2>Prüfung Starten</h2>
-  <button onclick="startPruefung()">Prüfung starten</button>
-  <div id="test-container"></div>
-</div>
- </section>
-  </main>
+
+  <!-- Math Section -->
+  <div id="math" class="section hidden">
+    <h2>Math</h2>
+    <div id="math-field"></div>
+    <div id="math-questions"></div>
+  </div>
+
+  <!-- Quiz Section -->
+  <section id="quiz" class="section hidden">
+    <div id="quiz-container">
+      <div id="question-box"></div>
+      <div id="answers-box"></div>
+      <div id="feedback" style="margin:10px 0; font-weight:bold;"></div>
+      <button id="next-button" onclick="nextQuestion()" class="hidden">Nächste Frage</button>
+    </div>
+    <div id="result-box" class="hidden"></div>
+  </section>
+
+  <!-- Prüfung Section -->
+  <div id="pruefung" class="section hidden">
+    <h2>Prüfung Starten</h2>
+    <button onclick="startPruefung()">Prüfung starten</button>
+    <div id="test-container"></div>
+  </div>
+
   <footer>
     <p>© 2025 Prüfungsvorbereitung für Taxi-Unternehmersschein</p>
   </footer>
-  <script src="script.js"></script>
 </body>
 </html>

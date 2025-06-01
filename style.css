@@ -6,13 +6,13 @@ body {
 }
 header {
   background: #222;
-  color: white;
+  color: Light Green;
   padding: 1em;
   text-align: center;
 }
 nav button {
-  margin: 0.3em;
-  padding: 0.6em;
+  margin: 0.5em;
+  padding: 0.8em;
   font-size: 1em;
 }
 .section {
@@ -35,5 +35,5 @@ nav button {
   min-height: 40px;
   padding: 10px;
   width: 100%;
-  background: white;
+  background: Light Green;
 }

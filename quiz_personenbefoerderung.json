@@ -1,0 +1,502 @@
+[
+  {
+    "frage": "Was regelt das Personenbeförderungsgesetz (PBefG)? (Variante 1)",
+    "antworten": [
+      "Den Güterverkehr auf See",
+      "Die Beförderung von Personen im öffentlichen Verkehr",
+      "Die Wartung von Fahrzeugen"
+    ],
+    "korrekt": 1,
+    "erklaerung": "اردو: Personenbeförderungsgesetz عوامی ٹرانسپورٹ کے ذریعے لوگوں کو سفر کرانے کے قوانین وضع کرتا ہے۔"
+  },
+  {
+    "frage": "Für welche Verkehrsmittel gilt das PBefG? (Variante 1)",
+    "antworten": [
+      "Taxen und Mietwagen",
+      "Privatautos",
+      "Flugzeuge"
+    ],
+    "korrekt": 0,
+    "erklaerung": "اردو: PBefG ٹیکسی، بس، اور کرایے کی گاڑیوں جیسے عوامی ٹرانسپورٹ پر لاگو ہوتا ہے۔"
+  },
+  {
+    "frage": "Welche Beförderung ist nach PBefG genehmigungspflichtig? (Variante 1)",
+    "antworten": [
+      "Kostenlose Mitfahrten unter Freunden",
+      "Beförderung gegen Entgelt mit Taxis",
+      "Fahrradverleih"
+    ],
+    "korrekt": 1,
+    "erklaerung": "اردو: PBefG کے مطابق اگر مسافروں کو کرایہ لے کر سفر کرایا جائے تو اس کے لیے اجازت نامہ درکار ہوتا ہے۔"
+  },
+  {
+    "frage": "Was bedeutet 'Betriebspflicht' im Taxiverkehr? (Variante 1)",
+    "antworten": [
+      "Das Taxi darf nur nachts fahren.",
+      "Der Unternehmer muss den Betrieb während der genehmigten Zeiten sicherstellen.",
+      "Der Fahrer kann Fahrgäste ablehnen, wie er möchte."
+    ],
+    "korrekt": 1,
+    "erklaerung": "اردو: Betriebspflicht کے تحت ٹیکسی سروس کو مخصوص اوقات میں لازماً فراہم کرنا ہوتا ہے۔"
+  },
+  {
+    "frage": "Was ist die Rückkehrpflicht bei Mietwagen? (Variante 1)",
+    "antworten": [
+      "Der Fahrer muss nach jeder Fahrt zur Betriebsstätte zurückkehren.",
+      "Der Fahrer darf keine Rückfahrt machen.",
+      "Der Fahrer muss immer im Einsatz sein."
+    ],
+    "korrekt": 0,
+    "erklaerung": "اردو: Mietwagen کو ہر کرایہ کے بعد واپس اپنی کمپنی یا اسٹینڈ پر جانا لازمی ہے۔"
+  },
+  {
+    "frage": "Wann liegt eine genehmigungspflichtige Personenbeförderung vor? (Variante 1)",
+    "antworten": [
+      "Nur bei Busreisen",
+      "Wenn Personen regelmäßig und entgeltlich befördert werden",
+      "Bei Fahrradtouren im Wald"
+    ],
+    "korrekt": 1,
+    "erklaerung": "اردو: باقاعدگی سے اور کرایہ لے کر لوگوں کو سفر کرانا قانون کے تحت لائسنس کے بغیر ممکن نہیں۔"
+  },
+  {
+    "frage": "Welche Rolle spielt der Fahrpreis im PBefG? (Variante 1)",
+    "antworten": [
+      "Er ist unwichtig",
+      "Er bestimmt, ob eine Beförderung genehmigungspflichtig ist",
+      "Er ist nur bei Flugreisen relevant"
+    ],
+    "korrekt": 1,
+    "erklaerung": "اردو: کرایہ لینا یا نہ لینا یہ طے کرتا ہے کہ آپ کو اجازت نامہ درکار ہے یا نہیں۔"
+  },
+  {
+    "frage": "Wer erteilt Genehmigungen für die Personenbeförderung? (Variante 1)",
+    "antworten": [
+      "Das Finanzamt",
+      "Die Genehmigungsbehörde der Stadt oder des Kreises",
+      "Die Polizei"
+    ],
+    "korrekt": 1,
+    "erklaerung": "اردو: متعلقہ شہر یا ضلع کی اجازت دینے والی اتھارٹی سے لائسنس حاصل کیا جاتا ہے۔"
+  },
+  {
+    "frage": "Was passiert bei Verstoß gegen das PBefG? (Variante 1)",
+    "antworten": [
+      "Es gibt keine Konsequenzen",
+      "Verwarnung ohne Strafe",
+      "Bußgeld oder Entzug der Genehmigung"
+    ],
+    "korrekt": 2,
+    "erklaerung": "اردو: بغیر اجازت نامے کے لوگوں کو سفر کرانے پر جرمانہ یا اجازت نامے کی منسوخی ہو سکتی ہے۔"
+  },
+  {
+    "frage": "Was ist ein 'Gelegenheitsverkehr' laut PBefG? (Variante 1)",
+    "antworten": [
+      "Ungeplante private Fahrten",
+      "Verkehr, der nicht regelmäßig stattfindet",
+      "Öffentlicher Linienverkehr"
+    ],
+    "korrekt": 1,
+    "erklaerung": "اردو: ایسی سروس جو مقررہ وقت پر نہ ہو بلکہ ضرورت کے مطابق ہو، 'Gelegenheitsverkehr' کہلاتی ہے۔"
+  },
+  {
+    "frage": "Was regelt das Personenbeförderungsgesetz (PBefG)? (Variante 2)",
+    "antworten": [
+      "Den Güterverkehr auf See",
+      "Die Beförderung von Personen im öffentlichen Verkehr",
+      "Die Wartung von Fahrzeugen"
+    ],
+    "korrekt": 1,
+    "erklaerung": "اردو: Personenbeförderungsgesetz عوامی ٹرانسپورٹ کے ذریعے لوگوں کو سفر کرانے کے قوانین وضع کرتا ہے۔"
+  },
+  {
+    "frage": "Für welche Verkehrsmittel gilt das PBefG? (Variante 2)",
+    "antworten": [
+      "Taxen und Mietwagen",
+      "Privatautos",
+      "Flugzeuge"
+    ],
+    "korrekt": 0,
+    "erklaerung": "اردو: PBefG ٹیکسی، بس، اور کرایے کی گاڑیوں جیسے عوامی ٹرانسپورٹ پر لاگو ہوتا ہے۔"
+  },
+  {
+    "frage": "Welche Beförderung ist nach PBefG genehmigungspflichtig? (Variante 2)",
+    "antworten": [
+      "Kostenlose Mitfahrten unter Freunden",
+      "Beförderung gegen Entgelt mit Taxis",
+      "Fahrradverleih"
+    ],
+    "korrekt": 1,
+    "erklaerung": "اردو: PBefG کے مطابق اگر مسافروں کو کرایہ لے کر سفر کرایا جائے تو اس کے لیے اجازت نامہ درکار ہوتا ہے۔"
+  },
+  {
+    "frage": "Was bedeutet 'Betriebspflicht' im Taxiverkehr? (Variante 2)",
+    "antworten": [
+      "Das Taxi darf nur nachts fahren.",
+      "Der Unternehmer muss den Betrieb während der genehmigten Zeiten sicherstellen.",
+      "Der Fahrer kann Fahrgäste ablehnen, wie er möchte."
+    ],
+    "korrekt": 1,
+    "erklaerung": "اردو: Betriebspflicht کے تحت ٹیکسی سروس کو مخصوص اوقات میں لازماً فراہم کرنا ہوتا ہے۔"
+  },
+  {
+    "frage": "Was ist die Rückkehrpflicht bei Mietwagen? (Variante 2)",
+    "antworten": [
+      "Der Fahrer muss nach jeder Fahrt zur Betriebsstätte zurückkehren.",
+      "Der Fahrer darf keine Rückfahrt machen.",
+      "Der Fahrer muss immer im Einsatz sein."
+    ],
+    "korrekt": 0,
+    "erklaerung": "اردو: Mietwagen کو ہر کرایہ کے بعد واپس اپنی کمپنی یا اسٹینڈ پر جانا لازمی ہے۔"
+  },
+  {
+    "frage": "Wann liegt eine genehmigungspflichtige Personenbeförderung vor? (Variante 2)",
+    "antworten": [
+      "Nur bei Busreisen",
+      "Wenn Personen regelmäßig und entgeltlich befördert werden",
+      "Bei Fahrradtouren im Wald"
+    ],
+    "korrekt": 1,
+    "erklaerung": "اردو: باقاعدگی سے اور کرایہ لے کر لوگوں کو سفر کرانا قانون کے تحت لائسنس کے بغیر ممکن نہیں۔"
+  },
+  {
+    "frage": "Welche Rolle spielt der Fahrpreis im PBefG? (Variante 2)",
+    "antworten": [
+      "Er ist unwichtig",
+      "Er bestimmt, ob eine Beförderung genehmigungspflichtig ist",
+      "Er ist nur bei Flugreisen relevant"
+    ],
+    "korrekt": 1,
+    "erklaerung": "اردو: کرایہ لینا یا نہ لینا یہ طے کرتا ہے کہ آپ کو اجازت نامہ درکار ہے یا نہیں۔"
+  },
+  {
+    "frage": "Wer erteilt Genehmigungen für die Personenbeförderung? (Variante 2)",
+    "antworten": [
+      "Das Finanzamt",
+      "Die Genehmigungsbehörde der Stadt oder des Kreises",
+      "Die Polizei"
+    ],
+    "korrekt": 1,
+    "erklaerung": "اردو: متعلقہ شہر یا ضلع کی اجازت دینے والی اتھارٹی سے لائسنس حاصل کیا جاتا ہے۔"
+  },
+  {
+    "frage": "Was passiert bei Verstoß gegen das PBefG? (Variante 2)",
+    "antworten": [
+      "Es gibt keine Konsequenzen",
+      "Verwarnung ohne Strafe",
+      "Bußgeld oder Entzug der Genehmigung"
+    ],
+    "korrekt": 2,
+    "erklaerung": "اردو: بغیر اجازت نامے کے لوگوں کو سفر کرانے پر جرمانہ یا اجازت نامے کی منسوخی ہو سکتی ہے۔"
+  },
+  {
+    "frage": "Was ist ein 'Gelegenheitsverkehr' laut PBefG? (Variante 2)",
+    "antworten": [
+      "Ungeplante private Fahrten",
+      "Verkehr, der nicht regelmäßig stattfindet",
+      "Öffentlicher Linienverkehr"
+    ],
+    "korrekt": 1,
+    "erklaerung": "اردو: ایسی سروس جو مقررہ وقت پر نہ ہو بلکہ ضرورت کے مطابق ہو، 'Gelegenheitsverkehr' کہلاتی ہے۔"
+  },
+  {
+    "frage": "Was regelt das Personenbeförderungsgesetz (PBefG)? (Variante 3)",
+    "antworten": [
+      "Den Güterverkehr auf See",
+      "Die Beförderung von Personen im öffentlichen Verkehr",
+      "Die Wartung von Fahrzeugen"
+    ],
+    "korrekt": 1,
+    "erklaerung": "اردو: Personenbeförderungsgesetz عوامی ٹرانسپورٹ کے ذریعے لوگوں کو سفر کرانے کے قوانین وضع کرتا ہے۔"
+  },
+  {
+    "frage": "Für welche Verkehrsmittel gilt das PBefG? (Variante 3)",
+    "antworten": [
+      "Taxen und Mietwagen",
+      "Privatautos",
+      "Flugzeuge"
+    ],
+    "korrekt": 0,
+    "erklaerung": "اردو: PBefG ٹیکسی، بس، اور کرایے کی گاڑیوں جیسے عوامی ٹرانسپورٹ پر لاگو ہوتا ہے۔"
+  },
+  {
+    "frage": "Welche Beförderung ist nach PBefG genehmigungspflichtig? (Variante 3)",
+    "antworten": [
+      "Kostenlose Mitfahrten unter Freunden",
+      "Beförderung gegen Entgelt mit Taxis",
+      "Fahrradverleih"
+    ],
+    "korrekt": 1,
+    "erklaerung": "اردو: PBefG کے مطابق اگر مسافروں کو کرایہ لے کر سفر کرایا جائے تو اس کے لیے اجازت نامہ درکار ہوتا ہے۔"
+  },
+  {
+    "frage": "Was bedeutet 'Betriebspflicht' im Taxiverkehr? (Variante 3)",
+    "antworten": [
+      "Das Taxi darf nur nachts fahren.",
+      "Der Unternehmer muss den Betrieb während der genehmigten Zeiten sicherstellen.",
+      "Der Fahrer kann Fahrgäste ablehnen, wie er möchte."
+    ],
+    "korrekt": 1,
+    "erklaerung": "اردو: Betriebspflicht کے تحت ٹیکسی سروس کو مخصوص اوقات میں لازماً فراہم کرنا ہوتا ہے۔"
+  },
+  {
+    "frage": "Was ist die Rückkehrpflicht bei Mietwagen? (Variante 3)",
+    "antworten": [
+      "Der Fahrer muss nach jeder Fahrt zur Betriebsstätte zurückkehren.",
+      "Der Fahrer darf keine Rückfahrt machen.",
+      "Der Fahrer muss immer im Einsatz sein."
+    ],
+    "korrekt": 0,
+    "erklaerung": "اردو: Mietwagen کو ہر کرایہ کے بعد واپس اپنی کمپنی یا اسٹینڈ پر جانا لازمی ہے۔"
+  },
+  {
+    "frage": "Wann liegt eine genehmigungspflichtige Personenbeförderung vor? (Variante 3)",
+    "antworten": [
+      "Nur bei Busreisen",
+      "Wenn Personen regelmäßig und entgeltlich befördert werden",
+      "Bei Fahrradtouren im Wald"
+    ],
+    "korrekt": 1,
+    "erklaerung": "اردو: باقاعدگی سے اور کرایہ لے کر لوگوں کو سفر کرانا قانون کے تحت لائسنس کے بغیر ممکن نہیں۔"
+  },
+  {
+    "frage": "Welche Rolle spielt der Fahrpreis im PBefG? (Variante 3)",
+    "antworten": [
+      "Er ist unwichtig",
+      "Er bestimmt, ob eine Beförderung genehmigungspflichtig ist",
+      "Er ist nur bei Flugreisen relevant"
+    ],
+    "korrekt": 1,
+    "erklaerung": "اردو: کرایہ لینا یا نہ لینا یہ طے کرتا ہے کہ آپ کو اجازت نامہ درکار ہے یا نہیں۔"
+  },
+  {
+    "frage": "Wer erteilt Genehmigungen für die Personenbeförderung? (Variante 3)",
+    "antworten": [
+      "Das Finanzamt",
+      "Die Genehmigungsbehörde der Stadt oder des Kreises",
+      "Die Polizei"
+    ],
+    "korrekt": 1,
+    "erklaerung": "اردو: متعلقہ شہر یا ضلع کی اجازت دینے والی اتھارٹی سے لائسنس حاصل کیا جاتا ہے۔"
+  },
+  {
+    "frage": "Was passiert bei Verstoß gegen das PBefG? (Variante 3)",
+    "antworten": [
+      "Es gibt keine Konsequenzen",
+      "Verwarnung ohne Strafe",
+      "Bußgeld oder Entzug der Genehmigung"
+    ],
+    "korrekt": 2,
+    "erklaerung": "اردو: بغیر اجازت نامے کے لوگوں کو سفر کرانے پر جرمانہ یا اجازت نامے کی منسوخی ہو سکتی ہے۔"
+  },
+  {
+    "frage": "Was ist ein 'Gelegenheitsverkehr' laut PBefG? (Variante 3)",
+    "antworten": [
+      "Ungeplante private Fahrten",
+      "Verkehr, der nicht regelmäßig stattfindet",
+      "Öffentlicher Linienverkehr"
+    ],
+    "korrekt": 1,
+    "erklaerung": "اردو: ایسی سروس جو مقررہ وقت پر نہ ہو بلکہ ضرورت کے مطابق ہو، 'Gelegenheitsverkehr' کہلاتی ہے۔"
+  },
+  {
+    "frage": "Was regelt das Personenbeförderungsgesetz (PBefG)? (Variante 4)",
+    "antworten": [
+      "Den Güterverkehr auf See",
+      "Die Beförderung von Personen im öffentlichen Verkehr",
+      "Die Wartung von Fahrzeugen"
+    ],
+    "korrekt": 1,
+    "erklaerung": "اردو: Personenbeförderungsgesetz عوامی ٹرانسپورٹ کے ذریعے لوگوں کو سفر کرانے کے قوانین وضع کرتا ہے۔"
+  },
+  {
+    "frage": "Für welche Verkehrsmittel gilt das PBefG? (Variante 4)",
+    "antworten": [
+      "Taxen und Mietwagen",
+      "Privatautos",
+      "Flugzeuge"
+    ],
+    "korrekt": 0,
+    "erklaerung": "اردو: PBefG ٹیکسی، بس، اور کرایے کی گاڑیوں جیسے عوامی ٹرانسپورٹ پر لاگو ہوتا ہے۔"
+  },
+  {
+    "frage": "Welche Beförderung ist nach PBefG genehmigungspflichtig? (Variante 4)",
+    "antworten": [
+      "Kostenlose Mitfahrten unter Freunden",
+      "Beförderung gegen Entgelt mit Taxis",
+      "Fahrradverleih"
+    ],
+    "korrekt": 1,
+    "erklaerung": "اردو: PBefG کے مطابق اگر مسافروں کو کرایہ لے کر سفر کرایا جائے تو اس کے لیے اجازت نامہ درکار ہوتا ہے۔"
+  },
+  {
+    "frage": "Was bedeutet 'Betriebspflicht' im Taxiverkehr? (Variante 4)",
+    "antworten": [
+      "Das Taxi darf nur nachts fahren.",
+      "Der Unternehmer muss den Betrieb während der genehmigten Zeiten sicherstellen.",
+      "Der Fahrer kann Fahrgäste ablehnen, wie er möchte."
+    ],
+    "korrekt": 1,
+    "erklaerung": "اردو: Betriebspflicht کے تحت ٹیکسی سروس کو مخصوص اوقات میں لازماً فراہم کرنا ہوتا ہے۔"
+  },
+  {
+    "frage": "Was ist die Rückkehrpflicht bei Mietwagen? (Variante 4)",
+    "antworten": [
+      "Der Fahrer muss nach jeder Fahrt zur Betriebsstätte zurückkehren.",
+      "Der Fahrer darf keine Rückfahrt machen.",
+      "Der Fahrer muss immer im Einsatz sein."
+    ],
+    "korrekt": 0,
+    "erklaerung": "اردو: Mietwagen کو ہر کرایہ کے بعد واپس اپنی کمپنی یا اسٹینڈ پر جانا لازمی ہے۔"
+  },
+  {
+    "frage": "Wann liegt eine genehmigungspflichtige Personenbeförderung vor? (Variante 4)",
+    "antworten": [
+      "Nur bei Busreisen",
+      "Wenn Personen regelmäßig und entgeltlich befördert werden",
+      "Bei Fahrradtouren im Wald"
+    ],
+    "korrekt": 1,
+    "erklaerung": "اردو: باقاعدگی سے اور کرایہ لے کر لوگوں کو سفر کرانا قانون کے تحت لائسنس کے بغیر ممکن نہیں۔"
+  },
+  {
+    "frage": "Welche Rolle spielt der Fahrpreis im PBefG? (Variante 4)",
+    "antworten": [
+      "Er ist unwichtig",
+      "Er bestimmt, ob eine Beförderung genehmigungspflichtig ist",
+      "Er ist nur bei Flugreisen relevant"
+    ],
+    "korrekt": 1,
+    "erklaerung": "اردو: کرایہ لینا یا نہ لینا یہ طے کرتا ہے کہ آپ کو اجازت نامہ درکار ہے یا نہیں۔"
+  },
+  {
+    "frage": "Wer erteilt Genehmigungen für die Personenbeförderung? (Variante 4)",
+    "antworten": [
+      "Das Finanzamt",
+      "Die Genehmigungsbehörde der Stadt oder des Kreises",
+      "Die Polizei"
+    ],
+    "korrekt": 1,
+    "erklaerung": "اردو: متعلقہ شہر یا ضلع کی اجازت دینے والی اتھارٹی سے لائسنس حاصل کیا جاتا ہے۔"
+  },
+  {
+    "frage": "Was passiert bei Verstoß gegen das PBefG? (Variante 4)",
+    "antworten": [
+      "Es gibt keine Konsequenzen",
+      "Verwarnung ohne Strafe",
+      "Bußgeld oder Entzug der Genehmigung"
+    ],
+    "korrekt": 2,
+    "erklaerung": "اردو: بغیر اجازت نامے کے لوگوں کو سفر کرانے پر جرمانہ یا اجازت نامے کی منسوخی ہو سکتی ہے۔"
+  },
+  {
+    "frage": "Was ist ein 'Gelegenheitsverkehr' laut PBefG? (Variante 4)",
+    "antworten": [
+      "Ungeplante private Fahrten",
+      "Verkehr, der nicht regelmäßig stattfindet",
+      "Öffentlicher Linienverkehr"
+    ],
+    "korrekt": 1,
+    "erklaerung": "اردو: ایسی سروس جو مقررہ وقت پر نہ ہو بلکہ ضرورت کے مطابق ہو، 'Gelegenheitsverkehr' کہلاتی ہے۔"
+  },
+  {
+    "frage": "Was regelt das Personenbeförderungsgesetz (PBefG)? (Variante 5)",
+    "antworten": [
+      "Den Güterverkehr auf See",
+      "Die Beförderung von Personen im öffentlichen Verkehr",
+      "Die Wartung von Fahrzeugen"
+    ],
+    "korrekt": 1,
+    "erklaerung": "اردو: Personenbeförderungsgesetz عوامی ٹرانسپورٹ کے ذریعے لوگوں کو سفر کرانے کے قوانین وضع کرتا ہے۔"
+  },
+  {
+    "frage": "Für welche Verkehrsmittel gilt das PBefG? (Variante 5)",
+    "antworten": [
+      "Taxen und Mietwagen",
+      "Privatautos",
+      "Flugzeuge"
+    ],
+    "korrekt": 0,
+    "erklaerung": "اردو: PBefG ٹیکسی، بس، اور کرایے کی گاڑیوں جیسے عوامی ٹرانسپورٹ پر لاگو ہوتا ہے۔"
+  },
+  {
+    "frage": "Welche Beförderung ist nach PBefG genehmigungspflichtig? (Variante 5)",
+    "antworten": [
+      "Kostenlose Mitfahrten unter Freunden",
+      "Beförderung gegen Entgelt mit Taxis",
+      "Fahrradverleih"
+    ],
+    "korrekt": 1,
+    "erklaerung": "اردو: PBefG کے مطابق اگر مسافروں کو کرایہ لے کر سفر کرایا جائے تو اس کے لیے اجازت نامہ درکار ہوتا ہے۔"
+  },
+  {
+    "frage": "Was bedeutet 'Betriebspflicht' im Taxiverkehr? (Variante 5)",
+    "antworten": [
+      "Das Taxi darf nur nachts fahren.",
+      "Der Unternehmer muss den Betrieb während der genehmigten Zeiten sicherstellen.",
+      "Der Fahrer kann Fahrgäste ablehnen, wie er möchte."
+    ],
+    "korrekt": 1,
+    "erklaerung": "اردو: Betriebspflicht کے تحت ٹیکسی سروس کو مخصوص اوقات میں لازماً فراہم کرنا ہوتا ہے۔"
+  },
+  {
+    "frage": "Was ist die Rückkehrpflicht bei Mietwagen? (Variante 5)",
+    "antworten": [
+      "Der Fahrer muss nach jeder Fahrt zur Betriebsstätte zurückkehren.",
+      "Der Fahrer darf keine Rückfahrt machen.",
+      "Der Fahrer muss immer im Einsatz sein."
+    ],
+    "korrekt": 0,
+    "erklaerung": "اردو: Mietwagen کو ہر کرایہ کے بعد واپس اپنی کمپنی یا اسٹینڈ پر جانا لازمی ہے۔"
+  },
+  {
+    "frage": "Wann liegt eine genehmigungspflichtige Personenbeförderung vor? (Variante 5)",
+    "antworten": [
+      "Nur bei Busreisen",
+      "Wenn Personen regelmäßig und entgeltlich befördert werden",
+      "Bei Fahrradtouren im Wald"
+    ],
+    "korrekt": 1,
+    "erklaerung": "اردو: باقاعدگی سے اور کرایہ لے کر لوگوں کو سفر کرانا قانون کے تحت لائسنس کے بغیر ممکن نہیں۔"
+  },
+  {
+    "frage": "Welche Rolle spielt der Fahrpreis im PBefG? (Variante 5)",
+    "antworten": [
+      "Er ist unwichtig",
+      "Er bestimmt, ob eine Beförderung genehmigungspflichtig ist",
+      "Er ist nur bei Flugreisen relevant"
+    ],
+    "korrekt": 1,
+    "erklaerung": "اردو: کرایہ لینا یا نہ لینا یہ طے کرتا ہے کہ آپ کو اجازت نامہ درکار ہے یا نہیں۔"
+  },
+  {
+    "frage": "Wer erteilt Genehmigungen für die Personenbeförderung? (Variante 5)",
+    "antworten": [
+      "Das Finanzamt",
+      "Die Genehmigungsbehörde der Stadt oder des Kreises",
+      "Die Polizei"
+    ],
+    "korrekt": 1,
+    "erklaerung": "اردو: متعلقہ شہر یا ضلع کی اجازت دینے والی اتھارٹی سے لائسنس حاصل کیا جاتا ہے۔"
+  },
+  {
+    "frage": "Was passiert bei Verstoß gegen das PBefG? (Variante 5)",
+    "antworten": [
+      "Es gibt keine Konsequenzen",
+      "Verwarnung ohne Strafe",
+      "Bußgeld oder Entzug der Genehmigung"
+    ],
+    "korrekt": 2,
+    "erklaerung": "اردو: بغیر اجازت نامے کے لوگوں کو سفر کرانے پر جرمانہ یا اجازت نامے کی منسوخی ہو سکتی ہے۔"
+  },
+  {
+    "frage": "Was ist ein 'Gelegenheitsverkehr' laut PBefG? (Variante 5)",
+    "antworten": [
+      "Ungeplante private Fahrten",
+      "Verkehr, der nicht regelmäßig stattfindet",
+      "Öffentlicher Linienverkehr"
+    ],
+    "korrekt": 1,
+    "erklaerung": "اردو: ایسی سروس جو مقررہ وقت پر نہ ہو بلکہ ضرورت کے مطابق ہو، 'Gelegenheitsverkehr' کہلاتی ہے۔"
+  }
+]

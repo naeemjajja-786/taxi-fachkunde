@@ -20,25 +20,7 @@ function toggleLanguage(lang) {
 function showUrduContent() {
   const urduContent = [
     {
-      title: "ٹیکسی لائسنس کے تقاضے",
-      items: [
-        "عمر کم از کم 21 سال",
-        "کم از کم 2 سال کا ڈرائیونگ تجربہ",
-        "طبی فٹنس سرٹیفکیٹ",
-        "پولیس کلیئرنس (Führungszeugnis)",
-        "پیشہ ورانہ امتحان (Fachkundeprüfung)"
-      ]
-    },
-    {
-      title: "ضروری دستاویزات",
-      items: [
-        "ٹیکسی اجازت نامہ (Taxikonzession)",
-        "گاڑی رجسٹریشن دستاویزات",
-        "کاروباری رجسٹریشن (Gewerbeanmeldung)",
-        "ٹیکسی میٹر کی تصدیق",
-        "لازمی انشورنس دستاویزات"
-      ]
-    }
+      
   ];
 
   const container = document.getElementById('urduContent');

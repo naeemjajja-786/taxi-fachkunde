@@ -1,223 +1,446 @@
 [
   {
-    "frage": "Welche Gesellschaft benötigt keine Eintragung ins Handelsregister?",
+    "frage": "Welche Aussage über Einzelunternehmer ist korrekt?",
     "antworten": [
-      "Einzelunternehmen",
-      "GmbH",
-      "AG",
-      "UG"
-    ],
-    "korrekt": 0,
-    "erklaerung": "اردو وضاحت: Einzelunternehmen کی Handelsregister-Eintragung freiwillig ہے، لازمی نہیں۔"
-  },
-  {
-    "frage": "Welche Aussage zu Freiberuflern ist richtig?",
-    "antworten": [
-      "Sie müssen Gewerbesteuer zahlen",
-      "Sie melden ihr Gewerbe beim Gewerbeamt an",
-      "Sie gelten nicht als Gewerbetreibende",
-      "Sie müssen IHK-Mitglied sein"
+      "Einzelunternehmer haften nur mit dem Betriebsvermögen.",
+      "Einzelunternehmer benötigen mindestens zwei Gesellschafter.",
+      "Ein Einzelunternehmer haftet mit seinem gesamten Privatvermögen.",
+      "Einzelunternehmer müssen im Handelsregister eingetragen sein."
     ],
     "korrekt": 2,
-    "erklaerung": "اردو وضاحت: Freiberufler کو Gewerbetreibende نہیں سمجھا جاتا اور Gewerbe anmelden کی ضرورت نہیں۔"
+    "erklaerung": "اردو وضاحت: Einzelunternehmer مکمل طور پر اپنی ذاتی جائیداد سے بھی ذمہ دار ہوتا ہے۔"
   },
   {
-    "frage": "Was versteht man unter einer juristischen Person?",
-    "antworten": [
-      "Ein Mensch mit Rechtsfähigkeit",
-      "Ein Unternehmen mit eigener Rechtspersönlichkeit",
-      "Ein Freiberufler",
-      "Ein Geschäftsführer"
-    ],
-    "korrekt": 1,
-    "erklaerung": "اردو وضاحت: GmbH یا AG ایک juristische Person ہوتی ہے جو قانونی طور پر خود مختار ہے۔"
-  },
-  {
-    "frage": "Welche Rechtsform ist besonders für Startups geeignet?",
-    "antworten": [
-      "AG",
-      "UG (haftungsbeschränkt)",
-      "GbR",
-      "OHG"
-    ],
-    "korrekt": 1,
-    "erklaerung": "اردو وضاحت: UG چھوٹے سرمایہ کے ساتھ کمپنی شروع کرنے کا موزوں طریقہ ہے۔"
-  },
-  {
-    "frage": "Was ist eine Firma im rechtlichen Sinne?",
-    "antworten": [
-      "Der Standort eines Unternehmens",
-      "Der Name eines Unternehmens im Handelsregister",
-      "Die Abteilung der Buchhaltung",
-      "Die Kundenkartei"
-    ],
-    "korrekt": 1,
-    "erklaerung": "اردو وضاحت: Firma قانونی طور پر ایک رجسٹر شدہ کمپنی کا نام ہے، نہ کہ مقام یا محکمہ۔"
-  },
-  {
-    "frage": "Welches Merkmal trifft auf die GbR zu?",
-    "antworten": [
-      "Kapitalgesellschaft mit Eintragungspflicht",
-      "Haftungsbeschränkung",
-      "Einfach zu gründen, keine Eintragungspflicht",
-      "Börsennotiert"
-    ],
-    "korrekt": 2,
-    "erklaerung": "اردو وضاحت: GbR آسانی سے بغیر رجسٹریشن کے بنائی جا سکتی ہے اور اس میں ذاتی ذمہ داری ہوتی ہے۔"
-  },
-  {
-    "frage": "Welche Rechtsform ist zur Eintragung im Handelsregister verpflichtet?",
+    "frage": "Welche Gesellschaftsform ist eine Kapitalgesellschaft?",
     "antworten": [
       "GbR",
       "GmbH",
-      "Einzelunternehmer unter 22.000 EUR Umsatz",
-      "Freiberufler"
+      "OHG",
+      "Einzelunternehmen"
     ],
     "korrekt": 1,
-    "erklaerung": "اردو وضاحت: GmbH کمپنیوں کے لیے Handelsregister میں اندراج لازمی ہوتا ہے۔"
+    "erklaerung": "اردو وضاحت: GmbH ایک Kapitalgesellschaft ہے جس میں Haftung صرف Firmenvermögen تک محدود ہوتی ہے۔"
   },
   {
-    "frage": "Welche Bedeutung hat der Zusatz 'haftungsbeschränkt'?",
+    "frage": "Wer gilt als Kaufmann im Sinne des Handelsgesetzbuches?",
     "antworten": [
-      "Die Gesellschaft ist verpflichtet, Steuern zu zahlen",
-      "Die Haftung ist auf das Gesellschaftsvermögen beschränkt",
-      "Es handelt sich um eine AG",
-      "Die Firma muss IHK-Mitglied sein"
-    ],
-    "korrekt": 1,
-    "erklaerung": "اردو وضاحت: Haftungsbeschränkt کا مطلب ہے کہ ذاتی جائیداد محفوظ ہے، صرف کمپنی کا سرمایہ ذمہ دار ہے۔"
-  },
-  {
-    "frage": "Was bedeutet Gewerbefreiheit?",
-    "antworten": [
-      "Jeder darf ein Gewerbe ohne Bedingungen starten",
-      "Gewerbe dürfen ohne Anmeldung betrieben werden",
-      "Grundsätzlich darf jeder ein Gewerbe ausüben, sofern kein Verbot besteht",
-      "Nur Unternehmen mit Genehmigung dürfen tätig sein"
+      "Jede Privatperson",
+      "Nur GmbHs",
+      "Wer ein Handelsgewerbe betreibt",
+      "Nur juristische Personen"
     ],
     "korrekt": 2,
-    "erklaerung": "اردو وضاحت: Gewerbefreiheit کا مطلب ہے کہ ہر شہری کو کاروبار کرنے کا حق حاصل ہے، جب تک کوئی قانونی رکاوٹ نہ ہو۔"
+    "erklaerung": "اردو وضاحت: جو شخص Handelsgewerbe چلاتا ہے وہ قانوناً Kaufmann کہلاتا ہے۔"
   },
   {
-    "frage": "Wer prüft die persönliche Zuverlässigkeit bei Gewerbeanmeldung?",
-    "antworten": [
-      "Finanzamt",
-      "Polizei",
-      "Gewerbeamt",
-      "IHK"
-    ],[
-  {
-    "frage": "Was ist eine Voraussetzung zur Eintragung in das Handelsregister?",
+    "frage": "Was ist eine Voraussetzung für die Eintragung ins Handelsregister?",
     "antworten": [
       "Freiberufliche Tätigkeit",
-      "Gewinnerzielungsabsicht mit Selbstständigkeit",
-      "Mindestens zwei Gesellschafter",
-      "Eintragung ist immer freiwillig"
+      "Natürliche Person",
+      "Eintrag erfolgt automatisch",
+      "Handelsgewerbe mit entsprechender Größe"
     ],
-    "korrekt": 1,
-    "erklaerung": "اردو: Handelsregister میں وہ کاروبار درج ہوتے ہیں جو مستقل اور نفع کی نیت سے کیے جائیں۔"
+    "korrekt": 3,
+    "erklaerung": "اردو وضاحت: صرف وہ کاروبار Handelsregister میں درج ہوتے ہیں جو Kaufmann gelten اور بڑی سطح پر کام کریں۔"
   },
   {
-    "frage": "Welche Unternehmensform haftet mit dem gesamten Privatvermögen?",
+    "frage": "Welche Aussage über Freiberufler ist korrekt?",
+    "antworten": [
+      "Sie zahlen Gewerbesteuer",
+      "Sie sind IHK-Mitglied",
+      "Sie führen Einnahmenüberschussrechnung",
+      "Sie müssen doppelte Buchführung machen"
+    ],
+    "korrekt": 2,
+    "erklaerung": "اردو وضاحت: Freiberufler کو Gewerbesteuer اور IHK-Mitgliedschaft سے استثناء حاصل ہے، لیکن وہ Einnahmenüberschussrechnung کرتے ہیں۔"
+  },
+  {
+    "frage": "Welche Aussage trifft auf eine UG (haftungsbeschränkt) zu?",
+    "antworten": [
+      "Sie benötigt 25.000 Euro Stammkapital",
+      "Sie haftet mit dem Privatvermögen",
+      "Sie ist eine Personengesellschaft",
+      "Sie kann mit nur 1 Euro gegründet werden"
+    ],
+    "korrekt": 3,
+    "erklaerung": "اردو وضاحت: UG (haftungsbeschränkt) کو صرف 1 یورو سے بھی شروع کیا جا سکتا ہے۔"
+  },
+  {
+    "frage": "Was gilt für eine GbR?",
+    "antworten": [
+      "Sie muss ins Handelsregister eingetragen werden",
+      "Sie braucht ein Mindestkapital von 25.000 EUR",
+      "Sie kann formlos durch zwei Personen gegründet werden",
+      "Sie ist eine Kapitalgesellschaft"
+    ],
+    "korrekt": 2,
+    "erklaerung": "اردو وضاحت: GbR دو افراد کے درمیان غیر رسمی طور پر بھی بن سکتی ہے، بغیر Handelsregister۔"
+  },
+  {
+    "frage": "Welche Aussage trifft auf juristische Personen zu?",
+    "antworten": [
+      "Sie haften immer mit Privatvermögen",
+      "Sie sind natürliche Menschen",
+      "Sie entstehen durch Eintragung im Handelsregister",
+      "Sie dürfen keine Firma führen"
+    ],
+    "korrekt": 2,
+    "erklaerung": "اردو وضاحت: Juristische Personen اپنی قانونی حیثیت Handelsregister Eintrag کے ذریعے حاصل کرتی ہیں۔"
+  },
+  {
+    "frage": "Was ist ein typischer Freiberufler?",
+    "antworten": [
+      "Bäcker",
+      "Rechtsanwalt",
+      "Taxifahrer",
+      "Gastronom"
+    ],
+    "korrekt": 1,
+    "erklaerung": "اردو وضاحت: Rechtsanwalt، Arzt، Architekt وغیرہ Freiberufler میں شمار ہوتے ہیں۔"
+  },
+  {
+    "frage": "Was beschreibt eine Firma im rechtlichen Sinne?",
+    "antworten": [
+      "Der Standort eines Unternehmens",
+      "Die Abteilung der Buchhaltung",
+      "Der Name des Unternehmens im Handelsregister",
+      "Das Produkt eines Unternehmens"
+    ],
+    "korrekt": 2,
+    "erklaerung": "اردو وضاحت: Firma وہ نام ہوتا ہے جس کے تحت ایک Kaufmann کاروبار چلاتا ہے۔"
+  }
+  // Fragen 11–25 اگلے حصے میں دوں گا
+][
+  {
+    "frage": "Was ist ein Merkmal von Kapitalgesellschaften?",
+    "antworten": [
+      "Sie haften unbeschränkt mit Privatvermögen",
+      "Sie sind nicht rechtsfähig",
+      "Sie sind juristische Personen",
+      "Sie benötigen keine Eintragung"
+    ],
+    "korrekt": 2,
+    "erklaerung": "اردو وضاحت: Kapitalgesellschaften جیسے GmbH اور AG juristische Personen ہوتی ہیں۔"
+  },
+  {
+    "frage": "Was gilt für eine GmbH?",
+    "antworten": [
+      "Sie ist eine Personengesellschaft",
+      "Sie benötigt kein Mindestkapital",
+      "Sie muss im Handelsregister eingetragen werden",
+      "Sie darf nur von zwei Personen gegründet werden"
+    ],
+    "korrekt": 2,
+    "erklaerung": "اردو وضاحت: GmbH کو Handelsregister میں درج کرنا قانونی طور پر لازم ہے۔"
+  },
+  {
+    "frage": "Wer haftet bei einer GbR?",
+    "antworten": [
+      "Nur die Gesellschaft",
+      "Nur ein Gesellschafter",
+      "Alle Gesellschafter unbeschränkt mit Privatvermögen",
+      "Niemand"
+    ],
+    "korrekt": 2,
+    "erklaerung": "اردو وضاحت: GbR میں تمام شرکاء ذاتی طور پر اور مکمل ذمہ دار ہوتے ہیں۔"
+  },
+  {
+    "frage": "Welche Aussage über das Handelsregister ist korrekt?",
+    "antworten": [
+      "Es ist nicht öffentlich einsehbar",
+      "Es enthält nur Freiberufler",
+      "Es listet eingetragene Kaufleute und Unternehmen",
+      "Es ist freiwillig für Kapitalgesellschaften"
+    ],
+    "korrekt": 2,
+    "erklaerung": "اردو وضاحت: Handelsregister میں تمام Kaufleute اور کمپنیوں کی تفصیل درج ہوتی ہے۔"
+  },
+  {
+    "frage": "Was ist für eine Gewerbeanmeldung erforderlich?",
+    "antworten": [
+      "Ein Studium",
+      "Eintrag ins Vereinsregister",
+      "Persönliche Zuverlässigkeit",
+      "Ein Handelsregistereintrag"
+    ],
+    "korrekt": 2,
+    "erklaerung": "اردو وضاحت: Gewerbeanmeldung کے لیے قابلِ اعتماد ہونا (Zuverlässigkeit) ضروری ہے۔"
+  },
+  {
+    "frage": "Welche Rechtsform benötigt kein Mindestkapital?",
     "antworten": [
       "GmbH",
       "AG",
-      "Einzelunternehmen",
-      "UG (haftungsbeschränkt)"
-    ],
-    "korrekt": 2,
-    "erklaerung": "اردو: Einzelunternehmer اپنی ذاتی جائیداد سے بھی ذمہ دار ہوتا ہے۔"
-  },
-  {
-    "frage": "Was unterscheidet Kapitalgesellschaften von Personengesellschaften?",
-    "antworten": [
-      "Mehr Gesellschafter",
-      "Kapitalgesellschaften haften nur mit Firmenvermögen",
-      "Personengesellschaften brauchen kein Gewerbe",
-      "Kapitalgesellschaften zahlen keine Steuern"
-    ],
-    "korrekt": 1,
-    "erklaerung": "اردو: Kapitalgesellschaft صرف کمپنی کے اثاثوں سے ذمہ دار ہوتی ہے۔"
-  },
-  {
-    "frage": "Welche Rechtsform gilt als juristische Person?",
-    "antworten": [
-      "Einzelunternehmen",
       "GbR",
+      "UG"
+    ],
+    "korrekt": 2,
+    "erklaerung": "اردو وضاحت: GbR بغیر کسی ابتدائی سرمایہ کے قائم کی جا سکتی ہے۔"
+  },
+  {
+    "frage": "Was ist keine juristische Person?",
+    "antworten": [
       "GmbH",
-      "Freiberufler"
+      "AG",
+      "e.V.",
+      "Einzelunternehmer"
     ],
-    "korrekt": 2,
-    "erklaerung": "اردو: GmbH ایک juristische Person ہے جو قانونی طور پر ایک شخصیت رکھتی ہے۔"
+    "korrekt": 3,
+    "erklaerung": "اردو وضاحت: Einzelunternehmer ایک natürliche Person ہوتا ہے، juristisch نہیں۔"
   },
   {
-    "frage": "Wer ist nach HGB §1 Kaufmann?",
+    "frage": "Was trifft auf einen Freiberufler zu?",
     "antworten": [
-      "Nur Kapitalgesellschaften",
-      "Jede natürliche Person mit Einkommen",
-      "Wer ein Handelsgewerbe betreibt",
-      "Nur eingetragene Firmen"
+      "Er zahlt Gewerbesteuer",
+      "Er muss ins Handelsregister",
+      "Er benötigt IHK-Mitgliedschaft",
+      "Er macht Einnahmenüberschussrechnung"
     ],
-    "korrekt": 2,
-    "erklaerung": "اردو: جو شخص Handelsgewerbe (تجارتی کاروبار) کرتا ہے وہ Kaufmann ہے۔"
+    "korrekt": 3,
+    "erklaerung": "اردو وضاحت: Freiberufler کو Gewerbesteuer یا IHK-Mitgliedschaft سے استثنا حاصل ہے۔"
   },
   {
-    "frage": "Welche Aussage zur GbR ist korrekt?",
+    "frage": "Wer ist zur Eintragung ins Handelsregister verpflichtet?",
     "antworten": [
-      "Braucht ein Mindestkapital von 25.000€",
-      "Ist eine Kapitalgesellschaft",
-      "Ist eine einfache Personengesellschaft ohne Handelsregister",
-      "Haftet nicht mit Privatvermögen"
+      "Freiberufler",
+      "Einzelunternehmer mit großem Umsatz",
+      "Kleingewerbetreibende",
+      "Alle natürlichen Personen"
     ],
-    "korrekt": 2,
-    "erklaerung": "اردو: GbR دو یا زیادہ افراد کی شراکت ہے جو سادہ اور بغیر رجسٹریشن کی جا سکتی ہے۔"
+    "korrekt": 1,
+    "erklaerung": "اردو وضاحت: صرف وہ Einzelunternehmer جن کی تجارتی نوعیت بڑی ہو، درج کرنا لازم ہوتا ہے۔"
   },
   {
-    "frage": "Welche Pflichtmitgliedschaft gilt für Gewerbetreibende?",
+    "frage": "Was ist eine UG?",
     "antworten": [
-      "Kfz-Innung",
+      "Eine nicht-rechtsfähige Gesellschaft",
+      "Eine Kapitalgesellschaft mit geringer Einlage",
+      "Eine Mischform aus GmbH und AG",
+      "Ein Verein mit Spendenpflicht"
+    ],
+    "korrekt": 1,
+    "erklaerung": "اردو وضاحت: UG ایک سادہ GmbH ہے جو کم سرمایہ سے شروع کی جا سکتی ہے۔"
+  },
+  {
+    "frage": "Was ist der Zweck eines Verbandes?",
+    "antworten": [
+      "Eintrag ins Register",
+      "Beratung und Interessenvertretung von Mitgliedern",
+      "Finanzierung von Kapitalgesellschaften",
+      "Verkauf von Taxi-Lizenzen"
+    ],
+    "korrekt": 1,
+    "erklaerung": "اردو وضاحت: Verband ممبران کی نمائندگی اور مشورہ دینے کے لیے ہوتا ہے۔"
+  },
+  {
+    "frage": "Wer vertritt Taxiunternehmer auf Bundesebene?",
+    "antworten": [
+      "BG Verkehr",
+      "Deutscher Taxi- und Mietwagenverband (BZP)",
       "Handwerkskammer",
-      "IHK",
-      "BG Bau"
-    ],
-    "korrekt": 2,
-    "erklaerung": "اردو: Gewerbetreibende کو IHK کی رکنیت لازمی ہے۔"
-  },
-  {
-    "frage": "Was ist die Funktion eines Verbandes im Gewerbe?",
-    "antworten": [
-      "Steuerprüfung",
-      "Kontrolle des Betriebs",
-      "Vertretung gewerblicher Interessen",
-      "Ausstellung von Führerscheinen"
-    ],
-    "korrekt": 2,
-    "erklaerung": "اردو: Verband کاروباری حضرات کے مفادات کی نمائندگی کرتے ہیں۔"
-  },
-  {
-    "frage": "Was beschreibt eine natürliche Person im Gewerberecht?",
-    "antworten": [
-      "Eine juristische Gesellschaft",
-      "Ein Einzelunternehmer oder Mensch",
-      "Ein Verein",
-      "Ein Konzern"
+      "Stadtwerke"
     ],
     "korrekt": 1,
-    "erklaerung": "اردو: ہر انسان جو قانونی حقوق و فرائض رکھتا ہو، natürliche Person کہلاتا ہے۔"
+    "erklaerung": "اردو وضاحت: BZP ٹیکسی کاروباریوں کی نمائندگی وفاقی سطح پر کرتا ہے۔"
   },
   {
-    "frage": "Was ist Voraussetzung für die Anmeldung eines Gewerbes?",
+    "frage": "Was darf ein Unternehmer ohne Mitgliedschaft in der Zentrale tun?",
     "antworten": [
-      "Eintrag in das Vereinsregister",
-      "Persönliche Zuverlässigkeit",
-      "Volljährigkeit",
-      "Steuerliche Unbedenklichkeit"
+      "Sich auf Taxistandplätze stellen",
+      "Funkgerät ohne Lizenz nutzen",
+      "Fahrpreise frei festlegen",
+      "Genehmigungen umgehen"
+    ],
+    "korrekt": 0,
+    "erklaerung": "اردو وضاحت: بغیر زینٹرالے کے بھی ٹیکسی اسٹینڈ استعمال کیے جا سکتے ہیں۔"
+  },
+  {
+    "frage": "Was regelt ein Vermittlungsvertrag?",
+    "antworten": [
+      "Miete der Fahrzeuge",
+      "Verbindung zwischen Zentrale und Unternehmer",
+      "Versicherungspflichten",
+      "Steuerzahlungen"
     ],
     "korrekt": 1,
-    "erklaerung": "اردو: Gewerbe شروع کرنے کے لیے Zuverlässigkeit (قابل اعتبار ہونا) لازمی ہے۔"
+    "erklaerung": "اردو وضاحت: Vermittlungsvertrag زینٹرالے اور ٹیکسی کاروباری کے درمیان تعلق بناتا ہے۔"
+  },
+  {
+    "frage": "Was ist ein Werkvertrag?",
+    "antworten": [
+      "Vertrag ohne Erfolgspflicht",
+      "Vertrag zur Vermittlung",
+      "Vertrag mit Erfolgspflicht auf ein Werk",
+      "Nur für Ärzte gültig"
+    ],
+    "korrekt": 2,
+    "erklaerung": "اردو وضاحت: Werkvertrag میں مخصوص نتیجہ یا چیز کی فراہمی ضروری ہوتی ہے۔"
   }
 ]
+[
+  {
+    "frage": "Was wird im Handelsregister dokumentiert?",
+    "antworten": [
+      "Nur die Umsatzsteuer-Identifikationsnummer",
+      "Angaben zu Firma, Rechtsform, Kapital",
+      "Nur Namen der Gesellschafter",
+      "Ausschließlich die Steuerlast"
+    ],
+    "korrekt": 1,
+    "erklaerung": "اردو وضاحت: Handelsregister میں کمپنی کا نام، Rechtsform اور سرمایہ وغیرہ شامل ہوتا ہے۔"
+  },
+  {
+    "frage": "Welche Firma darf sich als GmbH bezeichnen?",
+    "antworten": [
+      "Jede Einzelfirma",
+      "Nur eingetragene juristische Personen mit GmbH-Status",
+      "Alle Freiberufler",
+      "GbRs mit mehr als zwei Gesellschaftern"
+    ],
+    "korrekt": 1,
+    "erklaerung": "اردو وضاحت: صرف وہ کمپنیاں جو GmbH کے قانونی معیار پر پوری اتریں، وہی یہ نام استعمال کر سکتی ہیں۔"
+  },
+  {
+    "frage": "Woraus ergibt sich die Rechtsfähigkeit einer juristischen Person?",
+    "antworten": [
+      "Durch Geburt",
+      "Durch Handelsregistereintrag",
+      "Durch Mitgliedschaft in der IHK",
+      "Durch Steuerzahlung"
+    ],
+    "korrekt": 1,
+    "erklaerung": "اردو وضاحت: Juristische Person کی قانونی حیثیت اس کے Handelsregister-Eintrag سے شروع ہوتی ہے۔"
+  },
+  {
+    "frage": "Welche Aussage zur UG trifft zu?",
+    "antworten": [
+      "Sie benötigt 25.000 € Kapital",
+      "Sie ist keine haftungsbeschränkte Gesellschaft",
+      "Sie ist eine Mini-GmbH mit 1 € Startkapital",
+      "Sie wird nicht ins Handelsregister eingetragen"
+    ],
     "korrekt": 2,
-    "erklaerung": "اردو وضاحت: Gewerbeamt Gewerbeanmeldung کے وقت Zuverlässigkeit چیک کرتا ہے۔"
+    "erklaerung": "اردو وضاحت: UG ایک GmbH کی مختصر شکل ہے جسے صرف 1 یورو سے شروع کیا جا سکتا ہے۔"
+  },
+  {
+    "frage": "Was muss eine Firma enthalten?",
+    "antworten": [
+      "Eine Fantasiebezeichnung ohne Zusatz",
+      "Den Namen des Steuerberaters",
+      "Einen Zusatz zur Rechtsform",
+      "Den Ort der Anmeldung"
+    ],
+    "korrekt": 2,
+    "erklaerung": "اردو وضاحت: قانونی طور پر Firmenname میں Rechtsform (مثلاً GmbH، UG) لازمی ہوتا ہے۔"
+  },
+  {
+    "frage": "Wann ist ein Unternehmer Kaufmann im Sinne des HGB?",
+    "antworten": [
+      "Wenn er im Vereinsregister steht",
+      "Wenn er ein Handelsgewerbe betreibt",
+      "Wenn er Arzt ist",
+      "Wenn er eine UG gründet"
+    ],
+    "korrekt": 1,
+    "erklaerung": "اردو وضاحت: HGB کے مطابق، جو شخص Handelsgewerbe چلاتا ہے وہ Kaufmann ہوتا ہے۔"
+  },
+  {
+    "frage": "Was ist ein Vorteil der Mitgliedschaft in einer Funkzentrale?",
+    "antworten": [
+      "Erhöhte Steuerlast",
+      "Unabhängigkeit von Aufträgen",
+      "Verbesserte Fahrauftragsvermittlung",
+      "Keine Pflicht zur Versicherung"
+    ],
+    "korrekt": 2,
+    "erklaerung": "اردو وضاحت: Funkzentrale کی رکنیت سے آرڈرز کی دستیابی بہتر ہو جاتی ہے۔"
+  },
+  {
+    "frage": "Welche Organisation ist Pflicht für Gewerbetreibende?",
+    "antworten": [
+      "Kfz-Innung",
+      "IHK",
+      "BZP",
+      "Finanzamt"
+    ],
+    "korrekt": 1,
+    "erklaerung": "اردو وضاحت: Gewerbetreibende کو IHK کی رکنیت لازمی طور پر حاصل کرنی ہوتی ہے۔"
+  },
+  {
+    "frage": "Was ist ein Dienstvertrag?",
+    "antworten": [
+      "Ein Vertrag mit Erfolgspflicht",
+      "Ein Vertrag über reinen Zeiteinsatz",
+      "Ein Kaufvertrag",
+      "Ein Mietvertrag"
+    ],
+    "korrekt": 1,
+    "erklaerung": "اردو وضاحت: Dienstvertrag میں وقت یا خدمت دی جاتی ہے، جیسے ڈاکٹر کا علاج۔"
+  },
+  {
+    "frage": "Welche Angabe gehört nicht ins Handelsregister?",
+    "antworten": [
+      "Firma",
+      "Rechtsform",
+      "Stammkapital",
+      "Privatadresse des Fahrers"
+    ],
+    "korrekt": 3,
+    "erklaerung": "اردو وضاحت: Handelsregister میں کاروباری تفصیل دی جاتی ہے، ذاتی پتہ نہیں۔"
+  },
+  {
+    "frage": "Was ist eine Genossenschaft im Taxigewerbe?",
+    "antworten": [
+      "Eine Kapitalgesellschaft mit mehreren Taxis",
+      "Ein Zusammenschluss von Taxiunternehmern zur Nutzung einer Zentrale",
+      "Ein Verband der Fahrer",
+      "Ein Pflichtverein"
+    ],
+    "korrekt": 1,
+    "erklaerung": "اردو وضاحت: اکثر Funkzentralen ایک Genossenschaft (شراکت داری) کے طور پر کام کرتی ہیں۔"
+  },
+  {
+    "frage": "Wann wird ein Beförderungsvertrag abgeschlossen?",
+    "antworten": [
+      "Mit dem Funkgerät",
+      "Zwischen Taxizentrale und Fahrer",
+      "Zwischen Unternehmer und Fahrgast beim Fahrtantritt",
+      "Nach der Zahlung"
+    ],
+    "korrekt": 2,
+    "erklaerung": "اردو وضاحت: جیسے ہی سفر شروع ہوتا ہے، Unternehmer اور Fahrgast کے درمیان معاہدہ بن جاتا ہے۔"
+  },
+  {
+    "frage": "Was ist ein Vorteil eines Fantasienamens für eine Firma?",
+    "antworten": [
+      "Er muss gesetzlich verwendet werden",
+      "Er ist immer eindeutig",
+      "Er bietet Marketingmöglichkeiten",
+      "Er ist kostenlos geschützt"
+    ],
+    "korrekt": 2,
+    "erklaerung": "اردو وضاحت: Fantasiename مارکیٹنگ میں مدد دیتا ہے، لیکن قانونی تقاضے پورے کرنا ضروری ہے۔"
+  },
+  {
+    "frage": "Wer kann eine GmbH gründen?",
+    "antworten": [
+      "Nur Juristische Personen",
+      "Nur zwei natürliche Personen",
+      "Jede volljährige natürliche Person",
+      "Nur Freiberufler"
+    ],
+    "korrekt": 2,
+    "erklaerung": "اردو وضاحت: کوئی بھی بالغ شخص GmbH کا قیام کر سکتا ہے، حتیٰ کہ اکیلا شخص بھی۔"
+  },
+  {
+    "frage": "Wodurch wird die Funkfrequenz für Taxifunk vergeben?",
+    "antworten": [
+      "IHK",
+      "Bundesnetzagentur",
+      "BZP",
+      "Gewerbeamt"
+    ],
+    "korrekt": 1,
+    "erklaerung": "اردو وضاحت: ٹیکسی کے لیے مخصوص Funkfrequenz صرف Bundesnetzagentur سے لی جا سکتی ہے۔"
   }
 ]

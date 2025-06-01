@@ -59,7 +59,7 @@ const topics = [
   "Personenbeförderung", "Gewerberecht", "Arbeitsrecht",
   "Kaufmännische und finanzielle Führung des Unternehmens", "Kostenrechnung", "Straßenverkehrsrecht",
   "Umweltschutz", "Versicherungswesen", "Technische Normen und technischer Betrieb",
-  "Beförderungsentgelte und -bedingungen", "Mietwagen", "Fallbeispiele" "Teste Dich"
+  "Beförderungsentgelte und -bedingungen", "Mietwagen", "Fallbeispiele"
 ];
 
 document.addEventListener('DOMContentLoaded', () => {

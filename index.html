@@ -31,9 +31,15 @@
 
   <section id="lern" class="section hidden">
     <h2>Lernmaterial</h2>
-      <div id="lern inhalt" class="lerninhalte hidden"></div>
-    <!-- اردو مواد کے لیے مخصوص ڈیو -->
-    <div id="urduContent" class="urdu-content hidden"></div>
+
+    <!-- زبان منتخب کرنے کے بٹن -->
+    <div id="language-buttons" style="margin-bottom: 15px;">
+      <button onclick="loadLernmaterial('de')">Deutsch</button>
+      <button onclick="loadLernmaterial('ur')">Urdu</button>
+    </div>
+
+    <!-- یہاں مواد ظاہر ہوگا -->
+    <div id="lernContent" class="content-box"></div>
   </section>
 
   <section id="math" class="section hidden">

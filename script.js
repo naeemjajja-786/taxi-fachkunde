@@ -18,7 +18,7 @@ function toggleLanguage(lang) {
 
 // ✅ اردو مواد کو ظاہر کرنے کا فنکشن (نیا اضافہ)
 function showUrduContent() {
-  const urduContent = [
+  const urduContent = [content-urdu
     {
       
   ];

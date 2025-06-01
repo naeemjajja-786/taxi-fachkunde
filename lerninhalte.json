@@ -1,0 +1,43 @@
+{
+  "chapters": [
+    {
+      "title": "Kapitel 1: Personenbeförderungsrecht",
+      "subtopics": [
+        {
+          "title": "Genehmigungspflicht im Personenbeförderungsgesetz",
+          "content": "Wer gewerbsmäßig Taxen- oder Mietwagenverkehr betreiben will, braucht gemäß Personenbeförderungsgesetz (PBefG) eine behördliche Genehmigung. Das PBefG bildet den rechtlichen Ordnungsrahmen für Taxiunternehmen: Es regelt Berufszugang, Kontrollen und die Ahndung von Verstößen sowie die Vorschriften für die Tarifbildung im Taxenverkehr."
+        },
+        {
+          "title": "Unterschied zwischen Taxi und Mietwagen",
+          "content": "Taxen dürfen im Gegensatz zu Mietwagen auch an Taxihaltestellen oder unterwegs Fahrgäste aufnehmen. Sie unterliegen einer Betriebs-, Beförderungs- und Tarifpflicht und müssen z. B. mit einem vorgeschriebenen Taxameter ausgestattet sein. Mietwagen dagegen dürfen nur am Betriebssitz Aufträge entgegennehmen und sind mit einem Wegstreckenzähler ausgerüstet."
+        }
+      ]
+    },
+    {
+      "title": "Kapitel 2: Gewerberecht und Genehmigung",
+      "subtopics": [
+        {
+          "title": "Gewerbeanmeldung und Unternehmensgründung",
+          "content": "Für das Taxen- und Mietwagengewerbe ist eine Gewerbeanmeldung bei der zuständigen Behörde verpflichtend. Die Gewerbeordnung (GewO) enthält allgemeine Regelungen zur Gründung eines Unternehmens. Vor Betriebsstart müssen Nachweise über persönliche Zuverlässigkeit und finanzielle Leistungsfähigkeit erbracht werden."
+        },
+        {
+          "title": "Genehmigungsverfahren und Voraussetzungen",
+          "content": "Anträge auf Genehmigung für den Taxi- oder Mietwagenverkehr werden bei der Behörde des Betriebssitzes gestellt. Neben der Gewerbeanmeldung ist die Genehmigung nach PBefG erforderlich. Die Behörde prüft, ob die Voraussetzungen (Zuverlässigkeit, Leistungsfähigkeit, fachliche Eignung) erfüllt sind. Liegen sie vor, wird die Erlaubnis erteilt."
+        }
+      ]
+    },
+    {
+      "title": "Kapitel 3: Straßenverkehrsrecht",
+      "subtopics": [
+        {
+          "title": "Fahrerlaubnis und Qualifikation",
+          "content": "Im Taxengewerbe benötigt der Unternehmer bzw. Fahrer die Fahrerlaubnis der Klasse B und – soweit erforderlich – eine Beförderungserlaubnis gem. § 48 PBefG. Nach der Fahrerlaubnis-Verordnung (FeV) sind ärztliche Untersuchungen und der Nachweis über die Fahrtauglichkeit erforderlich. Fahrer müssen also einen gültigen Pkw-Führerschein haben und regelmäßig geschult sein."
+        },
+        {
+          "title": "Verkehrsregeln und Fahrzeugausstattung",
+          "content": "Die Taxen müssen die Straßenverkehrsordnung (StVO) einhalten. Dazu gehören z. B. die Anschnallpflicht und die Kindersitzpflicht für Fahrgäste. Außerdem schreibt die Fahrzeug-Zulassungsverordnung (StVZO/FZV) vor, dass Taxen technisch in Ordnung sind (Bremsen, Beleuchtung, Reifen). Der Unternehmer muss auch dafür sorgen, dass Funkgeräte oder Telefon als Kommunikationsmittel bereitstehen."
+        }
+      ]
+    }
+  ]
+}

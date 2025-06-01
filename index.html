@@ -5,8 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Taxi-Unternehmers Vorbereitung</title>
   <link rel="stylesheet" href="style.css">
+  <!-- اردو مواد کے لیے اضافی CSS -->
+  <link rel="stylesheet" href="urdu.css">
+  <!-- اردو فونٹ کے لیے -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;700&display=swap" rel="stylesheet">
   <script src="script.js" defer></script>
   <script src="quiz.js" defer></script>
+  <!-- اردو مواد کے لیے الگ JavaScript -->
+  <script src="urdu.js" defer></script>
 </head>
 <body>
 
@@ -19,11 +25,15 @@
     <button onclick="showSection('themen')">Themen Quiz</button>
     <button onclick="showSection('math')">Mathe Eingabe</button>
     <button onclick="showSection('pruefung')">Muster Prüfungen</button>
+    <!-- یہاں صرف اردو بٹن کا اضافہ کیا گیا ہے -->
+    <button id="urduBtn" onclick="showUrduContent()">اردو رہنمائی</button>
   </nav>
 
   <section id="lern" class="section hidden">
     <h2>Lernmaterial</h2>
     <p>اردو / Deutsch متن یہاں شامل کریں۔</p>
+    <!-- اردو مواد کے لیے مخصوص ڈیو -->
+    <div id="urduContent" class="urdu-content hidden"></div>
   </section>
 
   <section id="math" class="section hidden">

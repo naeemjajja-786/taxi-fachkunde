@@ -16,6 +16,50 @@ function toggleLanguage(lang) {
   }
 }
 
+// ✅ اردو مواد کو ظاہر کرنے کا فنکشن (نیا اضافہ)
+function showUrduContent() {
+  const urduContent = [
+    {
+      title: "ٹیکسی لائسنس کے تقاضے",
+      items: [
+        "عمر کم از کم 21 سال",
+        "کم از کم 2 سال کا ڈرائیونگ تجربہ",
+        "طبی فٹنس سرٹیفکیٹ",
+        "پولیس کلیئرنس (Führungszeugnis)",
+        "پیشہ ورانہ امتحان (Fachkundeprüfung)"
+      ]
+    },
+    {
+      title: "ضروری دستاویزات",
+      items: [
+        "ٹیکسی اجازت نامہ (Taxikonzession)",
+        "گاڑی رجسٹریشن دستاویزات",
+        "کاروباری رجسٹریشن (Gewerbeanmeldung)",
+        "ٹیکسی میٹر کی تصدیق",
+        "لازمی انشورنس دستاویزات"
+      ]
+    }
+  ];
+
+  const container = document.getElementById('urduContent');
+  container.innerHTML = '';
+  
+  urduContent.forEach(section => {
+    const sectionDiv = document.createElement('div');
+    sectionDiv.className = 'urdu-section';
+    sectionDiv.innerHTML = `
+      <h3>${section.title}</h3>
+      <ul>
+        ${section.items.map(item => `<li>${item}</li>`).join('')}
+      </ul>
+    `;
+    container.appendChild(sectionDiv);
+  });
+
+  showSection('lern');
+  document.getElementById('urduContent').classList.remove('hidden');
+}
+
 // ✅ MathQuill Setup (optional placeholder)
 window.onload = function () {
   if (document.getElementById('math-field')) {

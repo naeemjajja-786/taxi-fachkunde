@@ -1,118 +1,75 @@
-// script.js
-
-// 1) Section دکھانے کا فنکشن
+// ✅ Show sections
 function showSection(id) {
-  document.querySelectorAll('.section')
-    .forEach(s => s.classList.add('hidden'));
+  document.querySelectorAll('.section').forEach(sec => sec.classList.add('hidden'));
   document.getElementById(id).classList.remove('hidden');
 }
 
-// 2) Lernmaterial کے لیے زبان کی toggle
+// ✅ Toggle language content for Lernmaterial
 function toggleLanguage(lang) {
   document.getElementById('content-urdu').classList.add('hidden');
   document.getElementById('content-de').classList.add('hidden');
-  if (lang === 'urdu')    document.getElementById('content-urdu').classList.remove('hidden');
-  else if (lang === 'de') document.getElementById('content-de').classList.remove('hidden');
+
+  if (lang === 'urdu') {
+    document.getElementById('content-urdu').classList.remove('hidden');
+  } else {
+    document.getElementById('content-de').classList.remove('hidden');
+  }
 }
 
-// 3) MathQuill Initialization
-window.onload = () => {
-  // MathQuill سیٹ اپ
-  const MQ = MathQuill.getInterface(2);
-  MQ.MathField(document.getElementById('math-field'), {
-    spaceBehavesLikeTab: true
-  });
-
-  // placeholder: بعد میں questions append کریں
-  // loadMathQuestions();
+// ✅ MathQuill Setup (optional placeholder)
+window.onload = function () {
+  if (document.getElementById('math-field')) {
+    const MQ = MathQuill.getInterface(2);
+    MQ.MathField(document.getElementById('math-field'), {
+      spaceBehavesLikeTab: true
+    });
+  }
 };
 
-// 4) Quiz کے موجودہ دو سوالات (بعد میں JSON لوڈ کر کے merge کریں)
-const quizData = [
-  {
-    frage: "Wie hoch ist der gesetzliche MwSt-Satz für innerstädtische Fahrten?",
-    antworten: ["19%", "7%", "0%"],
-    korrekt: 1,
-    erklaerung: "اردو: شہر کے اندر ٹیکسی کرایہ پر 7% سیلز ٹیکس لاگو ہوتا ہے۔"
-  },
-  {
-    frage: "Was tun bei Taxameter-Ausfall?",
-    antworten: ["Einfach weiterfahren", "Fahrgast informieren", "Schätzen"],
-    korrekt: 1,
-    erklaerung: "اردو: ٹیکسی میٹر خراب ہو تو مسافر کو فوراً اطلاع دینا ضروری ہے۔"
-  }
-];
-
-function loadQuiz() {
-  const container = document.getElementById("quiz-container");
-  container.innerHTML = '';  // reset
-  quizData.forEach((q, i) => {
-    const div = document.createElement("div");
-    div.innerHTML = `<p><b>Frage ${i+1}:</b> ${q.frage}</p>` +
-      q.antworten.map((a,j)=>
-        `<label><input type="radio" name="q${i}" value="${j}"> ${a}</label><br>`
-      ).join("");
-    container.appendChild(div);
-  });
-}
-
-function showQuizResult() {
-  let correct = 0;
-  quizData.forEach((q,i)=>{
-    const sel = document.querySelector(`input[name=q${i}]:checked`);
-    if (sel && +sel.value === q.korrekt) correct++;
-  });
-  const res = document.getElementById("quiz-result");
-  res.innerHTML = `<p>Ergebnis: ${correct} / ${quizData.length}</p>`;
-  quizData.forEach((q,i)=>{
-    res.innerHTML += `<p><b>Frage ${i+1}:</b> ${q.erklaerung}</p>`;
-  });
-}
-
-// 5) Prüfung Starten: testFiles سے Random JSON لوڈ کرنا
-const testFiles = [
-  "prüfung-01.json",
-  "prüfung_01.json"
-];
-
+// ✅ Prüfung Starten: Zufällige Test-Datei laden
 function startPruefung() {
-  const file = testFiles[Math.floor(Math.random()*testFiles.length)];
-  fetch(file)
-    .then(r=>r.json())
-    .then(data=>{
-      renderTest(data);
+  const testFiles = [
+    "prüfung_01.json",
+    "prüfung_02.json",
+    "prüfung_03.json"
+    // weitere Testdateien hier ergänzen
+  ];
+
+  const randomFile = testFiles[Math.floor(Math.random() * testFiles.length)];
+  fetch(randomFile)
+    .then(res => res.json())
+    .then(data => {
+      const container = document.getElementById("test-container");
+      container.innerHTML = '';
+      data.forEach((q, i) => {
+        const div = document.createElement("div");
+        div.innerHTML = `
+          <p><b>Frage ${i + 1}:</b> ${q.frage}</p>
+          ${q.antworten.map((a, j) => `
+            <label><input type="radio" name="q${i}" value="${j}"> ${a}</label><br>`).join('')}
+        `;
+        container.appendChild(div);
+      });
     })
-    .catch(e=>{
-      alert("Test لوڈ کرنے میں مسئلہ: " + e);
-    });
+    .catch(() => alert("❌ Fehler beim Laden der Prüfungsdatei."));
 }
 
-// test.json کو render کرنے کا basic فنکشن
-function renderTest(data) {
-  const container = document.getElementById("test-container");
-  container.innerHTML = '';
-  data.forEach((q,i)=>{
-    const div = document.createElement("div");
-    div.classList.add("question");
-    div.innerHTML = `<p><b>Q${i+1}:</b> ${q.frage}</p>` +
-      q.antworten.map((a,j)=>
-        `<label><input type="radio" name="tq${i}" value="${j}"> ${a}</label><br>`
-      ).join("") +
-      `<button onclick="checkTestAnswer(${i}, ${q.korrekt})">Antwort prüfen</button>` +
-      `<span id="tresult${i}"></span>`;
-    container.appendChild(div);
-  });
-}
-function showQuizSection() {
-  showSection('quiz');
-  startQuiz();
-}
-function checkTestAnswer(qIndex, kor) {
-  const sel = document.querySelector(`input[name=tq${qIndex}]:checked`);
-  const span = document.getElementById(`tresult${qIndex}`);
-  if (!sel) {
-    span.textContent = " آپ نے جواب نہیں دیا!";
-    return;
+// ✅ Themen Quiz: 12 Topics anzeigen und Quiz laden
+const topics = [
+  "Personenbeförderung", "Gewerberecht", "Arbeitsrecht",
+  "Kaufmännische und finanzielle Führung des Unternehmens", "Kostenrechnung", "Straßenverkehrsrecht",
+  "Umweltschutz", "Versicherungswesen", "Technische Normen und technischer Betrieb",
+  "Beförderungsentgelte und -bedingungen", "Mietwagen", "Fallbeispiele"
+];
+
+document.addEventListener('DOMContentLoaded', () => {
+  const container = document.getElementById("topics-list");
+  if (container && container.children.length === 0) {
+    topics.forEach(topic => {
+      const btn = document.createElement("button");
+      btn.textContent = topic;
+      btn.onclick = () => loadTopicQuiz(topic); // in quiz.js definiert
+      container.appendChild(btn);
+    });
   }
-  span.textContent = (+sel.value===kor) ? "✅ درست!" : "❌ غلط!";
-}
+});

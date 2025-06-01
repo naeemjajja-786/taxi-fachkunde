@@ -1,0 +1,36 @@
+{
+  "sections": [
+    {
+      "title": "ٹیکسی لائسنس کے تقاضے",
+      "items": [
+        "عمر کم از کم 21 سال ہونی چاہیے",
+        "کم از کم 2 سال کا ڈرائیونگ تجربہ (کلاس B)",
+        "طبی معائنہ سرٹیفکیٹ (ärztliches Gutachten)",
+        "بینائی کا ٹیسٹ (Sehtest) - کم از کم 70%",
+        "پیشہ ورانہ امتحان (Fachkundeprüfung bei der IHK)",
+        "پولیس ریکارڈ چیک (Führungszeugnis)"
+      ]
+    },
+    {
+      "title": "ضروری دستاویزات",
+      "items": [
+        "ٹیکسی اجازت نامہ (Taxikonzession)",
+        "گاڑی رجسٹریشن دستاویزات (Zulassungsbescheinigung Teil I und II)",
+        "کاروباری رجسٹریشن (Gewerbeanmeldung)",
+        "ٹیکسی میٹر کی تصدیق (Eichzertifikat)",
+        "لازمی انشورنس دستاویزات (Pflichtversicherungsnachweis)",
+        "شہریت کا ثبوت (Personalausweis oder Aufenthaltstitel)"
+      ]
+    },
+    {
+      "title": "ٹیکسی کاروبار کے اہم قوانین",
+      "items": [
+        "ٹیرف پابندی (Tarifpflicht) - مقررہ قیمتیں",
+        "بس اسپور (Busspur) استعمال کرنے کا حق",
+        "ٹیکسی اسٹینڈ پر کھڑے ہونے کے قواعد",
+        "مسافروں کے ساتھ رویے کے ضوابط",
+        "گاڑی کی تکنیکی جانچ (Hauptuntersuchung) سالانہ"
+      ]
+    }
+  ]
+}

@@ -103,7 +103,10 @@ function renderTest(data) {
     container.appendChild(div);
   });
 }
-
+function showQuizSection() {
+  showSection('quiz');
+  startQuiz();
+}
 function checkTestAnswer(qIndex, kor) {
   const sel = document.querySelector(`input[name=tq${qIndex}]:checked`);
   const span = document.getElementById(`tresult${qIndex}`);

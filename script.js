@@ -54,7 +54,7 @@ function startPruefung() {
     .catch(() => alert("❌ Fehler beim Laden der Prüfungsdatei."));
 }
 
-// ✅ Themen Quiz: 12 Topics anzeigen und Quiz laden
+// ✅ Themen Quiz: 13 Topics anzeigen und Quiz laden
 const topics = [
   "Personenbeförderung", "Gewerberecht", "Arbeitsrecht",
   "Kaufmännische und finanzielle Führung des Unternehmens", "Kostenrechnung", "Straßenverkehrsrecht",

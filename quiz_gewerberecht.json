@@ -105,7 +105,118 @@
       "Polizei",
       "Gewerbeamt",
       "IHK"
+    ],[
+  {
+    "frage": "Was ist eine Voraussetzung zur Eintragung in das Handelsregister?",
+    "antworten": [
+      "Freiberufliche Tätigkeit",
+      "Gewinnerzielungsabsicht mit Selbstständigkeit",
+      "Mindestens zwei Gesellschafter",
+      "Eintragung ist immer freiwillig"
     ],
+    "korrekt": 1,
+    "erklaerung": "اردو: Handelsregister میں وہ کاروبار درج ہوتے ہیں جو مستقل اور نفع کی نیت سے کیے جائیں۔"
+  },
+  {
+    "frage": "Welche Unternehmensform haftet mit dem gesamten Privatvermögen?",
+    "antworten": [
+      "GmbH",
+      "AG",
+      "Einzelunternehmen",
+      "UG (haftungsbeschränkt)"
+    ],
+    "korrekt": 2,
+    "erklaerung": "اردو: Einzelunternehmer اپنی ذاتی جائیداد سے بھی ذمہ دار ہوتا ہے۔"
+  },
+  {
+    "frage": "Was unterscheidet Kapitalgesellschaften von Personengesellschaften?",
+    "antworten": [
+      "Mehr Gesellschafter",
+      "Kapitalgesellschaften haften nur mit Firmenvermögen",
+      "Personengesellschaften brauchen kein Gewerbe",
+      "Kapitalgesellschaften zahlen keine Steuern"
+    ],
+    "korrekt": 1,
+    "erklaerung": "اردو: Kapitalgesellschaft صرف کمپنی کے اثاثوں سے ذمہ دار ہوتی ہے۔"
+  },
+  {
+    "frage": "Welche Rechtsform gilt als juristische Person?",
+    "antworten": [
+      "Einzelunternehmen",
+      "GbR",
+      "GmbH",
+      "Freiberufler"
+    ],
+    "korrekt": 2,
+    "erklaerung": "اردو: GmbH ایک juristische Person ہے جو قانونی طور پر ایک شخصیت رکھتی ہے۔"
+  },
+  {
+    "frage": "Wer ist nach HGB §1 Kaufmann?",
+    "antworten": [
+      "Nur Kapitalgesellschaften",
+      "Jede natürliche Person mit Einkommen",
+      "Wer ein Handelsgewerbe betreibt",
+      "Nur eingetragene Firmen"
+    ],
+    "korrekt": 2,
+    "erklaerung": "اردو: جو شخص Handelsgewerbe (تجارتی کاروبار) کرتا ہے وہ Kaufmann ہے۔"
+  },
+  {
+    "frage": "Welche Aussage zur GbR ist korrekt?",
+    "antworten": [
+      "Braucht ein Mindestkapital von 25.000€",
+      "Ist eine Kapitalgesellschaft",
+      "Ist eine einfache Personengesellschaft ohne Handelsregister",
+      "Haftet nicht mit Privatvermögen"
+    ],
+    "korrekt": 2,
+    "erklaerung": "اردو: GbR دو یا زیادہ افراد کی شراکت ہے جو سادہ اور بغیر رجسٹریشن کی جا سکتی ہے۔"
+  },
+  {
+    "frage": "Welche Pflichtmitgliedschaft gilt für Gewerbetreibende?",
+    "antworten": [
+      "Kfz-Innung",
+      "Handwerkskammer",
+      "IHK",
+      "BG Bau"
+    ],
+    "korrekt": 2,
+    "erklaerung": "اردو: Gewerbetreibende کو IHK کی رکنیت لازمی ہے۔"
+  },
+  {
+    "frage": "Was ist die Funktion eines Verbandes im Gewerbe?",
+    "antworten": [
+      "Steuerprüfung",
+      "Kontrolle des Betriebs",
+      "Vertretung gewerblicher Interessen",
+      "Ausstellung von Führerscheinen"
+    ],
+    "korrekt": 2,
+    "erklaerung": "اردو: Verband کاروباری حضرات کے مفادات کی نمائندگی کرتے ہیں۔"
+  },
+  {
+    "frage": "Was beschreibt eine natürliche Person im Gewerberecht?",
+    "antworten": [
+      "Eine juristische Gesellschaft",
+      "Ein Einzelunternehmer oder Mensch",
+      "Ein Verein",
+      "Ein Konzern"
+    ],
+    "korrekt": 1,
+    "erklaerung": "اردو: ہر انسان جو قانونی حقوق و فرائض رکھتا ہو، natürliche Person کہلاتا ہے۔"
+  },
+  {
+    "frage": "Was ist Voraussetzung für die Anmeldung eines Gewerbes?",
+    "antworten": [
+      "Eintrag in das Vereinsregister",
+      "Persönliche Zuverlässigkeit",
+      "Volljährigkeit",
+      "Steuerliche Unbedenklichkeit"
+    ],
+    "korrekt": 1,
+    "erklaerung": "اردو: Gewerbe شروع کرنے کے لیے Zuverlässigkeit (قابل اعتبار ہونا) لازمی ہے۔"
+  }
+]
     "korrekt": 2,
     "erklaerung": "اردو وضاحت: Gewerbeamt Gewerbeanmeldung کے وقت Zuverlässigkeit چیک کرتا ہے۔"
   }

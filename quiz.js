@@ -4,7 +4,7 @@ let currentIndex = 0;
 let score = 0;
 
 async function startQuiz() {
-  const res = await fetch('quiz_gesamt.json');
+  const res = await fetch('quiz_personenbefoerderung.json');
   allQuestions = await res.json();
   selectedQuestions = getRandomQuestionsByTopic(allQuestions);
   shuffleArray(selectedQuestions);

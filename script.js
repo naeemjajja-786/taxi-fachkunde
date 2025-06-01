@@ -4,28 +4,18 @@ function showSection(id) {
   document.getElementById(id).classList.remove('hidden');
 }
 
-// ✅ Toggle language content for Lernmaterial
-function toggleLanguage(lang) {
-  document.getElementById('content-urdu').classList.add('hidden');
-  document.getElementById('content-de').classList.add('hidden');
-
-  if (lang === 'urdu') {
-    document.getElementById('content-urdu').classList.remove('hidden');
-  } else {
-    document.getElementById('content-de').classList.remove('hidden');
-  }
-}
-
-// ✅ اردو مواد کو ظاہر کرنے کا فنکشن (نیا اضافہ)
+// ✅ اردو مواد کو ظاہر کرنے کا فنکشن (پہلے والا استعمال میں نہیں آ رہا، بعد میں ہٹایا جا سکتا ہے)
 function showUrduContent() {
-  const urduContent = [content-urdu
+  const urduContent = [
     {
-      
+      title: "مثال",
+      items: ["نکتہ ۱", "نکتہ ۲", "نکتہ ۳"]
+    }
   ];
 
   const container = document.getElementById('urduContent');
   container.innerHTML = '';
-  
+
   urduContent.forEach(section => {
     const sectionDiv = document.createElement('div');
     sectionDiv.className = 'urdu-section';
@@ -40,6 +30,39 @@ function showUrduContent() {
 
   showSection('lern');
   document.getElementById('urduContent').classList.remove('hidden');
+}
+
+// ✅ نیا فنکشن: Lernmaterial JSON لوڈ کرنا
+function loadLernmaterial(lang) {
+  let file = '';
+  if (lang === 'de') {
+    file = 'lerninhalte.json';
+  } else if (lang === 'ur') {
+    file = 'urdu-content.json';
+  }
+
+  fetch(file)
+    .then(res => res.json())
+    .then(data => {
+      const container = document.getElementById('lernContent');
+      container.innerHTML = '';
+
+      data.forEach(section => {
+        const sectionDiv = document.createElement('div');
+        sectionDiv.className = 'lern-section';
+        sectionDiv.innerHTML = `
+          <h3>${section.title}</h3>
+          <ul>
+            ${section.items.map(item => `<li>${item}</li>`).join('')}
+          </ul>
+        `;
+        container.appendChild(sectionDiv);
+      });
+    })
+    .catch(err => {
+      console.error("❌ Fehler beim Laden von Lernmaterial:", err);
+      alert("Lernmaterial konnte nicht geladen werden.");
+    });
 }
 
 // ✅ MathQuill Setup (optional placeholder)

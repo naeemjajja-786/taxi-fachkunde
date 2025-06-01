@@ -1,56 +1,44 @@
-let allQuestions = [];
-let selectedQuestions = [];
+let currentQuestions = [];
 let currentIndex = 0;
 let score = 0;
 
-async function startQuiz() {
-  const res = await fetch('quiz_personenbefoerderung.json');
-  allQuestions = await res.json();
-  selectedQuestions = getRandomQuestionsByTopic(allQuestions);
-  shuffleArray(selectedQuestions);
-  currentIndex = 0;
-  score = 0;
-  document.getElementById('result-box').classList.add('hidden');
-  document.getElementById('quiz-container').classList.remove('hidden');
-  showQuestion();
-}
+function loadTopicQuiz(topic) {
+  const filename = `quiz_${topic.toLowerCase().replace(/ä/g, 'ae').replace(/ö/g, 'oe').replace(/ü/g, 'ue').replace(/ß/g, 'ss').replace(/[^a-z0-9]/gi, '_')}.json`;
 
-function getRandomQuestionsByTopic(data) {
-  const topics = [...new Set(data.map(q => q.thema))];
-  let selected = [];
-  for (let topic of topics) {
-    const topicQs = data.filter(q => q.thema === topic);
-    const n = Math.floor(Math.random() * 6) + 10; // 10–15 questions
-    selected.push(...shuffleArray([...topicQs]).slice(0, n));
-  }
-  return selected;
+  fetch(filename)
+    .then(res => res.json())
+    .then(data => {
+      currentQuestions = shuffleArray(data).slice(0, 15);
+      currentIndex = 0;
+      score = 0;
+      document.getElementById("quiz-container").classList.remove("hidden");
+      document.getElementById("result-box").classList.add("hidden");
+      showQuestion();
+    })
+    .catch(() => alert("Quiz Datei nicht gefunden."));
 }
 
 function showQuestion() {
-  const q = selectedQuestions[currentIndex];
-  document.getElementById('feedback').innerHTML = '';
-  document.getElementById('next-button').classList.add('hidden');
+  const q = currentQuestions[currentIndex];
+  document.getElementById("feedback").innerHTML = '';
+  document.getElementById("next-button").classList.add("hidden");
 
-  document.getElementById('question-box').innerHTML =
-    `<div class="topic">Thema: ${q.thema}</div><h3>Frage ${currentIndex + 1}:</h3><p>${q.frage}</p>`;
+  document.getElementById("question-box").innerHTML =
+    `<h3>Frage ${currentIndex + 1}:</h3><p>${q.frage}</p>`;
 
-  const shuffledAnswers = q.antworten.map((a, i) => ({ a, i }));
-  shuffleArray(shuffledAnswers);
+  const answersHTML = shuffleArray(q.antworten).map((a, i) => `
+    <label><input type="radio" name="answer" value="${a}"> ${a}</label><br>`).join("");
 
-  const answersHTML = shuffledAnswers.map(obj => `
-    <label><input type="radio" name="answer" value="${obj.i}"> ${obj.a}</label><br>
-  `).join("");
-
-  document.getElementById('answers-box').innerHTML = answersHTML;
+  document.getElementById("answers-box").innerHTML = answersHTML;
 
   document.querySelectorAll('input[name="answer"]').forEach(input => {
     input.onclick = () => {
-      const selected = parseInt(input.value);
-      const correct = q.korrekt;
-      const feedback = selected === correct ? "✅ Richtig!" : "❌ Falsch!";
+      const correctAnswer = q.antworten[q.korrekt];
+      const selected = input.value;
+      const feedback = selected === correctAnswer ? "✅ Richtig!" : "❌ Falsch!";
       document.getElementById('feedback').innerHTML =
         `${feedback}<br><i>${q.erklaerung}</i>`;
-      if (selected === correct) score++;
+      if (selected === correctAnswer) score++;
       document.getElementById('next-button').classList.remove('hidden');
       document.querySelectorAll('input[name="answer"]').forEach(i => i.disabled = true);
     };
@@ -59,16 +47,16 @@ function showQuestion() {
 
 function nextQuestion() {
   currentIndex++;
-  if (currentIndex < selectedQuestions.length) {
+  if (currentIndex < currentQuestions.length) {
     showQuestion();
   } else {
-    document.getElementById('quiz-container').classList.add('hidden');
-    document.getElementById('result-box').classList.remove('hidden');
-    document.getElementById('result-box').innerHTML =
-      `<h2>Ergebnis</h2><p>Du hast ${score} von ${selectedQuestions.length} Fragen richtig beantwortet.</p>`;
+    document.getElementById("quiz-container").classList.add("hidden");
+    document.getElementById("result-box").classList.remove("hidden");
+    document.getElementById("result-box").innerHTML =
+      `<h3>Quiz beendet</h3><p>Du hast ${score} von ${currentQuestions.length} Fragen richtig beantwortet.</p>`;
   }
 }
 
-function shuffleArray(array) {
-  return array.sort(() => Math.random() - 0.5);
+function shuffleArray(arr) {
+  return arr.sort(() => Math.random() - 0.5);
 }

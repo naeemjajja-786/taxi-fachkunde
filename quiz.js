@@ -1,4 +1,3 @@
-
 let currentQuiz = [];
 let currentQuestionIndex = 0;
 
@@ -28,7 +27,7 @@ function showQuestion() {
 function selectAnswer(selectedIdx) {
   const correct = currentQuiz[currentQuestionIndex].antworten[selectedIdx].korrekt;
   const feedback = document.getElementById('feedback');
-  feedback.innerText = correct ? "Richtig â" : "Falsch â";
+  feedback.innerText = correct ? "✅ Richtig" : "❌ Falsch";
   document.getElementById('next-button').classList.remove('hidden');
 }
 
@@ -39,6 +38,6 @@ function nextQuestion() {
   } else {
     document.getElementById('quiz-container').classList.add('hidden');
     document.getElementById('result-box').classList.remove('hidden');
-    document.getElementById('result-box').innerText = "Quiz abgeschlossen!";
+    document.getElementById('result-box').innerText = "🎉 Quiz abgeschlossen!";
   }
 }

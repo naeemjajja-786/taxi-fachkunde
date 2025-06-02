@@ -2,9 +2,14 @@
 function showSection(id) {
   document.querySelectorAll('.section').forEach(sec => sec.classList.add('hidden'));
   document.getElementById(id).classList.remove('hidden');
+
+  // Reset Quiz if not in "themen"
+  if (id !== 'themen') {
+    resetQuiz();
+  }
 }
 
-// ✅ اردو مواد کو ظاہر کرنے کا فنکشن (پہلے والا استعمال میں نہیں آ رہا، بعد میں ہٹایا جا سکتا ہے)
+// ✅ اردو مواد کو ظاہر کرنے کا فنکشن (اختیاری مثال)
 function showUrduContent() {
   const urduContent = [
     {
@@ -13,12 +18,12 @@ function showUrduContent() {
     }
   ];
 
-  const container = document.getElementById('urduContent');
+  const container = document.getElementById('lernContent');
   container.innerHTML = '';
 
   urduContent.forEach(section => {
     const sectionDiv = document.createElement('div');
-    sectionDiv.className = 'urdu-section';
+    sectionDiv.className = 'lern-section';
     sectionDiv.innerHTML = `
       <h3>${section.title}</h3>
       <ul>
@@ -29,17 +34,11 @@ function showUrduContent() {
   });
 
   showSection('lern');
-  document.getElementById('urduContent').classList.remove('hidden');
 }
 
-// ✅ نیا فنکشن: Lernmaterial JSON لوڈ کرنا
+// ✅ Lernmaterial JSON لوڈ کرنا
 function loadLernmaterial(lang) {
-  let file = '';
-  if (lang === 'de') {
-    file = 'lerninhalte.json';
-  } else if (lang === 'ur') {
-    file = 'urdu-content.json';
-  }
+  let file = lang === 'de' ? 'lerninhalte.json' : 'urdu-content.json';
 
   fetch(file)
     .then(res => res.json())
@@ -65,7 +64,7 @@ function loadLernmaterial(lang) {
     });
 }
 
-// ✅ MathQuill Setup (optional placeholder)
+// ✅ MathQuill Setup
 window.onload = function () {
   if (document.getElementById('math-field')) {
     const MQ = MathQuill.getInterface(2);
@@ -75,16 +74,11 @@ window.onload = function () {
   }
 };
 
-// ✅ Prüfung Starten: Zufällige Test-Datei laden
+// ✅ Prüfung Starten
 function startPruefung() {
-  const testFiles = [
-    "prüfung_01.json",
-    "prüfung_02.json",
-    "prüfung_03.json"
-    // weitere Testdateien hier ergänzen
-  ];
-
+  const testFiles = ["prüfung_01.json", "prüfung_02.json", "prüfung_03.json"];
   const randomFile = testFiles[Math.floor(Math.random() * testFiles.length)];
+
   fetch(randomFile)
     .then(res => res.json())
     .then(data => {
@@ -103,22 +97,10 @@ function startPruefung() {
     .catch(() => alert("❌ Fehler beim Laden der Prüfungsdatei."));
 }
 
-// ✅ Themen Quiz: 13 Topics anzeigen und Quiz laden
-const topics = [
-  "Personenbeförderung", "Gewerberecht", "Arbeitsrecht",
-  "Kaufmännische und finanzielle Führung des Unternehmens", "Kostenrechnung", "Straßenverkehrsrecht",
-  "Umweltschutz", "Versicherungswesen", "Technische Normen und technischer Betrieb",
-  "Beförderungsentgelte und -bedingungen", "Mietwagen", "TesteDich", "Fallbeispiele"
-];
-
-document.addEventListener('DOMContentLoaded', () => {
-  const container = document.getElementById("topics-list");
-  if (container && container.children.length === 0) {
-    topics.forEach(topic => {
-      const btn = document.createElement("button");
-      btn.textContent = topic;
-      btn.onclick = () => loadTopicQuiz(topic); // in quiz.js definiert
-      container.appendChild(btn);
-    });
-  }
-});
+// ✅ Reset Quiz UI
+function resetQuiz() {
+  const quizContainer = document.getElementById("quiz-container");
+  const resultBox = document.getElementById("result-box");
+  if (quizContainer) quizContainer.classList.add("hidden");
+  if (resultBox) resultBox.classList.add("hidden");
+}

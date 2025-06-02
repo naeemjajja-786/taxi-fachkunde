@@ -12,26 +12,26 @@ header {
   text-align: center;
 }
 
-nav {
+nav#main-buttons {
   background-color: #eee;
-  padding: 10px;
+  padding: 15px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 10px;
 }
 
-nav button {
-  padding: 10px 20px;
+nav#main-buttons button {
+  padding: 12px 20px;
   background-color: #0066cc;
   color: white;
   border: none;
   cursor: pointer;
   border-radius: 4px;
-  font-size: 14px;
+  font-size: 15px;
 }
 
-nav button:hover {
+nav#main-buttons button:hover {
   background-color: #004d99;
 }
 
@@ -45,18 +45,15 @@ nav button:hover {
 
 .content-box {
   background-color: white;
-  padding: 15px;
+  padding: 20px;
   border-radius: 6px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.lern-section,
-.urdu-section {
   margin-bottom: 20px;
 }
 
 .lern-section h3,
-.urdu-section h3 {
+#themenquiz-section h3,
+#musterpruefung-section h3 {
   margin-bottom: 10px;
 }
 
@@ -64,6 +61,7 @@ nav button:hover {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  margin-bottom: 20px;
 }
 
 #topics-list button {
@@ -80,47 +78,19 @@ nav button:hover {
   background-color: #00796b;
 }
 
-#quiz-container {
-  margin-top: 20px;
-}
-
-#answers-box button {
+#answers-box label {
   display: block;
   margin-bottom: 10px;
-  padding: 10px;
-  width: 100%;
-  background-color: #eee;
-  border: 1px solid #ccc;
-  border-radius: 4px;
   cursor: pointer;
-}
-
-#answers-box button:hover {
-  background-color: #ddd;
-}
-
-#next-button,
-#check-button {
-  padding: 10px 20px;
-  margin-top: 15px;
-  border: none;
-  border-radius: 4px;
-  font-size: 14px;
-  cursor: pointer;
-}
-
-#check-button {
-  background-color: #007bff;
-  color: white;
-}
-
-#check-button:hover {
-  background-color: #0056b3;
 }
 
 #next-button {
+  padding: 10px 20px;
   background-color: #28a745;
   color: white;
+  border: none;
+  border-radius: 4px;
+  margin-top: 15px;
 }
 
 #next-button:hover {

@@ -1,64 +1,81 @@
-function showSection(id) {
-  document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
-  document.getElementById(id).classList.add('active');
+document.addEventListener("DOMContentLoaded", () => {
+  const sections = {
+    lernmaterial: document.getElementById("lernmaterial-section"),
+    themenquiz: document.getElementById("themenquiz-section"),
+    mathe: document.getElementById("mathe-section"),
+    musterpruefung: document.getElementById("musterpruefung-section")
+  };
 
-  if (id !== 'themen') {
-    resetQuiz();
-  }
-}
+  const mainButtons = {
+    lernmaterial: document.getElementById("btn-lernmaterial"),
+    themenquiz: document.getElementById("btn-themenquiz"),
+    mathe: document.getElementById("btn-mathe"),
+    musterpruefung: document.getElementById("btn-musterpruefung")
+  };
 
-function loadLernmaterial(lang) {
-  let file = lang === 'de' ? 'lerninhalte.json' : 'urdu-content.json';
+  const showSection = (sectionKey) => {
+    Object.values(sections).forEach(sec => sec.classList.add("hidden"));
+    sections[sectionKey].classList.remove("hidden");
+  };
 
-  fetch(file)
-    .then(res => res.json())
-    .then(data => {
-      const container = document.getElementById('lernContent');
-      container.innerHTML = '';
+  Object.entries(mainButtons).forEach(([key, button]) => {
+    button.addEventListener("click", () => showSection(key));
+  });
 
-      data.forEach(section => {
-        const sectionDiv = document.createElement('div');
-        sectionDiv.className = 'lern-section';
-        sectionDiv.innerHTML = `
-          <h3>${section.title}</h3>
-          <ul>
-            ${section.items.map(item => `<li>${item}</li>`).join('')}
-          </ul>
-        `;
-        container.appendChild(sectionDiv);
-      });
-    })
-    .catch(err => {
-      console.error("❌ Fehler beim Laden von Lernmaterial:", err);
-      alert("Lernmaterial konnte nicht geladen werden.");
+  // Deutsch / Urdu content loading
+  document.getElementById("btn-deutsch").addEventListener("click", () => {
+    fetch("lerninhalte.json")
+      .then(res => res.json())
+      .then(data => displayContent(data, "deutsch-content"));
+  });
+
+  document.getElementById("btn-urdu").addEventListener("click", () => {
+    fetch("urdu-content.json")
+      .then(res => res.json())
+      .then(data => displayContent(data, "urdu-content"));
+  });
+
+  function displayContent(data, containerId) {
+    const container = document.getElementById("lernmaterial-content");
+    container.innerHTML = "";
+    data.forEach(item => {
+      const div = document.createElement("div");
+      div.className = "content-box";
+      div.innerHTML = `<h4>${item.title}</h4><p>${item.content}</p>`;
+      container.appendChild(div);
     });
-}
+  }
 
-function startPruefung() {
-  const testFiles = ["prüfung_01.json", "prüfung_02.json", "prüfung_03.json"];
-  const randomFile = testFiles[Math.floor(Math.random() * testFiles.length)];
+  // Themen Quiz Topic Buttons
+  const topics = [
+    "personenbeförderung", "arbeitsrecht", "kaufmaennisch", "kostenrechnung",
+    "strassenverkehrsrecht", "umweltschutz", "versicherungswesen",
+    "technische-normen", "befoerderungsentgelte", "mietwagen",
+    "gewerberecht", "rechtliche-rahmenbedingungen", "testedich"
+  ];
 
-  fetch(randomFile)
-    .then(res => res.json())
-    .then(data => {
-      const container = document.getElementById("test-container");
-      container.innerHTML = '';
-      data.forEach((q, i) => {
-        const div = document.createElement("div");
-        div.innerHTML = `
-          <p><b>Frage ${i + 1}:</b> ${q.frage}</p>
-          ${q.antworten.map((a, j) => `
-            <label><input type="radio" name="q${i}" value="${j}"> ${a}</label><br>`).join('')}
-        `;
-        container.appendChild(div);
+  const topicContainer = document.getElementById("topics-list");
+  topics.forEach(topic => {
+    const btn = document.createElement("button");
+    btn.textContent = topic.replace(/-/g, " ").toUpperCase();
+    btn.addEventListener("click", () => {
+      loadQuiz(`quiz_${topic}.json`);
+    });
+    topicContainer.appendChild(btn);
+  });
+
+  // Muster Prüfung
+  const pruefungButtons = [
+    { id: "btn-pruefung-1", file: "prüfung_01.json" },
+    { id: "btn-pruefung-2", file: "prüfung-01.json" }
+  ];
+
+  pruefungButtons.forEach(({ id, file }) => {
+    const btn = document.getElementById(id);
+    if (btn) {
+      btn.addEventListener("click", () => {
+        loadQuiz(file);
       });
-    })
-    .catch(() => alert("❌ Fehler beim Laden der Prüfungsdatei."));
-}
-
-function resetQuiz() {
-  const quizContainer = document.getElementById("quiz-container");
-  const resultBox = document.getElementById("result-box");
-  if (quizContainer) quizContainer.classList.add("hidden");
-  if (resultBox) resultBox.classList.add("hidden");
-}
+    }
+  });
+});

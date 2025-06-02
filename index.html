@@ -9,7 +9,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;700&display=swap" rel="stylesheet">
   <script src="script.js" defer></script>
   <script src="quiz.js" defer></script>
-  <script src="urdu.js" defer></script>
   <style>
     nav button {
       display: block;
@@ -48,7 +47,6 @@
     <button onclick="showSection('themen')">🧠 Themen Quiz</button>
     <button onclick="showSection('math')">➕ Mathe Eingabe</button>
     <button onclick="showSection('pruefung')">📝 Muster Prüfungen</button>
-    <button onclick="showUrduContent()">🕌 اردو رہنمائی</button>
   </nav>
 
   <!-- Lernmaterial Section -->
@@ -72,7 +70,7 @@
   <section id="themen" class="section">
     <h2>Themen Quiz</h2>
     <div id="topics-list" class="content-box">
-      <!-- Buttons dynamically added here -->
+      <!-- Topics will be added here dynamically -->
     </div>
     <div id="quiz-container" class="quiz-section hidden">
       <div id="question-box"></div>
@@ -92,9 +90,9 @@
     </div>
   </section>
 
-  <!-- اردو رہنمائی -->
+  <!-- اردو رہنمائی کی جگہ اب Urdu بٹن سے لوڈ ہوگا -->
   <section id="urduContent" class="section hidden urdu-content">
-    <!-- Urdu Content will load here -->
+    <!-- Urdu Content loaded dynamically -->
   </section>
 
   <footer>

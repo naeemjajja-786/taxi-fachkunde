@@ -1,95 +1,87 @@
-// ✅ Quiz Topic → File Mapping
-const topicFileMap = {
-  "Personenbeförderung": "quiz_personenbefoerderung.json",
-  "Gewerberecht": "quiz_gewerberecht.json",
-  "Arbeitsrecht": "quiz_arbeitsrecht.json",
-  "Kaufmännische und finanzielle Führung des Unternehmens": "quiz_kfm_fuehrung.json",
-  "Kostenrechnung": "quiz_kostenrechnung.json",
-  "Straßenverkehrsrecht": "quiz_strassenverkehrsrecht.json",
-  "Umweltschutz": "quiz_umweltschutz.json",
-  "Versicherungswesen": "quiz_versicherungswesen.json",
-  "Technische Normen und technischer Betrieb": "quiz_techn_betrieb.json",
-  "Beförderungsentgelte und -bedingungen": "quiz_befoerderungsbedingungen.json",
-  "Mietwagen": "quiz_mietwagen.json",
-  "TesteDich": "quiz_testedich.json",
-  "Fallbeispiele": "quiz_fallbeispiele.json"
-};
-
-// ✅ Quiz laden nach Topic
-let currentQuestions = [];
-let currentIndex = 0;
-let score = 0;
+let quizData = [];
+let currentQuestion = 0;
+let currentTopic = "";
 
 function loadTopicQuiz(topic) {
-  const filename = topicFileMap[topic];
-  if (!filename) {
-    alert("❌ Keine passende Datei gefunden.");
-    return;
-  }
+  currentTopic = topic;
+  const file = `quiz-${topic}.json`;
 
-  fetch(filename)
+  fetch(file)
     .then(res => res.json())
     .then(data => {
-      currentQuestions = shuffleArray(data).slice(0, 15); // max 15 Fragen
-      currentIndex = 0;
-      score = 0;
-      document.getElementById("quiz-container").classList.remove("hidden");
-      document.getElementById("result-box").classList.add("hidden");
+      quizData = data.sort(() => 0.5 - Math.random()).slice(0, 10);
+      currentQuestion = 0;
       showQuestion();
     })
-    .catch(() => alert("❌ Quiz Datei nicht gefunden."));
+    .catch(err => {
+      console.error("❌ Fehler beim Laden der Quizdatei:", err);
+      alert("Quiz Datei nicht gefunden.");
+    });
 }
 
-// ✅ Frage anzeigen
 function showQuestion() {
-  const q = currentQuestions[currentIndex];
-  const container = document.getElementById("question-box");
-  container.innerHTML = `
-    <p><b>Frage ${currentIndex + 1}:</b> ${q.frage}</p>
-    ${q.antworten.map((a, i) => `
-      <label><input type="radio" name="antwort" value="${i}"> ${a}</label><br>`).join('')}
-    <button onclick="checkAnswer()">Antwort prüfen</button>
-  `;
+  const quizContainer = document.getElementById("quiz-container");
+  const questionBox = document.getElementById("question-box");
+  const answersBox = document.getElementById("answers-box");
+  const feedbackBox = document.getElementById("feedback");
+  const nextButton = document.getElementById("next-button");
+
+  quizContainer.classList.remove("hidden");
+  document.getElementById("result-box").classList.add("hidden");
+
+  const q = quizData[currentQuestion];
+  questionBox.innerHTML = `<h3>Frage ${currentQuestion + 1}:</h3><p>${q.frage}</p>`;
+
+  answersBox.innerHTML = "";
+  q.antworten.forEach((ans, index) => {
+    const label = document.createElement("label");
+    label.innerHTML = `<input type="radio" name="answer" value="${index}"> ${ans}`;
+    answersBox.appendChild(label);
+    answersBox.appendChild(document.createElement("br"));
+  });
+
+  feedbackBox.innerHTML = "";
+  nextButton.classList.add("hidden");
+
+  const radios = answersBox.querySelectorAll("input[type=radio]");
+  radios.forEach(r => r.addEventListener("change", () => checkAnswer(q.loesung)));
 }
 
-// ✅ Antwort prüfen
-function checkAnswer() {
-  const selected = document.querySelector('input[name="antwort"]:checked');
-  if (!selected) {
-    alert("Bitte eine Antwort auswählen.");
-    return;
-  }
+function checkAnswer(correctIndex) {
+  const selected = document.querySelector("input[name=answer]:checked");
+  const feedbackBox = document.getElementById("feedback");
+  const nextButton = document.getElementById("next-button");
 
-  const answer = parseInt(selected.value);
-  const correct = currentQuestions[currentIndex].loesung;
+  if (!selected) return;
 
-  if (answer === correct) {
-    score++;
-    alert("✅ Richtig!");
+  const answerIndex = parseInt(selected.value);
+  if (answerIndex === correctIndex) {
+    feedbackBox.innerHTML = "✅ Richtig!";
+    feedbackBox.style.color = "green";
   } else {
-    alert(`❌ Falsch. Richtige Antwort: ${currentQuestions[currentIndex].antworten[correct]}`);
+    feedbackBox.innerHTML = "❌ Falsch.";
+    feedbackBox.style.color = "red";
   }
 
-  currentIndex++;
-  if (currentIndex < currentQuestions.length) {
+  nextButton.classList.remove("hidden");
+}
+
+function nextQuestion() {
+  currentQuestion++;
+  if (currentQuestion < quizData.length) {
     showQuestion();
   } else {
     showResult();
   }
 }
 
-// ✅ Ergebnis anzeigen
 function showResult() {
   document.getElementById("quiz-container").classList.add("hidden");
   const resultBox = document.getElementById("result-box");
   resultBox.classList.remove("hidden");
-  resultBox.innerHTML = `<h3>Ergebnis</h3><p>Du hast ${score} von ${currentQuestions.length} richtig beantwortet.</p>`;
-}
-
-// ✅ Hilfsfunktion: Shuffle Array
-function shuffleArray(arr) {
-  return arr
-    .map((val) => ({ val, sort: Math.random() }))
-    .sort((a, b) => a.sort - b.sort)
-    .map(({ val }) => val);
+  resultBox.innerHTML = `
+    <h3>Quiz beendet!</h3>
+    <p>Du hast ${quizData.length} Fragen abgeschlossen.</p>
+    <button onclick="loadTopicQuiz('${currentTopic}')">Nochmal starten</button>
+  `;
 }

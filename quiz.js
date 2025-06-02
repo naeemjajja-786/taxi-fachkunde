@@ -1,101 +1,93 @@
-let currentQuestionIndex = 0;
 let currentQuiz = [];
+let currentQuestionIndex = 0;
 
 function loadQuiz(jsonFile) {
   fetch(jsonFile)
-    .then((res) => res.json())
-    .then((data) => {
+    .then(res => {
+      if (!res.ok) throw new Error("Quiz-Datei nicht gefunden: " + jsonFile);
+      return res.json();
+    })
+    .then(data => {
       currentQuiz = shuffleArray(data);
       currentQuestionIndex = 0;
-      document.getElementById("quiz-container").innerHTML = "";
-      showQuestion();
+      document.getElementById("quiz-container").classList.remove("hidden");
+      document.getElementById("feedback-box").innerHTML = "";
+      showQuizQuestion();
+    })
+    .catch(err => {
+      console.error(err);
+      alert("Quiz-Datei nicht geladen: " + jsonFile);
     });
 }
 
-function showQuestion() {
+function showQuizQuestion() {
   const container = document.getElementById("quiz-container");
-  container.innerHTML = "";
+  container.classList.remove("hidden");
 
   if (currentQuestionIndex >= currentQuiz.length) {
-    container.innerHTML = "<h3>🎉 Quiz beendet!</h3>";
+    container.innerHTML = `<h3>🎉 Quiz abgeschlossen!</h3>`;
     return;
   }
 
-  const question = currentQuiz[currentQuestionIndex];
+  const q = currentQuiz[currentQuestionIndex];
+  const questionBox = document.getElementById("question-box");
+  questionBox.innerHTML = `<h4>Frage ${currentQuestionIndex + 1}:</h4><p>${q.frage}</p>`;
 
-  const questionBox = document.createElement("div");
-  questionBox.className = "content-box";
-  questionBox.innerHTML = `<h4>Frage ${currentQuestionIndex + 1}:</h4>
-    <p>${question.question}</p>`;
+  const answersBox = document.getElementById("answers-box");
+  answersBox.innerHTML = "";
+  const shuffledAnswers = shuffleArray([...q.antworten]);
 
-  const answersBox = document.createElement("div");
-  answersBox.id = "answers-box";
-
-  const shuffledAnswers = shuffleArray([...question.answers]);
-
-  shuffledAnswers.forEach((ans, index) => {
+  shuffledAnswers.forEach(ansObj => {
     const label = document.createElement("label");
     const input = document.createElement("input");
     input.type = "radio";
     input.name = "answer";
-    input.value = ans;
+    input.value = ansObj.text;
     label.appendChild(input);
-    label.append(` ${ans}`);
+    label.insertAdjacentText("beforeend", ` ${ansObj.text}`);
     answersBox.appendChild(label);
+    answersBox.appendChild(document.createElement("br"));
   });
 
-  const checkBtn = document.createElement("button");
-  checkBtn.textContent = "✅ جواب چیک کریں";
-  checkBtn.onclick = () => checkAnswer(question.correct, question.explanation_ur);
-
-  const nextBtn = document.createElement("button");
-  nextBtn.id = "next-button";
-  nextBtn.textContent = "➡️ اگلا سوال";
-  nextBtn.classList.add("hidden");
-  nextBtn.onclick = () => {
-    currentQuestionIndex++;
-    showQuestion();
-  };
-
-  questionBox.appendChild(answersBox);
-  questionBox.appendChild(checkBtn);
-  questionBox.appendChild(nextBtn);
-  container.appendChild(questionBox);
+  document.getElementById("check-button").classList.remove("hidden");
+  document.getElementById("next-button").classList.add("hidden");
+  document.getElementById("feedback-box").innerHTML = "";
 }
 
-function checkAnswer(correctAnswer, explanationUr) {
+function checkAnswer() {
   const selected = document.querySelector("input[name='answer']:checked");
-
   if (!selected) {
-    alert("براہ کرم کوئی جواب منتخب کریں۔");
+    alert("Bitte wähle eine Antwort aus.");
     return;
   }
 
-  const isCorrect = selected.value === correctAnswer;
-  const feedback = document.createElement("p");
+  const chosenText = selected.value;
+  const correctText = currentQuiz[currentQuestionIndex].antworten.find(a => a.korrekt).text;
+  const explanationUr = currentQuiz[currentQuestionIndex].erklärung_ur || "";
 
-  if (isCorrect) {
-    feedback.innerHTML = "✅ درست جواب!";
-    feedback.style.color = "green";
+  const feedbackBox = document.getElementById("feedback-box");
+  feedbackBox.innerHTML = "";
+  if (chosenText === correctText) {
+    feedbackBox.innerHTML = `<p style="color:green;">✅ Richtig!</p>`;
   } else {
-    feedback.innerHTML = `❌ غلط جواب! درست جواب ہے: <b>${correctAnswer}</b>`;
-    feedback.style.color = "red";
+    feedbackBox.innerHTML = `<p style="color:red;">❌ Falsch! Richtige Antwort: <b>${correctText}</b></p>`;
   }
 
   if (explanationUr) {
-    const explain = document.createElement("p");
-    explain.innerHTML = `<i>📘 وضاحت: ${explanationUr}</i>`;
-    explain.style.color = "#333";
-    feedback.appendChild(explain);
+    feedbackBox.insertAdjacentHTML("beforeend", `<p><i>تفصیل: ${explanationUr}</i></p>`);
   }
 
-  document.getElementById("answers-box").appendChild(feedback);
-  document.querySelector("#next-button").classList.remove("hidden");
+  document.getElementById("next-button").classList.remove("hidden");
+}
+
+function nextQuestion() {
+  currentQuestionIndex++;
+  showQuizQuestion();
 }
 
 function shuffleArray(arr) {
   return arr
-    .map((item) => ({ sort: Math.random(), value: item }))
+    .map(v => ({ sort: Math.random(), value: v }))
     .sort((a, b) => a.sort - b.sort)
-    .map((obj) => obj.value);
+    .map(obj => obj.value);
 }

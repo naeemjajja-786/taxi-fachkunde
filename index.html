@@ -5,14 +5,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Taxi-Unternehmers Vorbereitung</title>
   <link rel="stylesheet" href="style.css">
-  <!-- اردو مواد کے لیے اضافی CSS -->
   <link rel="stylesheet" href="urdu.css">
-  <!-- اردو فونٹ کے لیے -->
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;700&display=swap" rel="stylesheet">
   <script src="script.js" defer></script>
   <script src="quiz.js" defer></script>
-  <!-- اردو مواد کے لیے الگ JavaScript -->
   <script src="urdu.js" defer></script>
+  <style>
+    nav button {
+      display: block;
+      margin: 5px auto;
+      width: 90%;
+      max-width: 300px;
+    }
+    #topics-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-top: 15px;
+    }
+    .content-box, .quiz-section {
+      border: 1px solid #ccc;
+      padding: 15px;
+      margin-top: 15px;
+      background: #f9f9f9;
+    }
+    .section {
+      display: none;
+    }
+    .section.active {
+      display: block;
+    }
+  </style>
 </head>
 <body>
 
@@ -21,50 +44,57 @@
   </header>
 
   <nav>
-    <button onclick="showSection('lern')">Lernmaterial</button>
-    <button onclick="showSection('themen')">Themen Quiz</button>
-    <button onclick="showSection('math')">Mathe Eingabe</button>
-    <button onclick="showSection('pruefung')">Muster Prüfungen</button>
-    <!-- یہاں صرف اردو بٹن کا اضافہ کیا گیا ہے -->
-    <button id="urduBtn" onclick="showUrduContent()">اردو رہنمائی</button>
+    <button onclick="showSection('lern')">📘 Lernmaterial</button>
+    <button onclick="showSection('themen')">🧠 Themen Quiz</button>
+    <button onclick="showSection('math')">➕ Mathe Eingabe</button>
+    <button onclick="showSection('pruefung')">📝 Muster Prüfungen</button>
+    <button onclick="showUrduContent()">🕌 اردو رہنمائی</button>
   </nav>
 
-  <section id="lern" class="section hidden">
+  <!-- Lernmaterial Section -->
+  <section id="lern" class="section">
     <h2>Lernmaterial</h2>
-
-    <!-- زبان منتخب کرنے کے بٹن -->
-    <div id="language-buttons" style="margin-bottom: 15px;">
-      <button onclick="loadLernmaterial('de')">Deutsch</button>
-      <button onclick="loadLernmaterial('ur')">Urdu</button>
+    <div id="language-buttons">
+      <button onclick="loadLernmaterial('de')">📗 Deutsch</button>
+      <button onclick="loadLernmaterial('ur')">📕 Urdu</button>
     </div>
-
-    <!-- یہاں مواد ظاہر ہوگا -->
     <div id="lernContent" class="content-box"></div>
   </section>
 
-  <section id="math" class="section hidden">
+  <!-- Math Section -->
+  <section id="math" class="section">
     <h2>Mathe Eingabe</h2>
     <div id="math-field"></div>
     <div id="math-questions"></div>
   </section>
 
-  <section id="themen" class="section hidden">
+  <!-- Themen Quiz Section -->
+  <section id="themen" class="section">
     <h2>Themen Quiz</h2>
-    <div id="topics-list">
-      <!-- Topics will be generated here dynamically -->
+    <div id="topics-list" class="content-box">
+      <!-- Buttons dynamically added here -->
     </div>
-    <div id="quiz-container" class="hidden">
+    <div id="quiz-container" class="quiz-section hidden">
       <div id="question-box"></div>
       <div id="answers-box"></div>
       <div id="feedback" style="margin:10px 0;"></div>
+      <button id="check-button" onclick="checkAnswer()">Antwort prüfen</button>
       <button id="next-button" onclick="nextQuestion()" class="hidden">Nächste Frage</button>
     </div>
     <div id="result-box" class="hidden"></div>
   </section>
 
-  <section id="pruefung" class="section hidden">
+  <!-- Prüfung Section -->
+  <section id="pruefung" class="section">
     <h2>Prüfung Starten</h2>
-    <p>یہاں بعد میں امتحان کی فائلز / بٹن ظاہر ہوں گے۔</p>
+    <div id="test-container" class="content-box">
+      <p>Hier erscheinen später Prüfungsfragen.</p>
+    </div>
+  </section>
+
+  <!-- اردو رہنمائی -->
+  <section id="urduContent" class="section hidden urdu-content">
+    <!-- Urdu Content will load here -->
   </section>
 
   <footer>

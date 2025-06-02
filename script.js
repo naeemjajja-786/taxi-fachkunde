@@ -1,14 +1,12 @@
-// ✅ Show sections
 function showSection(id) {
   document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
   document.getElementById(id).classList.add('active');
 
-  // Reset Quiz if not in "themen"
   if (id !== 'themen') {
     resetQuiz();
   }
 }
-// ✅ Lernmaterial JSON لوڈ کرنا
+
 function loadLernmaterial(lang) {
   let file = lang === 'de' ? 'lerninhalte.json' : 'urdu-content.json';
 
@@ -29,13 +27,6 @@ function loadLernmaterial(lang) {
         `;
         container.appendChild(sectionDiv);
       });
-
-      if (lang === 'ur') {
-        container.classList.add('urdu-content');
-      } else {
-        container.classList.remove('urdu-content');
-      }
-
     })
     .catch(err => {
       console.error("❌ Fehler beim Laden von Lernmaterial:", err);
@@ -43,17 +34,6 @@ function loadLernmaterial(lang) {
     });
 }
 
-// ✅ MathQuill Setup (optional)
-window.onload = function () {
-  if (document.getElementById('math-field') && typeof MathQuill !== 'undefined') {
-    const MQ = MathQuill.getInterface(2);
-    MQ.MathField(document.getElementById('math-field'), {
-      spaceBehavesLikeTab: true
-    });
-  }
-};
-
-// ✅ Prüfung Starten
 function startPruefung() {
   const testFiles = ["prüfung_01.json", "prüfung_02.json", "prüfung_03.json"];
   const randomFile = testFiles[Math.floor(Math.random() * testFiles.length)];
@@ -76,7 +56,6 @@ function startPruefung() {
     .catch(() => alert("❌ Fehler beim Laden der Prüfungsdatei."));
 }
 
-// ✅ Reset Quiz UI
 function resetQuiz() {
   const quizContainer = document.getElementById("quiz-container");
   const resultBox = document.getElementById("result-box");

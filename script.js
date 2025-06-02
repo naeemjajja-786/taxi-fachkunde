@@ -8,7 +8,6 @@ function showSection(id) {
     resetQuiz();
   }
 }
-
 // ✅ Lernmaterial JSON لوڈ کرنا
 function loadLernmaterial(lang) {
   let file = lang === 'de' ? 'lerninhalte.json' : 'urdu-content.json';

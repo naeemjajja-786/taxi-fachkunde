@@ -1,72 +1,61 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Taxi-Unternehmers Vorbereitung</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="urdu.css">
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;700&display=swap" rel="stylesheet">
-  <script src="script.js" defer></script>
-  <script src="quiz.js" defer></script>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
   <header>
     <h1>Taxi-Unternehmers Vorbereitung</h1>
   </header>
 
-  <nav>
-    <button onclick="showSection('lern')">📘 Lernmaterial</button>
-    <button onclick="showSection('themen')">🧠 Themen Quiz</button>
-    <button onclick="showSection('math')">➕ Mathe Eingabe</button>
-    <button onclick="showSection('pruefung')">📝 Muster Prüfungen</button>
+  <nav id="main-buttons">
+    <button onclick="showSection('lernmaterial')">📘 Lernmaterial</button>
+    <button onclick="showSection('themenquiz')">🧠 Themen Quiz</button>
+    <button onclick="showSection('matheeingabe')">➕ Mathe Eingabe</button>
+    <button onclick="showSection('musterpruefung')">📝 Muster Prüfungen</button>
   </nav>
 
-  <!-- Lernmaterial Section -->
-  <section id="lern" class="section">
-    <h2>Lernmaterial</h2>
-    <div id="language-buttons">
-      <button onclick="loadLernmaterial('de')">📗 Deutsch</button>
-      <button onclick="loadLernmaterial('ur')">📕 Urdu</button>
+  <div id="lernmaterial-section" class="section hidden">
+    <div class="content-box lern-section">
+      <h3>Lernmaterial Sprache</h3>
+      <button onclick="loadGermanContent()">📗 Deutsch</button>
+      <button onclick="loadUrduContent()">📕 Urdu</button>
     </div>
-    <div id="lernContent" class="content-box"></div>
-  </section>
+    <div id="lernmaterial-content" class="content-box"></div>
+  </div>
 
-  <!-- Math Section -->
-  <section id="math" class="section">
-    <h2>Mathe Eingabe</h2>
-    <div id="math-field"></div>
-    <div id="math-questions"></div>
-  </section>
-
-  <!-- Themen Quiz Section -->
-  <section id="themen" class="section">
-    <h2>Themen Quiz</h2>
-    <div id="topics-list" class="content-box">
-      <!-- Topics will be added here dynamically -->
-    </div>
-    <div id="quiz-container" class="quiz-section hidden">
+  <div id="themenquiz-section" class="section hidden">
+    <div id="topics-list"></div>
+    <div id="quiz-container" class="content-box">
       <div id="question-box"></div>
       <div id="answers-box"></div>
-      <div id="feedback" style="margin:10px 0;"></div>
-      <button id="check-button" onclick="checkAnswer()">Antwort prüfen</button>
-      <button id="next-button" onclick="nextQuestion()" class="hidden">Nächste Frage</button>
+      <button id="next-button" class="hidden" onclick="nextQuestion()">Next</button>
     </div>
-    <div id="result-box" class="hidden"></div>
-  </section>
+  </div>
 
-  <!-- Prüfung Section -->
-  <section id="pruefung" class="section">
-    <h2>Prüfung Starten</h2>
-    <div id="test-container" class="content-box">
-      <p>Hier erscheinen später Prüfungsfragen.</p>
+  <div id="matheeingabe-section" class="section hidden">
+    <div class="content-box">
+      <h3>Mathe Eingabe</h3>
+      <p>Hier können Mathe-bezogene Inhalte integriert werden.</p>
     </div>
-  </section>
+  </div>
+
+  <div id="musterpruefung-section" class="section hidden">
+    <div class="content-box">
+      <h3>Prüfung Auswahl</h3>
+      <button onclick="loadPruefung('prüfung-01.json')">Prüfung 1</button>
+      <button onclick="loadPruefung('prüfung_01.json')">Prüfung 2</button>
+    </div>
+  </div>
 
   <footer>
-    <p>©️ 2025 Prüfungsvorbereitung für Taxi-Unternehmersschein</p>
+    <p>© 2025 Taxi-Unternehmers Vorbereitung</p>
   </footer>
 
+  <script src="script.js"></script>
+  <script src="quiz.js"></script>
 </body>
 </html>

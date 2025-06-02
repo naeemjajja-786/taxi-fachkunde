@@ -1,53 +1,12 @@
 // ✅ Show sections
-
 function showSection(id) {
   document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
   document.getElementById(id).classList.add('active');
-}
-
-function loadLernmaterial(lang) {
-  const contentBox = document.getElementById('lernContent');
-  if (lang === 'de') {
-    contentBox.innerHTML = "<p>Hier erscheint das deutsche Lernmaterial.</p>";
-    contentBox.classList.remove('urdu-content');
-  } else if (lang === 'ur') {
-    contentBox.innerHTML = "<p class='urdu'>یہاں اردو مواد ظاہر ہوگا۔</p>";
-    contentBox.classList.add('urdu-content');
-  }
-}
-
 
   // Reset Quiz if not in "themen"
   if (id !== 'themen') {
     resetQuiz();
   }
-}
-
-// ✅ اردو مواد کو ظاہر کرنے کا فنکشن (اختیاری مثال)
-function showUrduContent() {
-  const urduContent = [
-    {
-      title: "مثال",
-      items: ["نکتہ ۱", "نکتہ ۲", "نکتہ ۳"]
-    }
-  ];
-
-  const container = document.getElementById('lernContent');
-  container.innerHTML = '';
-
-  urduContent.forEach(section => {
-    const sectionDiv = document.createElement('div');
-    sectionDiv.className = 'lern-section';
-    sectionDiv.innerHTML = `
-      <h3>${section.title}</h3>
-      <ul>
-        ${section.items.map(item => `<li>${item}</li>`).join('')}
-      </ul>
-    `;
-    container.appendChild(sectionDiv);
-  });
-
-  showSection('lern');
 }
 
 // ✅ Lernmaterial JSON لوڈ کرنا
@@ -71,6 +30,13 @@ function loadLernmaterial(lang) {
         `;
         container.appendChild(sectionDiv);
       });
+
+      if (lang === 'ur') {
+        container.classList.add('urdu-content');
+      } else {
+        container.classList.remove('urdu-content');
+      }
+
     })
     .catch(err => {
       console.error("❌ Fehler beim Laden von Lernmaterial:", err);
@@ -78,9 +44,9 @@ function loadLernmaterial(lang) {
     });
 }
 
-// ✅ MathQuill Setup
+// ✅ MathQuill Setup (optional)
 window.onload = function () {
-  if (document.getElementById('math-field')) {
+  if (document.getElementById('math-field') && typeof MathQuill !== 'undefined') {
     const MQ = MathQuill.getInterface(2);
     MQ.MathField(document.getElementById('math-field'), {
       spaceBehavesLikeTab: true

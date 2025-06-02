@@ -1,76 +1,111 @@
 body {
-  font-family: sans-serif;
+  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background: #DEB887;
+  background-color: #f4f4f4;
 }
+
 header {
-  background: #7E481C;
-  color: #FFFFFF;
-  padding: 1em;
+  background-color: #333;
+  color: white;
+  padding: 20px;
   text-align: center;
 }
+
+nav {
+  background-color: #eee;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
 nav button {
-  margin: 0.5em;
-  padding: 0.8em;
-  font-size: 1em;
+  padding: 10px 20px;
+  background-color: #0066cc;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 14px;
 }
+
+nav button:hover {
+  background-color: #004d99;
+}
+
 .section {
-  padding: 1em;
+  padding: 20px;
 }
+
 .hidden {
   display: none;
 }
-./* اردو مواد کے لیے مخصوص اسٹائلز */
-.urdu-content {
-  direction: rtl;
-  text-align: right;
-  font-family: 'Noto Sans Arabic', sans-serif;
-  padding: 20px;
-  background-color: #f8f9fa;
-  border-radius: 8px;
-  margin: 15px 0;
-  border: 1px solid #dee2e6;
-}
 
-.urdu-section {
+.content-box {
   background-color: white;
   padding: 15px;
-  margin-bottom: 15px;
-  border-radius: 5px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+.lern-section,
+.urdu-section {
+  margin-bottom: 20px;
+}
+
+.lern-section h3,
 .urdu-section h3 {
-  color: #2c3e50;
-  border-bottom: 1px solid #eee;
-  padding-bottom: 8px;
-  margin-top: 0;
-  font-size: 1.2em;
+  margin-bottom: 10px;
 }
 
-.urdu-section ul {
-  padding-right: 20px;
-  list-style-type: arabic-indic;
+#topics-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-.urdu-section li {
-  margin-bottom: 8px;
-  line-height: 1.6;
-}
-
-#urduBtn {
-  background-color: #27ae60;
+#topics-list button {
+  padding: 10px;
+  background-color: #009688;
   color: white;
   border: none;
-  padding: 8px 15px;
-  border-radius: 4px;
-  cursor: pointer;
-  font-family: 'Noto Sans Arabic', sans-serif;
-  margin-left: 10px;
-  transition: background-color 0.3s;
+  border-radius: 5px;
+  text-align: left;
+  font-size: 16px;
 }
 
-#urduBtn:hover {
-  background-color: #2ecc71;
+#topics-list button:hover {
+  background-color: #00796b;
+}
+
+#quiz-container {
+  margin-top: 20px;
+}
+
+#answers-box label {
+  display: block;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+#next-button {
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  margin-top: 15px;
+}
+
+#next-button:hover {
+  background-color: #218838;
+}
+
+footer {
+  background-color: #ddd;
+  text-align: center;
+  padding: 10px;
+  margin-top: 20px;
 }

@@ -1,69 +1,61 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Taxi-Unternehmers Vorbereitung</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <title>Taxi-Unternehmerschein Vorbereitung</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <header>
-    <h1>Taxi-Unternehmers Vorbereitung</h1>
-  </header>
+  <!-- Hauptmenü -->
+  <div id="main-menu">
+    <button id="btn-lernmaterial">Lernmaterial</button>
+    <button id="btn-themenquiz">Themen Quiz</button>
+    <button id="btn-matheeingabe">Mathe Eingabe</button>
+    <button id="btn-musterpruefungen">Muster Prüfungen</button>
+  </div>
 
-  <!-- چار بڑے بٹن عمودی (vertical) یا افقی (flex) رکھے گئے ہیں -->
-  <nav id="main-buttons">
-    <button id="btn-lernmaterial" onclick="showSection('lernmaterial')">📘 Lernmaterial</button>
-    <button id="btn-themenquiz" onclick="showSection('themenquiz')">🧠 Themen Quiz</button>
-    <button id="btn-matheeingabe" onclick="showSection('matheeingabe')">➕ Mathe Eingabe</button>
-    <button id="btn-musterpruefung" onclick="showSection('musterpruefung')">📝 Muster Prüfungen</button>
-  </nav>
+  <!-- Lernmaterial Abschnitt -->
+  <div id="lernmaterial-section" class="section">
+    <h2>Lernmaterial</h2>
+    <button id="btn-deutsch">Deutsch</button>
+    <button id="btn-urdu">Urdu</button>
+    <div id="lernmaterial-content"></div>
+  </div>
 
-  <!-- ۱) Lernmaterial سیکشن: Deutsch اور Urdu کے ذیلی بٹن -->
-  <section id="lernmaterial-section" class="section hidden">
-    <div class="content-box lern-section">
-      <h3>Lernmaterial</h3>
-      <button id="btn-deutsch" onclick="loadGermanContent()">📗 Deutsch</button>
-      <button id="btn-urdu" onclick="loadUrduContent()">📕 Urdu</button>
+  <!-- Themen Quiz Abschnitt -->
+  <div id="themenquiz-section" class="section">
+    <h2>Themen Quiz</h2>
+    <div id="topic-buttons">
+      <button class="topic-btn" data-file="Personenbeforderung.json">Personenbeförderung</button>
+      <button class="topic-btn" data-file="Gewerberecht.json">Gewerberecht</button>
+      <button class="topic-btn" data-file="Preisrecht.json">Preisrecht</button>
+      <button class="topic-btn" data-file="Fahrzeugtechnik.json">Fahrzeugtechnik</button>
+      <button class="topic-btn" data-file="Kundenservice.json">Kundenservice</button>
+      <button class="topic-btn" data-file="Verkehrsrecht.json">Verkehrsrecht</button>
+      <button class="topic-btn" data-file="Arbeitsrecht.json">Arbeitsrecht</button>
+      <button class="topic-btn" data-file="Steuern.json">Steuern</button>
+      <button class="topic-btn" data-file="Versicherung.json">Versicherung</button>
+      <button class="topic-btn" data-file="Finanzbuchhaltung.json">Finanzbuchhaltung</button>
+      <button class="topic-btn" data-file="Marketing.json">Marketing</button>
+      <button class="topic-btn" data-file="Sicherheit.json">Sicherheit</button>
+      <button class="topic-btn" data-file="Tourenplanung.json">Tourenplanung</button>
     </div>
-    <div id="lernmaterial-content" class="content-box"></div>
-  </section>
+    <div id="topic-quiz-container"></div>
+  </div>
 
-  <!-- ۲) Themen Quiz سیکشن: 13 Topics کی فہرست عمودی ترتیب میں -->
-  <section id="themenquiz-section" class="section hidden">
-    <h3>Themen Quiz</h3>
-    <div id="topics-list" class="content-box"></div>
-    <div id="quiz-container" class="content-box hidden">
-      <div id="question-box"></div>
-      <div id="answers-box"></div>
-      <button id="check-button" class="check-btn" onclick="checkAnswer()">🟢 جواب چیک کریں</button>
-      <button id="next-button" class="next-btn hidden" onclick="nextQuestion()">➡️ اگلا سوال</button>
-      <div id="feedback-box" class="feedback"></div>
-    </div>
-  </section>
+  <!-- Mathe Eingabe Abschnitt -->
+  <div id="mathe-section" class="section">
+    <h2>Mathe Eingabe</h2>
+    <p>Hier könnte ein Mathe-Tool oder Eingabefeld stehen.</p>
+  </div>
 
-  <!-- ۳) Mathe Eingabe سیکشن (فی الحال ایک پناسی سیکشن) -->
-  <section id="matheeingabe-section" class="section hidden">
-    <div class="content-box">
-      <h3>Mathe Eingabe</h3>
-      <p>Hier können Mathe-bezogene Inhalte oder Fragen stehen.</p>
-    </div>
-  </section>
-
-  <!-- ۴) Muster Prüfungen سیکشن: دو بٹن جو JSON فائلز لوڈ کریں -->
-  <section id="musterpruefung-section" class="section hidden">
-    <div class="content-box">
-      <h3>Muster Prüfungen</h3>
-      <button id="btn-pruefung-1" onclick="loadPruefung('Prüfung-01.json')">Prüfung 1 (Prüfung-01.json)</button>
-      <button id="btn-pruefung-2" onclick="loadPruefung('Prüfung_01.json')">Prüfung 2 (Prüfung_01.json)</button>
-      <div id="pruefung-container"></div>
-    </div>
-  </section>
-
-  <footer>
-    <p>©️ 2025 Prüfungsvorbereitung für Taxi-Unternehmerschein</p>
-  </footer>
+  <!-- Muster Prüfungen Abschnitt -->
+  <div id="muster-section" class="section">
+    <h2>Muster Prüfungen</h2>
+    <button id="btn-start-muster">Starte Musterprüfung</button>
+    <div id="prufung-quiz-container"></div>
+  </div>
 
   <script src="script.js"></script>
   <script src="quiz.js"></script>

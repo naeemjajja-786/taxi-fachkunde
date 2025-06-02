@@ -1,147 +1,90 @@
-// =========================================
-// ۱) Main Section Switching
-// =========================================
-function showSection(key) {
-  // پہلے سب سیکشنز چھپا دو
-  document.querySelectorAll(".section").forEach(sec => {
-    sec.classList.remove("visible");
-    sec.classList.add("hidden");
+// Funktion zum Anzeigen eines bestimmten Abschnitts
+function showSection(sectionId) {
+  // Verstecke Hauptmenü und alle Abschnitte
+  document.getElementById('main-menu').style.display = 'none';
+  document.querySelectorAll('.section').forEach(sec => {
+    sec.style.display = 'none';
   });
-
-  // پھر مطلوبہ سیکشن دکھاؤ
-  const sectionId = key + "-section";
-  const sectionEl = document.getElementById(sectionId);
-  if (sectionEl) {
-    sectionEl.classList.remove("hidden");
-    sectionEl.classList.add("visible");
-  }
-
-  // اگر موضوع Quiz نہیں ہے تو Quiz reset کر دو
-  if (key !== "themenquiz") {
-    resetQuiz();
-  }
+  // Zeige den ausgewählten Abschnitt
+  document.getElementById(sectionId).style.display = 'flex';
 }
 
-// =========================================
-// ۲) Lernmaterial میں Deutsch / Urdu مواد لوڈ کرنا
-// =========================================
-function loadGermanContent() {
-  fetch("lerninhalt.json")
-    .then(res => {
-      if (!res.ok) throw new Error("Datei lerninhalt.json nicht gefunden.");
-      return res.json();
-    })
+// Event-Handler für Hauptmenü-Buttons
+document.getElementById('btn-lernmaterial').addEventListener('click', () => {
+  showSection('lernmaterial-section');
+});
+document.getElementById('btn-themenquiz').addEventListener('click', () => {
+  showSection('themenquiz-section');
+});
+document.getElementById('btn-matheeingabe').addEventListener('click', () => {
+  showSection('mathe-section');
+});
+document.getElementById('btn-musterpruefungen').addEventListener('click', () => {
+  showSection('muster-section');
+});
+
+// Lernmaterial: Lade jeweilige JSON-Datei und zeige Inhalte
+function loadLernmaterial(datei) {
+  fetch(datei)
+    .then(response => response.json())
     .then(data => {
-      const container = document.getElementById("lernmaterial-content");
-      container.innerHTML = "";
-      data.forEach(section => {
-        const div = document.createElement("div");
-        div.className = "content-box";
-        div.innerHTML = `<h4>${section.title}</h4><p>${section.content}</p>`;
-        container.appendChild(div);
-      });
-      container.classList.remove("urdu-content");
+      const contentDiv = document.getElementById('lernmaterial-content');
+      contentDiv.innerHTML = '';
+      // Falls JSON ein Array ist
+      if (Array.isArray(data)) {
+        data.forEach(item => {
+          contentDiv.innerHTML += `<h3>${item.title || ''}</h3><p>${item.content || ''}</p>`;
+        });
+      } else {
+        // Objekt oder Schlüssel-Wert-Paar
+        for (const key in data) {
+          contentDiv.innerHTML += `<h3>${key}</h3><p>${data[key]}</p>`;
+        }
+      }
     })
     .catch(err => {
-      console.error(err);
-      alert("Fehler beim Laden des deutschen Lernmaterials.");
+      console.error('Fehler beim Laden des Lernmaterials:', err);
     });
 }
 
-function loadUrduContent() {
-  fetch("urdu-content.json")
-    .then(res => {
-      if (!res.ok) throw new Error("Datei urdu-content.json nicht gefunden.");
-      return res.json();
-    })
-    .then(data => {
-      const container = document.getElementById("lernmaterial-content");
-      container.innerHTML = "";
-      data.forEach(section => {
-        const div = document.createElement("div");
-        div.className = "content-box urdu-content";
-        div.innerHTML = `<h4>${section.title}</h4><p>${section.content}</p>`;
-        container.appendChild(div);
+// Event-Handler für Lernmaterial-Buttons
+document.getElementById('btn-deutsch').addEventListener('click', () => {
+  loadLernmaterial('lerninhalte.json');
+});
+document.getElementById('btn-urdu').addEventListener('click', () => {
+  loadLernmaterial('urdu-content.json');
+});
+
+// Themen Quiz: Event-Handler für Topic-Buttons
+document.querySelectorAll('.topic-btn').forEach(button => {
+  button.addEventListener('click', () => {
+    const fileName = button.getAttribute('data-file');
+    fetch(fileName)
+      .then(response => response.json())
+      .then(data => {
+        // JSON könnte Fragen direkt enthalten oder als 'questions'-Array
+        const questions = data.questions || data;
+        const container = document.getElementById('topic-quiz-container');
+        startQuiz(questions, container);
+      })
+      .catch(err => {
+        console.error('Fehler beim Laden der Themenquiz-Datei:', err);
       });
-    })
-    .catch(err => {
-      console.error(err);
-      alert("خطا: اردو مواد لوڈ نہیں ہو سکا۔");
-    });
-}
-
-// =========================================
-// ۳) Muster Prüfung بٹنز کے لیے JSON لوڈ کرنا
-// =========================================
-function loadPruefung(jsonFile) {
-  fetch(jsonFile)
-    .then(res => {
-      if (!res.ok) throw new Error("Prüfung Datei nicht gefunden.");
-      return res.json();
-    })
-    .then(data => {
-      const container = document.getElementById("pruefung-container");
-      container.innerHTML = "";
-      data.forEach((item, idx) => {
-        const div = document.createElement("div");
-        div.className = "content-box";
-        div.innerHTML = `<p><b>Frage ${idx + 1}:</b> ${item.frage}</p>
-          ${item.antworten.map((a, i) => 
-            `<label><input type="radio" name="pruefung_q${idx}" value="${i}"> ${a}</label><br>`
-          ).join("")}`;
-        container.appendChild(div);
-      });
-    })
-    .catch(err => {
-      console.error(err);
-      alert("Fehler beim Laden der Prüfungsdatei.");
-    });
-}
-
-// =========================================
-// ۴) Themen Quiz کے Topic Buttons بنانا
-// =========================================
-document.addEventListener("DOMContentLoaded", () => {
-  const topics = [
-    "personenbeförderung",
-    "gewerberecht",
-    "arbeitsrecht",
-    "kaufmaennische",
-    "kostenrechnung",
-    "strassenverkehrsrecht",
-    "umweltschutz",
-    "versicherungswesen",
-    "technische_normen",
-    "befoerderungsentgelte",
-    "mietwagen",
-    "testedich",
-    "fallbeispiele"
-  ];
-
-  const topicContainer = document.getElementById("topics-list");
-  topics.forEach(topic => {
-    const btn = document.createElement("button");
-    btn.textContent = topic.replace(/_/g, " ").replace(/\b\w/g, c => c.toUpperCase());
-    btn.onclick = () => loadQuiz(`quiz_${topic}.json`);
-    topicContainer.appendChild(btn);
   });
 });
 
-// =========================================
-// ۵) Quiz Logic (Delegated to quiz.js)
-// =========================================
-// quiz.js میں لکھا ہوا ان تمام فنکشنز کو یہاں استعمال کیا جائے گا
-
-// جب Quiz سیکشن دکھاؤں تو container کی کلاس بدل دو
-function resetQuiz() {
-  const quizContainer = document.getElementById("quiz-container");
-  const feedbackBox = document.getElementById("feedback-box");
-  document.getElementById("question-box").innerHTML = "";
-  document.getElementById("answers-box").innerHTML = "";
-  document.getElementById("feedback-box").innerHTML = "";
-  document.getElementById("check-button").classList.add("hidden");
-  document.getElementById("next-button").classList.add("hidden");
-  if (quizContainer) {
-    quizContainer.classList.add("hidden");
-  }
-}
+// Muster Prüfungen: Zufällige Prüfung laden
+document.getElementById('btn-start-muster').addEventListener('click', () => {
+  const files = ['prufung_01.json', 'prufung_02.json', 'prufung_03.json'];
+  const randomFile = files[Math.floor(Math.random() * files.length)];
+  fetch(randomFile)
+    .then(response => response.json())
+    .then(data => {
+      const questions = data.questions || data;
+      const container = document.getElementById('prufung-quiz-container');
+      startQuiz(questions, container);
+    })
+    .catch(err => {
+      console.error('Fehler beim Laden der Prüfungsdatei:', err);
+    });
+});

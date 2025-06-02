@@ -1,7 +1,21 @@
 // ✅ Show sections
+
 function showSection(id) {
-  document.querySelectorAll('.section').forEach(sec => sec.classList.add('hidden'));
-  document.getElementById(id).classList.remove('hidden');
+  document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+}
+
+function loadLernmaterial(lang) {
+  const contentBox = document.getElementById('lernContent');
+  if (lang === 'de') {
+    contentBox.innerHTML = "<p>Hier erscheint das deutsche Lernmaterial.</p>";
+    contentBox.classList.remove('urdu-content');
+  } else if (lang === 'ur') {
+    contentBox.innerHTML = "<p class='urdu'>یہاں اردو مواد ظاہر ہوگا۔</p>";
+    contentBox.classList.add('urdu-content');
+  }
+}
+
 
   // Reset Quiz if not in "themen"
   if (id !== 'themen') {

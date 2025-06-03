@@ -1,63 +1,44 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <title>Taxi-Unternehmerschein Vorbereitung</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <title>Taxi-Unternehmerschein Lernwebapp</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  <!-- Hauptmenü -->
-  <div id="main-menu">
-    <button id="btn-lernmaterial">Lernmaterial</button>
-    <button id="btn-themenquiz">Themen Quiz</button>
-    <button id="btn-matheeingabe">Mathe Eingabe</button>
-    <button id="btn-musterpruefungen">Muster Prüfungen</button>
-  </div>
-
-  <!-- Lernmaterial Abschnitt -->
-  <div id="lernmaterial-section" class="section">
-    <h2>Lernmaterial</h2>
-    <button id="btn-deutsch">Deutsch</button>
-    <button id="btn-urdu">Urdu</button>
-    <div id="lernmaterial-content"></div>
-  </div>
-
-  <!-- Themen Quiz Abschnitt -->
-  <div id="themenquiz-section" class="section">
-    <h2>Themen Quiz</h2>
-    <div id="topic-buttons">
-      <button class="topic-btn" data-file="Personenbeforderung.json">Personenbeförderung</button>
-      <button class="topic-btn" data-file="Gewerberecht.json">Gewerberecht</button>
-      <button class="topic-btn" data-file="Preisrecht.json">Preisrecht</button>
-      <button class="topic-btn" data-file="Fahrzeugtechnik.json">Fahrzeugtechnik</button>
-      <button class="topic-btn" data-file="Kundenservice.json">Kundenservice</button>
-      <button class="topic-btn" data-file="Verkehrsrecht.json">Verkehrsrecht</button>
-      <button class="topic-btn" data-file="Arbeitsrecht.json">Arbeitsrecht</button>
-      <button class="topic-btn" data-file="Steuern.json">Steuern</button>
-      <button class="topic-btn" data-file="Versicherung.json">Versicherung</button>
-      <button class="topic-btn" data-file="Finanzbuchhaltung.json">Finanzbuchhaltung</button>
-      <button class="topic-btn" data-file="Marketing.json">Marketing</button>
-      <button class="topic-btn" data-file="Sicherheit.json">Sicherheit</button>
-      <button class="topic-btn" data-file="Tourenplanung.json">Tourenplanung</button>
+<div id="container">
+    <nav id="main-nav">
+        <button id="btn-lern" data-target="lernmaterial-section">📘 Lernmaterial</button>
+        <button id="btn-quizmain" data-target="themen-quiz-section">🧠 Themen Quiz</button>
+        <button id="btn-mathe" data-target="mathe-section">➕ Mathe Eingabe</button>
+        <button id="btn-muster" data-target="muster-section">📝 Muster Prüfungen</button>
+    </nav>
+    <div id="content-area">
+        <section id="lernmaterial-section" class="content-section hidden">
+            <h2>Lernmaterial</h2>
+            <div id="lern-buttons">
+                <button id="btn-deutsch">📗 Deutsch</button>
+                <button id="btn-urdu">📕 Urdu</button>
+            </div>
+            <div id="lern-content"></div>
+        </section>
+        <section id="themen-quiz-section" class="content-section hidden">
+            <h2>Themen Quiz</h2>
+            <div id="quiz-topics-list"></div>
+            <div id="quiz-container"></div>
+        </section>
+        <section id="mathe-section" class="content-section hidden">
+            <h2>Mathe Eingabe</h2>
+            <p>Hier könnte ein Mathe-Eingabe-Tool integriert werden.</p>
+        </section>
+        <section id="muster-section" class="content-section hidden">
+            <h2>Muster Prüfungen</h2>
+            <button id="btn-load-muster">Musterprüfung starten</button>
+            <div id="muster-quiz-container"></div>
+        </section>
     </div>
-    <div id="topic-quiz-container"></div>
-  </div>
-
-  <!-- Mathe Eingabe Abschnitt -->
-  <div id="mathe-section" class="section">
-    <h2>Mathe Eingabe</h2>
-    <p>Hier könnte ein Mathe-Tool oder Eingabefeld stehen.</p>
-  </div>
-
-  <!-- Muster Prüfungen Abschnitt -->
-  <div id="muster-section" class="section">
-    <h2>Muster Prüfungen</h2>
-    <button id="btn-start-muster">Starte Musterprüfung</button>
-    <div id="prufung-quiz-container"></div>
-  </div>
-
-  <script src="script.js"></script>
-  <script src="quiz.js"></script>
+</div>
+<script src="quiz.js"></script>
+<script src="script.js"></script>
 </body>
 </html>

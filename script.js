@@ -1,90 +1,114 @@
-// Funktion zum Anzeigen eines bestimmten Abschnitts
-function showSection(sectionId) {
-  // Verstecke Hauptmenü und alle Abschnitte
-  document.getElementById('main-menu').style.display = 'none';
-  document.querySelectorAll('.section').forEach(sec => {
-    sec.style.display = 'none';
-  });
-  // Zeige den ausgewählten Abschnitt
-  document.getElementById(sectionId).style.display = 'flex';
-}
+document.addEventListener('DOMContentLoaded', () => {
+    const mainButtons = document.querySelectorAll('#main-nav button');
+    // Funktion zum Anzeigen eines Bereichs und Ausblenden der anderen
+    function showSection(sectionId) {
+        document.querySelectorAll('.content-section').forEach(sec => sec.classList.add('hidden'));
+        const section = document.getElementById(sectionId);
+        if (section) section.classList.remove('hidden');
+    }
 
-// Event-Handler für Hauptmenü-Buttons
-document.getElementById('btn-lernmaterial').addEventListener('click', () => {
-  showSection('lernmaterial-section');
-});
-document.getElementById('btn-themenquiz').addEventListener('click', () => {
-  showSection('themenquiz-section');
-});
-document.getElementById('btn-matheeingabe').addEventListener('click', () => {
-  showSection('mathe-section');
-});
-document.getElementById('btn-musterpruefungen').addEventListener('click', () => {
-  showSection('muster-section');
-});
-
-// Lernmaterial: Lade jeweilige JSON-Datei und zeige Inhalte
-function loadLernmaterial(datei) {
-  fetch(datei)
-    .then(response => response.json())
-    .then(data => {
-      const contentDiv = document.getElementById('lernmaterial-content');
-      contentDiv.innerHTML = '';
-      // Falls JSON ein Array ist
-      if (Array.isArray(data)) {
-        data.forEach(item => {
-          contentDiv.innerHTML += `<h3>${item.title || ''}</h3><p>${item.content || ''}</p>`;
+    // Hauptnavigation: Klick-Handler
+    mainButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            mainButtons.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            const target = btn.getAttribute('data-target');
+            showSection(target);
         });
-      } else {
-        // Objekt oder Schlüssel-Wert-Paar
-        for (const key in data) {
-          contentDiv.innerHTML += `<h3>${key}</h3><p>${data[key]}</p>`;
-        }
-      }
-    })
-    .catch(err => {
-      console.error('Fehler beim Laden des Lernmaterials:', err);
     });
-}
 
-// Event-Handler für Lernmaterial-Buttons
-document.getElementById('btn-deutsch').addEventListener('click', () => {
-  loadLernmaterial('lerninhalte.json');
-});
-document.getElementById('btn-urdu').addEventListener('click', () => {
-  loadLernmaterial('urdu-content.json');
-});
-
-// Themen Quiz: Event-Handler für Topic-Buttons
-document.querySelectorAll('.topic-btn').forEach(button => {
-  button.addEventListener('click', () => {
-    const fileName = button.getAttribute('data-file');
-    fetch(fileName)
-      .then(response => response.json())
-      .then(data => {
-        // JSON könnte Fragen direkt enthalten oder als 'questions'-Array
-        const questions = data.questions || data;
-        const container = document.getElementById('topic-quiz-container');
-        startQuiz(questions, container);
-      })
-      .catch(err => {
-        console.error('Fehler beim Laden der Themenquiz-Datei:', err);
-      });
-  });
-});
-
-// Muster Prüfungen: Zufällige Prüfung laden
-document.getElementById('btn-start-muster').addEventListener('click', () => {
-  const files = ['prufung_01.json', 'prufung_02.json', 'prufung_03.json'];
-  const randomFile = files[Math.floor(Math.random() * files.length)];
-  fetch(randomFile)
-    .then(response => response.json())
-    .then(data => {
-      const questions = data.questions || data;
-      const container = document.getElementById('prufung-quiz-container');
-      startQuiz(questions, container);
-    })
-    .catch(err => {
-      console.error('Fehler beim Laden der Prüfungsdatei:', err);
+    // Lernmaterial: Inhalte laden
+    document.getElementById('btn-deutsch').addEventListener('click', () => {
+        loadContent('lerninhalte.json', false);
     });
+    document.getElementById('btn-urdu').addEventListener('click', () => {
+        loadContent('urdu-content.json', true);
+    });
+
+    function loadContent(url, isUrdu) {
+        const container = document.getElementById('lern-content');
+        container.innerHTML = 'Lade Inhalte...';
+        fetch(url)
+            .then(response => response.json())
+            .then(data => {
+                container.innerHTML = '';
+                // Urdu-Stil aktivieren oder entfernen
+                if (isUrdu) {
+                    container.classList.add('urdu');
+                } else {
+                    container.classList.remove('urdu');
+                }
+                // JSON erwartet Array von {title, content}
+                data.forEach(item => {
+                    const titleEl = document.createElement('h3');
+                    titleEl.textContent = item.title;
+                    container.appendChild(titleEl);
+                    const contentEl = document.createElement('p');
+                    contentEl.textContent = item.content;
+                    container.appendChild(contentEl);
+                });
+            })
+            .catch(err => {
+                container.textContent = 'Fehler beim Laden der Inhalte.';
+                console.error(err);
+            });
+    }
+
+    // Themen-Quiz: Themenliste
+    const topics = [
+        { name: "Personenbeförderung", file: "quiz_personenbeförderung.json" },
+        { name: "Gewerberecht", file: "quiz_gewerberecht.json" },
+        { name: "Arbeitsrecht", file: "quiz_arbeitsrecht.json" },
+        { name: "Straßenverkehrsrecht", file: "quiz_strassenverkehrsrecht.json" },
+        { name: "Tarifrecht", file: "quiz_tarifrecht.json" },
+        { name: "Verkehrspolizei", file: "quiz_verkehrspolizei.json" },
+        { name: "Unfallverhütung", file: "quiz_unfallverhuetung.json" },
+        { name: "Versicherung", file: "quiz_versicherung.json" },
+        { name: "Steuerrecht", file: "quiz_steuerrecht.json" },
+        { name: "Betriebswirtschaft", file: "quiz_betriebswirtschaft.json" },
+        { name: "Umweltrecht", file: "quiz_umweltrecht.json" },
+        { name: "Kundenservice", file: "quiz_kundenservice.json" },
+        { name: "Fahrgastrecht", file: "quiz_fahrgastrecht.json" }
+    ];
+    const topicsList = document.getElementById('quiz-topics-list');
+    const quizContainer = document.getElementById('quiz-container');
+
+    // Buttons für jedes Thema erstellen
+    topics.forEach(topic => {
+        const btn = document.createElement('button');
+        btn.textContent = topic.name;
+        btn.addEventListener('click', () => {
+            quizContainer.innerHTML = 'Lade Quiz...';
+            fetch(topic.file)
+                .then(response => response.json())
+                .then(data => {
+                    runQuiz(data, quizContainer);
+                })
+                .catch(err => {
+                    quizContainer.textContent = 'Fehler beim Laden des Quiz.';
+                    console.error(err);
+                });
+        });
+        topicsList.appendChild(btn);
+    });
+
+    // Musterprüfungen
+    document.getElementById('btn-load-muster').addEventListener('click', () => {
+        const container = document.getElementById('muster-quiz-container');
+        container.innerHTML = 'Lade Musterprüfung...';
+        const num = Math.floor(Math.random() * 3) + 1;
+        const file = `prüfung_0${num}.json`;
+        fetch(encodeURI(file))
+            .then(response => response.json())
+            .then(data => {
+                runExam(data, container);
+            })
+            .catch(err => {
+                container.textContent = 'Fehler beim Laden der Prüfung.';
+                console.error(err);
+            });
+    });
+
+    // Standardmäßig ersten Bereich anzeigen
+    document.getElementById('btn-lern').click();
 });

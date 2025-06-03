@@ -1,87 +1,129 @@
-/**
- * Startet ein Quiz mit den gegebenen Fragen im angegebenen Container.
- * Erwarte ein Array von Fragen. Jede Frage sollte die Struktur haben:
- * { question: 'Frage...', answers: ['Antwort A', 'Antwort B', ...], correctAnswer: 0 }
- */
-function startQuiz(questions, container) {
-  let currentQuestionIndex = 0;
-  container.innerHTML = '';
-  
-  // Funktion zur Anzeige einer Frage
-  function showQuestion() {
+function runQuiz(questions, container) {
     container.innerHTML = '';
-    if (currentQuestionIndex < questions.length) {
-      const q = questions[currentQuestionIndex];
-      
-      // Frage anzeigen
-      const questionEl = document.createElement('h3');
-      questionEl.textContent = q.question || q.Frage || '';
-      container.appendChild(questionEl);
-      
-      // Antwortmöglichkeiten
-      const answersDiv = document.createElement('div');
-      if (q.answers && Array.isArray(q.answers)) {
-        q.answers.forEach((ansText, i) => {
-          const label = document.createElement('label');
-          const radio = document.createElement('input');
-          radio.type = 'radio';
-          radio.name = 'answer';
-          radio.value = i;
-          label.appendChild(radio);
-          label.appendChild(document.createTextNode(ansText));
-          answersDiv.appendChild(label);
+    let index = 0;
+    let score = 0;
+
+    function showQuestion() {
+        if (index >= questions.length) {
+            container.innerHTML = `<p>Quiz beendet! Du hast ${score} von ${questions.length} richtig beantwortet.</p>`;
+            return;
+        }
+
+        const q = questions[index];
+        container.innerHTML = '';
+
+        const questionEl = document.createElement('p');
+        questionEl.textContent = q.question;
+        container.appendChild(questionEl);
+
+        const optionsContainer = document.createElement('div');
+        q.options.forEach((opt, i) => {
+            const label = document.createElement('label');
+            const radio = document.createElement('input');
+            radio.type = 'radio';
+            radio.name = 'quiz';
+            radio.value = i;
+            label.appendChild(radio);
+            label.appendChild(document.createTextNode(opt));
+            optionsContainer.appendChild(label);
+            optionsContainer.appendChild(document.createElement('br'));
         });
-      }
-      container.appendChild(answersDiv);
-      
-      // Ergebnisnachricht
-      const resultMsg = document.createElement('p');
-      container.appendChild(resultMsg);
-      
-      // "Antwort prüfen" Button
-      const checkButton = document.createElement('button');
-      checkButton.textContent = 'Antwort prüfen';
-      container.appendChild(checkButton);
-      
-      // "Nächste Frage" Button (zuerst versteckt)
-      const nextButton = document.createElement('button');
-      nextButton.textContent = 'Nächste Frage';
-      nextButton.style.display = 'none';
-      container.appendChild(nextButton);
-      
-      // Ereignis beim Prüfen der Antwort
-      checkButton.addEventListener('click', () => {
-        const selected = container.querySelector('input[name="answer"]:checked');
-        if (!selected) {
-          alert('Bitte wähle eine Antwort aus.');
-          return;
-        }
-        const answerIndex = parseInt(selected.value);
-        // Prüfen der Antwort
-        if (answerIndex === q.correctAnswer) {
-          resultMsg.textContent = 'Richtig!';
-        } else {
-          resultMsg.textContent = 'Falsch. Richtige Antwort: ' +
-            (q.correctAnswer !== undefined && q.answers ? q.answers[q.correctAnswer] : '');
-        }
-        // Buttons aktualisieren
-        checkButton.disabled = true;
-        nextButton.style.display = 'inline-block';
-      });
-      
-      // Ereignis für nächste Frage
-      nextButton.addEventListener('click', () => {
-        currentQuestionIndex++;
-        if (currentQuestionIndex < questions.length) {
-          showQuestion();
-        } else {
-          // Quiz abgeschlossen
-          container.innerHTML = '<h3>Quiz abgeschlossen!</h3><p>Gut gemacht!</p>';
-        }
-      });
+        container.appendChild(optionsContainer);
+
+        const submitBtn = document.createElement('button');
+        submitBtn.textContent = 'Antwort prüfen';
+        container.appendChild(submitBtn);
+
+        const feedbackEl = document.createElement('p');
+        container.appendChild(feedbackEl);
+
+        const nextBtn = document.createElement('button');
+        nextBtn.textContent = 'Nächste Frage';
+        nextBtn.style.display = 'none';
+        container.appendChild(nextBtn);
+
+        submitBtn.addEventListener('click', () => {
+            const selected = container.querySelector('input[name="quiz"]:checked');
+            if (!selected) {
+                alert('Bitte wähle eine Antwort.');
+                return;
+            }
+            const answer = parseInt(selected.value);
+            if (answer === q.answer) {
+                feedbackEl.textContent = 'Richtig!';
+                score++;
+            } else {
+                feedbackEl.textContent = 'Falsch. Richtige Antwort: ' + q.options[q.answer];
+            }
+            // Optionen sperren
+            container.querySelectorAll('input[name="quiz"]').forEach(inp => inp.disabled = true);
+            submitBtn.disabled = true;
+            nextBtn.style.display = 'inline-block';
+        });
+
+        nextBtn.addEventListener('click', () => {
+            index++;
+            showQuestion();
+        });
     }
-  }
-  
-  // Starte das Quiz mit der ersten Frage
-  showQuestion();
+
+    showQuestion();
+}
+
+function runExam(questions, container) {
+    container.innerHTML = '';
+    let index = 0;
+    let score = 0;
+    const userAnswers = [];
+
+    function showQuestion() {
+        if (index >= questions.length) {
+            // Ergebnis anzeigen
+            score = 0;
+            for (let i = 0; i < questions.length; i++) {
+                const correct = questions[i].answers.slice().sort((a, b) => a - b);
+                const user = (userAnswers[i] || []).slice().sort((a, b) => a - b);
+                if (JSON.stringify(correct) === JSON.stringify(user)) {
+                    score++;
+                }
+            }
+            container.innerHTML = `<p>Prüfung beendet! Du hast ${score} von ${questions.length} richtig beantwortet.</p>`;
+            return;
+        }
+
+        const q = questions[index];
+        container.innerHTML = '';
+
+        const questionEl = document.createElement('p');
+        questionEl.textContent = q.question;
+        container.appendChild(questionEl);
+
+        const optionsContainer = document.createElement('div');
+        q.options.forEach((opt, i) => {
+            const label = document.createElement('label');
+            const checkbox = document.createElement('input');
+            checkbox.type = 'checkbox';
+            checkbox.name = 'exam';
+            checkbox.value = i;
+            label.appendChild(checkbox);
+            label.appendChild(document.createTextNode(opt));
+            optionsContainer.appendChild(label);
+            optionsContainer.appendChild(document.createElement('br'));
+        });
+        container.appendChild(optionsContainer);
+
+        const nextBtn = document.createElement('button');
+        nextBtn.textContent = (index < questions.length - 1) ? 'Nächste Frage' : 'Beenden';
+        container.appendChild(nextBtn);
+
+        nextBtn.addEventListener('click', () => {
+            const selected = container.querySelectorAll('input[name="exam"]:checked');
+            const answer = Array.from(selected).map(i => parseInt(i.value));
+            userAnswers.push(answer);
+            index++;
+            showQuestion();
+        });
+    }
+
+    showQuestion();
 }

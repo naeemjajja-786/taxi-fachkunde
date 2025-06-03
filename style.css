@@ -1,42 +1,79 @@
 body {
-  font-family: Arial, sans-serif;
-  text-align: center;
-  margin: 0;
-  padding: 0;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    display: flex;
+    min-height: 100vh;
 }
 
-#main-menu,
-.section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 20px;
+#container {
+    display: flex;
+    width: 100%;
+    height: 100%;
 }
 
-.section {
-  display: none; /* Abschnitte zunächst ausgeblendet */
+#main-nav {
+    width: 200px;
+    background-color: #f0f0f0;
+    padding: 10px;
 }
 
-/* Buttons vertikal anordnen */
-#main-menu button,
-#topic-buttons button,
-#lernmaterial-section button,
-#muster-section button {
-  display: block;
-  margin: 10px;
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
+#main-nav button {
+    width: 100%;
+    display: block;
+    margin: 5px 0;
+    padding: 10px;
+    border: none;
+    text-align: left;
+    background: none;
+    font-size: 16px;
 }
 
-/* Quiz-Antwort-Labels */
-#topic-quiz-container label,
-#prufung-quiz-container label {
-  display: block;
-  margin: 5px 0;
+#main-nav button.active {
+    background-color: #ccc;
 }
 
-button:disabled {
-  background-color: #ccc;
-  cursor: not-allowed;
+#content-area {
+    flex: 1;
+    padding: 20px;
+}
+
+.content-section {
+    margin-left: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+#lern-buttons button, #quiz-topics-list button {
+    display: block;
+    margin: 5px 0;
+    padding: 8px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    background-color: #e0e0e0;
+    font-size: 15px;
+}
+
+#lern-buttons button:hover, #quiz-topics-list button:hover,
+#main-nav button:hover, #btn-load-muster:hover {
+    background-color: #d0d0d0;
+}
+
+.urdu {
+    direction: rtl;
+    /* Optional: eigene Schrift für Urdu aktivieren */
+    /* font-family: 'Noto Nastaliq Urdu', serif; */
+}
+
+label {
+    cursor: pointer;
+    margin-bottom: 5px;
+    display: inline-block;
+}
+
+button {
+    cursor: pointer;
+    margin-top: 10px;
 }
